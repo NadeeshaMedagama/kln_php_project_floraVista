@@ -1,5 +1,6 @@
 <?php
 
+global $connection;
 session_start();
 error_reporting(E_ALL);
 ini_set("display_errors",1);
@@ -9,7 +10,7 @@ include_once '../../Connection/connection.php';
 
 
 // admin protection page
-if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true){
+if (!isset($_SESSION['admin']['islogin']) || !$_SESSION['admin']['islogin']){
 
     header("Location: ../admin.php");
 }
@@ -19,7 +20,7 @@ if (isset($_POST['delete_category'])){
 
         $category_id = (int) $_POST['category_id'];
 
-        $query = "DELETE FROM flowers_category WHERE category_id=$category_id";
+        $query = ("DELETE FROM flowers_category WHERE category_id=$category_id");
         $result = mysqli_query($connection, $query);
         logger("INFO", "$category_id id delete successfully");
 
@@ -36,7 +37,7 @@ if (isset($_POST["add_category"])){
     $add_category = mysqli_real_escape_string($connection, $add_category);
 
     if (!empty($add_category)){
-        $query = "INSERT INTO flowers_category(category_name) VALUES ('$add_category')";
+        $query = ("INSERT INTO flowers_category(category_name) VALUES ('$add_category')");
 
         try{
             if (mysqli_query($connection, $query)){
@@ -53,7 +54,7 @@ if (isset($_POST["add_category"])){
     }else{
         logger('WARNING', "user input is empty");
         //error_alert("Input is Empty");
-        echo"<script>window.alert('eqwr')</script>";
+        echo"<script>window.alert('error')</script>";
     }
 }
 
@@ -101,7 +102,7 @@ if(isset($_POST["flower_upload"] )){
     }
 }
 
-// Js handele show or hide flowers_category
+// Js handle show or hide flowers_category
 echo "<div id='flowers_category'>";
     echo "<h4>Flowers Category</h4>";
     echo "<div id='show_category'>";

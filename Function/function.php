@@ -26,7 +26,8 @@ function info_alert($msg){
 }
 
 // alert the error 
-function error_alert($msg){
+function error_alert($msg): void
+{
     echo "<script>window.alert($msg)</script>";
 }
 

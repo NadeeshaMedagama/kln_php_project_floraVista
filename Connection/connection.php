@@ -8,8 +8,8 @@ require __DIR__ . '/../Logger/logger.php';
 
 // Database connection parameters
 $host = "127.0.0.1";
-$username = "thush";
-$password = "thush";
+$username = "root";
+$password = "1234";
 $database = "kln_php";
 
 // Connect to the database
