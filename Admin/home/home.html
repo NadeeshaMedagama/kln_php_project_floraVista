@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+<header>
+    <div class="logo-search">
+        <img src="style/images/Flora Vista New.png" alt="Logo" class="logo">
+        <input type="text" placeholder="Search for anything..." class="search-bar" >
+        <button type="submit" class="search-button">Search</button>
+    </div>
+    <div class="header-info">
+        <span class="phone">Happiness Hotline:<br>011 2001122</span>
+        <span class="account"><a href = "../../login.php"><img src = "style/images/account.png" width="28px" height="28px" alt="account"><br>Log In.</a></span>
+        <span class="cart"><a href = "../cart/cart.php"><img src = "style/images/cart.png" width="28px" height="28px" alt="cart"></a><br></span>
+    </div>
+</header>
+
+<nav>
+    <ul class="main-menu">
+
+        <li>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">Categories <span>&#9654;</span></button>
+
+                <div class= "dropdown-content">
+                    <a href="#">Flowers <span>&gt;</span></a>
+                    <a href="#">Cakes and Bakes <span>&gt;</span></a>
+                    <a href="#">Supermarket <span>&gt;</span></a>
+                    <a href="#">Pharmacy <span>&gt;</span></a>
+                    <a href="#">Fruit Baskets & Hampers <span>&gt;</span></a>
+                    <a href="#">Chocolates & Cookies <span>&gt;</span></a>
+                    <a href="#">La Treats <span>&gt;</span></a>
+                    <a href="#">Traditional Treats <span>&gt;</span></a>
+                    <a href="#">Gifts <span>&gt;</span></a>
+                    <a href="#">Toys <span>&gt;</span></a>
+                    <a href="#">Plants & Gardening <span>&gt;</span></a>
+                    <a href="#">Perfumes <span>&gt;</span></a>
+
+                </div>
+            </div>
+
+        <script src="script.js"></script>
+
+        </li>
+
+                <li><a class="dropdown-btn" href="#">New Arrivals</a></li>
+                <li><a class="dropdown-btn" href="#">Flowers</a></li>
+                <li><a class="dropdown-btn" href="#">Cakes & Bakes</a></li>
+                <li><a class="dropdown-btn" href="#">Supermarket</a></li>
+                <li><a class="dropdown-btn" href="#">Pharmacy</a></li>
+                <li><a class="dropdown-btn" href="#">Daily Deals</a></li>
+                <li><a class="dropdown-btn" href="#">Order Status</a></li>
+
+    </ul>
+</nav>
+
+<div class="image-container">
+    <img id="slideshow-image" src="style/banners/image1.png" alt="Slideshow Image">
+</div>
+
+<div class="dots-container">
+    <span class="dot" onclick="showImage(0)"></span>
+    <span class="dot" onclick="showImage(1)"></span>
+    <span class="dot" onclick="showImage(2)"></span>
+    <span class="dot" onclick="showImage(3)"></span>
+    <span class="dot" onclick="showImage(4)"></span>
+    <span class="dot" onclick="showImage(5)"></span>
+    <span class="dot" onclick="showImage(6)"></span>
+    <span class="dot" onclick="showImage(7)"></span>
+    <span class="dot" onclick="showImage(8)"></span>
+    <span class="dot" onclick="showImage(9)"></span>
+</div>
+
+<script>
+    // Array of image sources
+    const images = ['style/banners/image1.png',
+                    'style/banners/image2.png',
+                    'style/banners/image3.png',
+                    'style/banners/image4.png',
+                    'style/banners/image5.png',
+                    'style/banners/image6.png',
+                    'style/banners/image7.png',
+                    'style/banners/image8.png',
+                    'style/banners/image9.png',
+                    'style/banners/image10.png'
+                    ];
+
+    let currentIndex = 0;
+    const slideshowImage = document.getElementById('slideshow-image');
+    const dots = document.getElementsByClassName('dot');
+
+    // Function to show a specific image based on the dot clicked
+    function showImage(index) {
+        currentIndex = index;
+        slideshowImage.src = images[currentIndex];
+        updateDots();
+        resetAutoChange();  // Reset the timer when user manually changes the image
+    }
+
+    // Function to update the active dot
+    function updateDots() {
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.remove('active'); // Remove active class from all dots
+        }
+        dots[currentIndex].classList.add('active'); // Add active class to the current dot
+    }
+
+    // Function to automatically change the image after a set interval
+    function autoChange() {
+        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+        slideshowImage.src = images[currentIndex];
+        updateDots();
+    }
+
+    // Function to reset the auto-change interval
+    function resetAutoChange() {
+        clearInterval(autoChangeInterval);
+        autoChangeInterval = setInterval(autoChange, 3000); // Restart the interval
+    }
+
+    // Set interval for auto image change (every 3 seconds)
+    let autoChangeInterval = setInterval(autoChange, 3000);
+
+    // Initialize the first dot as active
+    window.onload = function () {
+        updateDots();
+    };
+
+</script>
+
+</body>
+</html>

@@ -60,6 +60,7 @@ CREATE TABLE flowers_prices(flower_id VARCHAR(100) UNIQUE,
 
 CREATE TABLE images_links(flower_id VARCHAR(100) UNIQUE,
                           file_path VARCHAR(200),
+                          image_name VARCHAR(200) not null,
                           Foreign Key (flower_id) REFERENCES flowers(flower_id),
                           INDEX idx_flower_id(flower_id),
                           INDEX idx_image_name(image_name));
