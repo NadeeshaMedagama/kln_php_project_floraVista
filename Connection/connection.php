@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 require __DIR__ . '/../Logger/logger.php';
 
 // Database connection parameters
-$host = "127.0.0.1";
+$host = "localhost";
 $username = "root";
 $password = "1234";
 $database = "kln_php";

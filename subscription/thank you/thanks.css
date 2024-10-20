@@ -1,0 +1,42 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaeae1; /* Light background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height */
+}
+
+/* Container styles */
+h1 {
+    font-size: 2.5em; /* Larger font size for the heading */
+    color: #4CAF50; /* Green color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+p {
+    font-size: 1.2em; /* Slightly larger font size for the paragraph */
+    color: #333; /* Dark color for text */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+/* Link styles */
+a {
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Font size for the link */
+    color: #4CAF50; /* Green color for the link */
+    padding: 10px 20px; /* Padding for the link */
+    border: 2px solid #4CAF50; /* Border to match the link color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Link hover effect */
+a:hover {
+    background-color: #4CAF50; /* Background color on hover */
+    color: white; /* Change text color on hover */
+}

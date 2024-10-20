@@ -1,0 +1,172 @@
+<?php
+global $connection;
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+include_once "../Connection/connection.php";
+include_once "../Function/function.php";
+
+echo "<link rel='stylesheet' href='../style/cart.css?v=" . time() . "'>";
+
+if (!isset($_SESSION['user']['islogin']) || $_SESSION['user']['islogin'] == false) {
+    header("Location: ../login.php");
+}
+
+$user_id = $_SESSION['user']['user_id'];
+$user_name = $_SESSION['user']['user_name'];
+
+$total_items = "SELECT COUNT(*) AS total_items FROM shopping_cart WHERE user_id = '$user_id'";
+$result_total_items = mysqli_query($connection, $total_items);
+
+$num_of_items = mysqli_fetch_assoc($result_total_items)['total_items'];
+
+if (isset($_POST['change_quantity'])) {
+    $flower_id = $_POST['flower_id'];
+    $user_quantity = $_POST['user_quantity'];
+
+    $update = "UPDATE shopping_cart SET quantity='$user_quantity' WHERE user_id='$user_id' AND flower_id='$flower_id'";
+    if (mysqli_query($connection, $update)) {
+        header("Location: ./cart.php");
+    }
+}
+
+if (isset($_POST['delete'])) {
+    $flower_id = $_POST['flower_id'];
+
+    $delete = "DELETE FROM shopping_cart WHERE user_id='$user_id' AND flower_id='$flower_id'";
+
+    if (mysqli_query($connection, $delete)) {
+        header("Location: ./cart.php");
+    }
+}
+
+// show the cart items
+$query = "SELECT * FROM shopping_cart WHERE user_id = '$user_id'";
+$result = mysqli_query($connection, $query);
+
+$total = 0;
+$array = [];
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Flora Vista</title>
+    <link rel="stylesheet" href="../cart/cart.css?v=<?php echo time(); ?>">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="shop.php">Shop</a></li>
+            <li><a href="../offers/offers.html">Special Offers</a></li>
+            <li><a href="../new arrivals/arrivals.html">New Arrivals</a></li>
+            <li><a href="../contact/contact.html">Contact Us</a></li>
+            <li><a href="../subscription/subscription.html">Subscribe</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Your Cart</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $flower_id = $row['flower_id'];
+                $user_quantity = $row['quantity'];
+
+                $img_query = "SELECT * FROM flower_images WHERE flower_id='$flower_id'";
+                $img_result = mysqli_query($connection, $img_query);
+                $dir_path = mysqli_fetch_assoc($img_result)['dir_path'];
+
+                $flower_query = "SELECT * FROM flowers INNER JOIN flower_discounts ON flowers.flower_id=flower_discounts.flower_id WHERE flowers.flower_id = '$flower_id'";
+                $flower_result = mysqli_query($connection, $flower_query);
+                $data = mysqli_fetch_assoc($flower_result);
+
+                $flower_name = $data['flower_name'];
+                $sale_price = $data['sale_price'];
+                $max_quantity = $data['quantity'];
+
+                $items_price = (float)$user_quantity * $sale_price;
+                $discount = 0;
+
+                // Calculate discounts
+                $today_discount = $data['today_dicount'];
+                if (isset($today_discount) && date('Y-m-d') < $data['today_discount_end']) {
+                    $discount += ($items_price * $today_discount / 100);
+                }
+
+                $loyalty_discount = $data['loyalty_discount'];
+                if (isset($_SESSION['user']['loyalty_id']) && isset($loyalty_discount) && date('Y-m-d') < $data['loyalty_discount_end']) {
+                    $discount += ($items_price * $loyalty_discount / 100);
+                }
+
+                $price_off = $data['price_off'];
+                if (isset($price_off) && date('Y-m-d') < $data['price_off_end']) {
+                    $discount += ($items_price * $price_off / 100);
+                }
+
+                $items_total = $items_price - $discount;
+                $total += $items_total;
+
+                echo "<tr>
+                            <td>
+                                <img src='../$dir_path' alt='flower image' width='100' height='100'>
+                                <p>$flower_name</p>
+                            </td>
+                            <td>
+                                <form action='cart.php' method='post'>
+                                    <input type='number' name='user_quantity' min='1' max='$max_quantity' value='$user_quantity' required>
+                                    <input type='hidden' name='flower_id' value='$flower_id'>
+                                    <button type='submit' name='change_quantity'>Change</button>
+                                    <button type='submit' name='delete'>Delete</button>
+                                </form>
+                            </td>
+                            <td>\$$sale_price</td>
+                            <td>\$$items_total</td>
+                        </tr>";
+            }
+        } else {
+            echo "<tr><td colspan='5'>Your cart is empty.</td></tr>";
+        }
+        ?>
+        </tbody>
+    </table>
+
+    <div class="cart-summary">
+        <h2>Cart Summary</h2>
+        <p>Total: $<?php echo number_format($total, 2); ?></p>
+        <?php if ($num_of_items > 0): ?>
+            <form action="../payments/payment.php" method="get">
+                <input type="text" name="address" placeholder="Enter your address" required>
+                <button type="submit">Buy Now</button>
+            </form>
+        <?php endif; ?>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

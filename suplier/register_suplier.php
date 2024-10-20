@@ -1,5 +1,7 @@
-<?php 
+<?php
 
+global $connection;
+ob_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -18,7 +20,7 @@ try {
         $email = user_input($_POST['email']);
         $password = user_input($_POST['password']);
         $mobile = user_input($_POST['mobile']);
-       
+
 
         // Check for validation
         if (empty($username) || empty($email) || empty($password) || empty($mobile)) {
@@ -68,14 +70,14 @@ try {
             $email = mysqli_real_escape_string($connection, $email);
             $password = mysqli_real_escape_string($connection, $password);
             $mobile = mysqli_real_escape_string($connection, $mobile);
-            
+
 
             $query = "INSERT INTO supliers (suplier_username, email, password, mobile) VALUES ('$username', '$email', '$password', '$mobile')";
 
             try {
                 // Insert data into the users table
                 if (mysqli_query($connection, $query)) {
-                    logger("INFO", "register_register : Suplier data inserted successfully");
+                    logger("INFO", "register_suplier.php : Supplier data inserted successfully");
 
                     // If the query executes successfully, redirect to the login page
                     header("Location: login_suplier.php?Register=true&Username=$username");
@@ -84,15 +86,15 @@ try {
                     throw new Exception("Query failed: " . mysqli_error($connection));
                 }
             } catch (Exception $e) {
-                logger("ERROR", "register.php : " . $e->getMessage());
+                logger("ERROR", "register_suplier.php : " . $e->getMessage());
             }
         }
     }
 } catch (Exception $e) {
-    logger("ERROR", "register.php: " . $e->getMessage());
+    logger("ERROR", "register_suplier.php: " . $e->getMessage());
 }
 
- $connection->close();
+$connection->close();
 ?>
 
 <!DOCTYPE html>
@@ -105,30 +107,50 @@ try {
     <link rel="stylesheet" href="../style/register.css">
 </head>
 <body>
-    <div>
-        <h1>Flowers</h1>
-    </div>
-    <div class="container">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
-            <?php 
-                if (count($errors) > 0) {
-                    echo "<div id='error-box'> $errors[0] </div>";
-                }
-            ?>
+<div class="container">
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
+        <?php
+        if (count($errors) > 0) {
+            echo "<div id='error-box'> $errors[0] </div>";
+        }
+        ?>
+
+        <div class="form-box">
+
+            <div class = "formHead">
+                <h1>Create Account</h1>
+            </div>
+
+            <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="Username" required/><br><br>
 
-            <input type="email" name="email" id="email" placeholder="Email" required/><br><br>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="Email" required/>
+            </label><br><br>
 
-            <input type="number" name="mobile" id="mobile" placeholder="Mobile" required/><br><br>
+            <label for="mobile">
+                <input type="number" name="mobile" id="mobile" placeholder="Mobile" required/>
+            </label><br><br>
 
-            <input type="password" name="password" id="password" placeholder="Password" required/><br><br>
+            <label for="password">
+                <input type="password" name="password" id="password" placeholder="Password" required/>
+            </label><br><br>
 
-            
+            <label for="Male">
+                <input type="radio" id="Male" name="gender" value="male"/>Male
+            </label>
+
+            <label for="Female">
+                <input type="radio" id="Female" name="gender" value="female"/>Female
+            </label><br><br>
+
             <button id="submit-btn" type="submit">Register</button><br><br>
 
-        </form>
-    </div>
+        </div>
+    </form>
+
+</div>
 </body>
 </html>

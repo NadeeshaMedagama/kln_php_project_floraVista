@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe - Flora Vista</title>
+
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header or Navigation (Optional) -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="../index.php">Home</a></li>
+      <li><a href="shop.php">Shop</a></li>
+      <li><a href="../offers/offers.html">Special Offers</a></li>
+      <li><a href="../new arrivals/arrivals.html">New Arrivals</a></li>
+      <li><a href="../contact/contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Main content for Subscription -->
+<div class="container">
+  <h1>Subscribe to Our Newsletter</h1>
+
+  <p>Stay updated with our latest offers and news! Please fill out the form below to subscribe.</p>
+
+  <form action="process_subscription.php" method="POST">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <h2>Benefits of Subscribing</h2>
+  <ul>
+    <li>Exclusive promotions and discounts</li>
+    <li>Updates on new flower arrivals</li>
+    <li>Tips and ideas for flower arrangements</li>
+    <li>Special events and announcements</li>
+  </ul><br><br><br>
+</div>
+
+<!-- Footer (Optional) -->
+<footer>
+  <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

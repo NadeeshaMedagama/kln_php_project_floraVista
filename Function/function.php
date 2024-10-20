@@ -1,7 +1,7 @@
-<?php 
+<?php
 
- // Check for the user input data -> remove spaces , slash , specialchars   
- function user_input($data){
+// Check for the user input data -> remove spaces , slash , specialchars
+function user_input($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
@@ -26,9 +26,9 @@ function info_alert($msg){
 }
 
 // alert the error 
-function error_alert($msg): void
-{
+function error_alert($msg){
     echo "<script>window.alert($msg)</script>";
 }
+
 
 ?>

@@ -1,0 +1,126 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ccccb3;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color:  #66ff66;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="hidden"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+button {
+    display: inline-block;
+    background-color: #33ff33; /* Button color */
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+.logout{
+    margin-left: 535px;
+}
+
+/* Section headings */
+h2 {
+    font-size: 1.8rem;
+    color: #7a7a52; /* Headings color */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #7a7a52; /* Headings color */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Loyalty section styling */
+.loyalty-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-left: 4px solid #7bbf6a;
+}
+
+/* Order table */
+.order-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border-left: 4px solid #7bbf6a;
+}
+
+.order-info label {
+    font-weight: bold;
+    color: #555;
+}
+
+.order-info p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.order-info lable {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #555;
+}

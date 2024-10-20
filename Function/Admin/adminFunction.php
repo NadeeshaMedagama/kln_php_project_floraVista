@@ -9,7 +9,7 @@ include_once '../../Logger/logger.php';
 global $connection;
 function get_flowers_categories(){
     global $connection;
-   try{
+    try{
         $query = "SELECT * FROM flowers_category";
         $result = mysqli_query($connection,$query);
         logger("INFO", "get flowers category successfully");
@@ -19,10 +19,10 @@ function get_flowers_categories(){
         }else{
             return null;
         }
-   }catch(Exception $e){
-        logger('ERROR', 'get_flowers_categories function ' . $e->getMessage());   
-        return null; 
-   }
+    }catch(Exception $e){
+        logger('ERROR', 'get_flowers_categories function ' . $e->getMessage());
+        return null;
+    }
 }
 
 ?>

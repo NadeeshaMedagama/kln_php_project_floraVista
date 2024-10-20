@@ -1,0 +1,74 @@
+/* Container that holds all the cards */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap the cards to the next line */
+    justify-content: space-between; /* Add space between cards */
+    gap: 20px; /* Add space between each card */
+    margin: 20px;
+}
+
+/* Each individual card */
+.card {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    width: 300px; /* Fixed width for each card */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Styling for the image inside the card */
+.card img {
+    border-radius: 10px; /* Rounded image corners */
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Heading for the flower name */
+.card h2 {
+    font-size: 22px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Price display */
+.card .price {
+    font-size: 18px;
+    color: #e74c3c; /* Red for the price */
+    margin: 10px 0;
+}
+
+/* Button for adding to cart */
+.card button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Optional: Styling for the discount text */
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.out-of-stock{
+    color: red;
+    font-weight: bold;
+}

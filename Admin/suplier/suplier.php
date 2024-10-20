@@ -8,10 +8,12 @@ include_once  '../../Function/function.php';
 include_once  '../../Connection/connection.php';
 
 // admin protection page
-if(!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true) {
 
-    header(header: 'Location ../admin.php');
+if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true){
+
+    header("Location: ../admin.php");
 }
+
 
 // verify the suplier sumbit the button
 if (isset($_POST['submit_verify'])){
@@ -35,7 +37,7 @@ if (isset($_POST['submit_verify'])){
 echo "<div id='supplier-verify'>";
 
 if(cookie_checker_admin()){
-    
+
     // Get the suplier details in db
     try{
 
@@ -47,7 +49,7 @@ if(cookie_checker_admin()){
         logger("INFO", "get the supplier data in db successfully");
 
         // Create a table
-        echo "<table id='table-supplier-verify'>
+        echo "<table id='table-supplier-verify border='1'>
                 <th>Suplier id</th>
                 <th>Username</th>
                 <th>Email</th>

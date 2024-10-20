@@ -553,3 +553,59 @@
 [2024-10-14 17:41:30]  [WARNING] - nadeeshamedagama1234@gmail.com or 9900 is already taken
 [2024-10-14 17:42:10]  [WARNING] - nadeeshamedagama1234@gmail.com or 9900 is already taken
 [2024-10-14 17:45:03]  [WARNING] - nadeeshamedagama1234@gmail.com or 9900 is already taken
+[2024-10-20 08:47:50]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 08:48:26]  [WARNING] - kamal@gmail.com or 0777777777 is already taken
+[2024-10-20 08:48:26]  [INFO] - register.php : User data inserted successfully
+[2024-10-20 08:48:40]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 08:48:40]  [INFO] - User : kamal Login Successfully. Redirect to the Index page.
+[2024-10-20 12:22:38]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 12:22:38]  [INFO] - User : kamal Login Successfully. Redirect to the Index page.
+[2024-10-20 12:40:57]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 12:40:57]  [INFO] - User : kamal Login Successfully. Redirect to the Index page.
+[2024-10-20 15:56:31]  [WARNING] - saman@gmail.com or 0888888888 is already taken
+[2024-10-20 15:56:31]  [INFO] - register.php : User data inserted successfully
+[2024-10-20 15:56:53]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 15:56:53]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
+[2024-10-20 16:33:56]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 16:33:56]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
+[2024-10-20 16:49:33]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 16:49:33]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
+[2024-10-20 16:59:45]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 16:59:45]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
+[2024-10-20 19:42:21]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:43:00]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:44:48]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:45:10]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:45:38]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:46:11]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:48:10]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:48:10]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
+[2024-10-20 19:50:37]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:50:37]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
+[2024-10-20 19:54:44]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:54:44]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
+[2024-10-20 19:55:43]  [WARNING] - amal@gmail.com or 1234567890 is already taken
+[2024-10-20 19:55:43]  [INFO] - register.php : User data inserted successfully
+[2024-10-20 19:56:16]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 19:56:16]  [INFO] - User : amal Login Successfully. Redirect to the Index page.
+[2024-10-20 20:11:26]  [WARNING] - amal@gmail.com or 1234567890 is already taken
+[2024-10-20 20:11:26]  [INFO] - register_register : Suplier data inserted successfully
+[2024-10-20 20:12:08]  [INFO] - retrieve data from users table successfully
+[2024-10-20 20:12:08]  [WARNING] - suplier login invalid username or password
+[2024-10-20 20:12:23]  [WARNING] - amal@gmail.com or 1234567890 is already taken
+[2024-10-20 20:12:36]  [WARNING] - amal123@gmail.com or 3434567890 is already taken
+[2024-10-20 20:12:36]  [ERROR] - register.php : Out of range value for column 'mobile' at row 1
+[2024-10-20 20:12:46]  [WARNING] - amal123@gmail.com or 3434567890 is already taken
+[2024-10-20 20:12:46]  [ERROR] - register.php : Out of range value for column 'mobile' at row 1
+[2024-10-20 20:13:02]  [WARNING] - amal1234@gmail.com or 3454567890 is already taken
+[2024-10-20 20:13:02]  [ERROR] - register.php : Out of range value for column 'mobile' at row 1
+[2024-10-20 20:13:35]  [WARNING] - amalka@gmail.com or 3456567890 is already taken
+[2024-10-20 20:13:35]  [ERROR] - register.php : Out of range value for column 'mobile' at row 1
+[2024-10-20 20:20:38]  [WARNING] - bimal@gmail.com or 2345678901 is already taken
+[2024-10-20 20:20:38]  [ERROR] - register.php : Out of range value for column 'mobile' at row 1
+[2024-10-20 20:21:12]  [WARNING] - bimal@gmail.com or 2345678901 is already taken
+[2024-10-20 20:21:12]  [ERROR] - register.php : Out of range value for column 'mobile' at row 1
+[2024-10-20 20:37:44]  [WARNING] - bimal@gmail.com or 2345678901 is already taken
+[2024-10-20 20:37:44]  [ERROR] - register_suplier.php : Out of range value for column 'mobile' at row 1
+[2024-10-20 20:40:52]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 20:40:52]  [INFO] - User : saman Login Successfully. Redirect to the Index page.

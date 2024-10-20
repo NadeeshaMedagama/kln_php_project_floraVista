@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Flora Vista</title>
+
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<!-- Header or Navigation (Optional) -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.php">Home</a></li>
+            <li><a href="shop.php">Shop</a></li>
+            <li><a href="../offers/offers.html">Special Offers</a></li>
+            <li><a href="../new arrivals/arrivals.html">New Arrivals</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main content for Contact Us -->
+<div class="container">
+    <h1>Contact Us</h1>
+
+    <p>We would love to hear from you! Please fill out the form below to get in touch with us.</p>
+
+    <form action="../profile.php" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <h2>Contact Information</h2>
+    <p>If you prefer, you can reach us via email or phone:</p>
+    <p><strong>Email:</strong> support@floravista.com</p>
+    <p><strong>Phone:</strong> +94 (011) 123-4567</p>
+
+    <h2>Follow Us</h2>
+    <p>Stay connected with us on social media!</p>
+    <ul class="social-media">
+        <li><a href="https://www.facebook.com/FloraVista" target="_blank"><img src = "image/img.png" width = "30px" height="30px"></a></li>
+        <li><a href="https://www.instagram.com/FloraVista" target="_blank"><img src = "image/img_1.png" width = "30px" height="30px"></a></li>
+        <li><a href="https://www.twitter.com/FloraVista" target="_blank"><img src = "image/img_2.png" width = "30px" height="30px"></a></li>
+    </ul><br><br><br>
+</div>
+
+<!-- Footer (Optional) -->
+<footer>
+    <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

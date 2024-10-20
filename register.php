@@ -95,7 +95,7 @@ try {
     logger("ERROR", "register.php: " . $e->getMessage());
 }
 
- $connection->close();
+$connection->close();
 ?>
 
 <!DOCTYPE html>
@@ -110,19 +110,19 @@ try {
 <body>
 
 
-    <div class="container">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+<div class="container">
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 
-            <?php 
-                if (count($errors) > 0) {
-                    echo "<div id='error-box'> $errors[0] </div>";
-                }
-            ?>
-            <div class="form-box">
-                <div class = "formHead">
-                    <h1>Create Account</h1>
-                </div>
-                    <label for="username"></label>
+        <?php
+        if (count($errors) > 0) {
+            echo "<div id='error-box'> $errors[0] </div>";
+        }
+        ?>
+        <div class="form-box">
+            <div class = "formHead">
+                <h1>Create Account</h1>
+            </div>
+            <label for="username"></label>
             <input type="text" name="username" id="username" placeholder="Username" required/><br><br>
 
             <label for="email">
@@ -147,9 +147,9 @@ try {
 
             <button id="submit-btn" type="submit">Register</button><br><br>
 
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 
 </body>
 </html>
