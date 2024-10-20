@@ -128,6 +128,14 @@ CREATE TABLE subscriptions (
                                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE contact_messages (
+                                  id INT AUTO_INCREMENT PRIMARY KEY,
+                                  name VARCHAR(100) NOT NULL,
+                                  email VARCHAR(100) NOT NULL,
+                                  message TEXT NOT NULL,
+                                  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 ALTER TABLE orders ADD purchase_price FLOAT;
 
 ALTER TABLE orders ADD order_sale_price FLOAT DEFAULT 0;

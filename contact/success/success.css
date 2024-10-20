@@ -1,0 +1,51 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccccb3; /* Light background color */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center the text */
+    padding: 50px; /* Add padding around the body */
+}
+
+.container {
+    max-width: 600px; /* Max width for the content */
+    margin: 0 auto; /* Center the container */
+    background-color: #f5f5ef; /* White background for the content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 30px; /* Padding inside the container */
+    border: 2px solid black;
+}
+
+h1 {
+    font-size: 2em; /* Font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #28a745; /* Green color for the heading */
+}
+
+p {
+    font-size: 1.2em; /* Font size for the paragraph */
+    margin-bottom: 30px; /* Space below the paragraph */
+}
+
+.home-link {
+    display: inline-block; /* Inline block to allow padding */
+    margin-top: 20px; /* Space above the link */
+    padding: 10px 20px; /* Padding inside the link */
+    background-color: #28a745; /* Green background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+    border: 1px solid black;
+}
+
+.home-link:hover {
+    background-color: #218838; /* Darker green on hover */
+}

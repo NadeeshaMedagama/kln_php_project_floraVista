@@ -609,3 +609,5 @@
 [2024-10-20 20:37:44]  [ERROR] - register_suplier.php : Out of range value for column 'mobile' at row 1
 [2024-10-20 20:40:52]  [INFO] - Retrieve data from Users table Successfully
 [2024-10-20 20:40:52]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
+[2024-10-20 21:02:27]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-20 21:02:27]  [INFO] - User : saman Login Successfully. Redirect to the Index page.
