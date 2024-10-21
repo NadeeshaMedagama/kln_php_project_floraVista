@@ -1,5 +1,6 @@
 <?php
 
+global $connection;
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -11,10 +12,24 @@ if(!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] ==fals
     header("Location: ../admin.php");
 }
 
-echo "<div id='conatiner'>
-            <h3>Accepted Delivered Orders</h3>";
+?>
 
-$query = "SELECT * FROM orders  WHERE isAccept_suplier=true  AND isDelivered=true ORDER BY delivered_date DESC";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accepted Delivered Orders</title>
+    <link rel="stylesheet" href="deliverOrdersHistory.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+<div id="container">
+    <h3>Accepted Delivered Orders</h3>
+
+    <?php
+
+$query = "SELECT * FROM orders  WHERE isAccept_supplier=true  AND isDelivered=true ORDER BY delivered_date DESC";
 
 $result = mysqli_query($connection,$query);
 
@@ -55,7 +70,7 @@ if(mysqli_num_rows($result)>0){
         $flower_data= mysqli_fetch_assoc($retrieve_flower_result);
         $flower_name = $flower_data['flower_name'];
 
-        $suplier_name = mysqli_fetch_assoc($retrieve_suplier_result)['suplier_username'];
+        $suplier_name = mysqli_fetch_assoc($retrieve_suplier_result)['supplier_username'];
 
         echo "<tr>
                                     <td>$order_id</td>

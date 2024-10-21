@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ccccb3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh; /* Full viewport height for centering */
+    display: flex; /* Use Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.container {
+    width: 90%; /* Set a maximum width */
+    max-width: 800px; /* Prevent it from being too wide */
+    padding: 20px;
+    background-color: #66ff66; /* White background for the content box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #7a7a52; /* Headings color */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: #7a7a52; /* Headings color */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+.nav-links {
+    text-align: center; /* Center the navigation links */
+    margin-bottom: 20px; /* Space below the links */
+}
+
+a {
+    display: inline-block;
+    background-color: #33ff33; /* Button color */
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #00cc00;
+}
+
+.logout-form {
+    text-align: center; /* Center the logout button */
+    margin-top: 20px; /* Space above the logout button */
+}
+
+button {
+    background-color: #f44336; /* Red for logout button */
+    display: inline-block;
+    color: black;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%; /* Full width of the container */
+    margin: 20px 0; /* Margin above and below the table */
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: center;
+    padding: 12px;
+}
+
+th {
+    background-color: #4CAF50; /* Green for table header */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey for even rows */
+}
+
+tr:hover {
+    background-color: #ddd; /* Grey for row hover */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    a, button {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust title size for small screens */
+    }
+}

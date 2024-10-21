@@ -68,12 +68,16 @@ CREATE TABLE `categories` (
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 INSERT INTO `categories` VALUES
-                             (1,'romance'),
-                             (2,'room decaration'),
-                             (3,'birthday gift'),
-                             (4,'garden'),
-                             (5,'decaretions'),
-                             (6,'wedding');
+                             (1,'Romance'),
+                             (2,'Room Decoration'),
+                             (3,'Birthday Gifts'),
+                             (4,'Garden'),
+                             (5,'Decorations'),
+                             (6,'Wedding'),
+                             (7,'Funerals'),
+                             (8,'Congratulations'),
+                             (9,'Festivals');
+
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,15 +107,15 @@ LOCK TABLES `comments` WRITE;
 /*!40000 ALTER TABLE `comments` DISABLE KEYS */;
 INSERT INTO `comments` VALUES
                            ('670f8e5d133e3',3,'wow'),
-                           ('670f8e5d133e3',3,'tbgvihyv'),
-                           ('670f8e5d133e3',3,'ergh'),
-                           ('670f8e5d133e3',3,'werthwerh'),
-                           ('670f8e5d133e3',3,'rtyutyu'),
-                           ('670f525cb03f3',3,'sdfh'),
-                           ('670f525cb03f3',3,'sdfgdzfhsdfh'),
-                           ('670f525cb03f3',3,'asdfhdafsgasg'),
-                           ('670f8e72548f2',3,'dhjthgj'),
-                           ('670f8e72548f2',3,'fsghsdgfhdfh');
+                           ('670f8e5d133e3',3,'beautiful'),
+                           ('670f8e5d133e3',3,'nice'),
+                           ('670f8e5d133e3',3,'awesome'),
+                           ('670f8e5d133e3',3,'cute'),
+                           ('670f525cb03f3',3,'superb'),
+                           ('670f525cb03f3',3,'colourful'),
+                           ('670f525cb03f3',3,'incredible'),
+                           ('670f8e72548f2',3,'nice'),
+                           ('670f8e72548f2',3,'woww');
 /*!40000 ALTER TABLE `comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -187,7 +191,7 @@ DROP TABLE IF EXISTS `flower_discounts`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `flower_discounts` (
                                     `flower_id` varchar(100) DEFAULT NULL,
-                                    `today_dicount` int(3) DEFAULT NULL,
+                                    `today_discount` int(3) DEFAULT NULL,
                                     `loyalty_discount` int(3) DEFAULT NULL,
                                     `price_off` int(5) DEFAULT NULL,
                                     `today_discount_end` date DEFAULT NULL,
@@ -284,7 +288,7 @@ DROP TABLE IF EXISTS `loyalty_users`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `loyalty_users` (
                                  `loyalty_id` varchar(36) NOT NULL,
-                                 `points_blance` int(5) DEFAULT 0,
+                                 `points_balance` int(5) DEFAULT 0,
                                  `user_id` int(10) NOT NULL,
                                  PRIMARY KEY (`user_id`,`loyalty_id`),
                                  CONSTRAINT `loyalty_users_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
@@ -311,12 +315,12 @@ DROP TABLE IF EXISTS `orders`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
                           `order_id` int(10) NOT NULL AUTO_INCREMENT,
-                          `order_date` date DEFAULT curdate(),
+                          `order_date` date DEFAULT NULL,
                           `flower_id` varchar(100) DEFAULT NULL,
                           `quantity` int(5) DEFAULT NULL,
                           `suplier_id` int(10) DEFAULT NULL,
-                          `isAccept_suplier` tinyint(1) DEFAULT 0,
-                          `accept_suplier_date` date DEFAULT NULL,
+                          `isAccept_supplier` tinyint(1) DEFAULT 0,
+                          `accept_supplier_date` date DEFAULT NULL,
                           `delivered_date` date DEFAULT NULL,
                           `isDelivered` tinyint(1) DEFAULT 0,
                           `purchase_price` float DEFAULT NULL,
@@ -412,7 +416,7 @@ DROP TABLE IF EXISTS `supliers`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `supliers` (
                             `suplier_id` int(10) NOT NULL AUTO_INCREMENT,
-                            `suplier_username` varchar(20) NOT NULL,
+                            `supplier_username` varchar(20) NOT NULL,
                             `email` varchar(40) NOT NULL,
                             `password` varchar(80) NOT NULL,
                             `mobile` int(10) NOT NULL,

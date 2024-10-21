@@ -1,0 +1,191 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid black;
+}
+
+/* Specific button width */
+button[name="add_category"] {
+    width: 100px;
+    padding: 10px 5px;  /* Adjust padding if necessary */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#category_name{
+    width: 400px;
+}
+
+.cat{
+    margin-left: 15px;
+    font-weight: bold;
+
+}
+
+#flower_upload_form{
+    margin-left: 15px;
+}
+
+#flowers-categories{
+    margin-left: 15px;
+}
+
+button[name="add_category"]:hover {
+    background-color: #218838;
+}
+
+button[name="flower_upload"] {
+    width: 100px;
+    padding: 10px 5px;  /* Adjust padding if necessary */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+}
+
+button[name="flower_upload"]:hover {
+    background-color: #218838;
+}
+
+button[name="search_category"] {
+    width: 100px;
+    padding: 10px 5px;  /* Adjust padding if necessary */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+}
+
+button[name="search_category"]:hover {
+    background-color: #218838;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: #0056b3;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-bottom: 15px;
+
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea, form select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+.add {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#category_name{
+    margin-left: 10px;
+}
+
+.add:hover {
+    background-color: #218838;
+}
+
+/* Add Category Form */
+.add-category-form {
+    margin-top: 20px;
+}

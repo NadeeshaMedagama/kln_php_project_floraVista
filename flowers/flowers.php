@@ -8,7 +8,7 @@ ini_set('display_errors', 1);
 include_once "../Connection/connection.php";
 include_once "../Function/function.php";
 
-echo "<link rel='stylesheet' href='../style/flowers.css?v=". time()."'>";
+echo "<link rel='stylesheet' href='style./flowers.css?v=". time()."'>";
 
 if(isset($_POST['add_cart'])){
     if(!isset($_SESSION['user']['islogin']) ||  $_SESSION['user']['islogin'] == false){
@@ -52,7 +52,7 @@ if(isset($_POST['buy_now'])){
     $data =  mysqli_fetch_assoc($flower_result);
 
 
-    $today_discount =  $data['today_dicount'];
+    $today_discount =  $data['today_discount'];
     $loyalty_discount =  $data['loyalty_discount'];
     $price_off = $data['price_off'];
     $today_discount_end = $data['today_discount_end'];

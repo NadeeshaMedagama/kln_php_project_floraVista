@@ -1,5 +1,6 @@
 <?php
 
+global $connection;
 session_start();
 error_reporting(E_ALL);
 ini_set("display_errors",1);
@@ -11,9 +12,21 @@ include_once  '../../Connection/connection.php';
 
 if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true){
 
-    header("Location: ../admin.php");
+    header("Location: ../Admin.php");
 }
+?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Suppliers</title>
+    <link rel="stylesheet" href="supplier.css"> <!-- Update the path as needed -->
+</head>
+<body>
+
+<?php
 
 // verify the suplier sumbit the button
 if (isset($_POST['submit_verify'])){
@@ -38,10 +51,10 @@ echo "<div id='supplier-verify'>";
 
 if(cookie_checker_admin()){
 
-    // Get the suplier details in db
+    // Get the supplier details in db
     try{
 
-        echo "<h4>suplier verify</h4>";
+        echo "<h1>Supplier Verify</h1><br>";
 
         $query = "SELECT * FROM supliers WHERE verify=false ;";
 
@@ -50,7 +63,7 @@ if(cookie_checker_admin()){
 
         // Create a table
         echo "<table id='table-supplier-verify border='1'>
-                <th>Suplier id</th>
+                <th>Supplier id</th>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Mobile</th>
@@ -61,7 +74,7 @@ if(cookie_checker_admin()){
         while($row = mysqli_fetch_assoc($result)){
             // Display the result
             $suplier_id = $row["suplier_id"];
-            $suplier_username = $row["suplier_username"];
+            $suplier_username = $row["supplier_username"];
             $email = $row["email"];
             $mobile = $row["mobile"];
 

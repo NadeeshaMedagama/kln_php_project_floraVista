@@ -1,4 +1,5 @@
 <?php
+global $connection;
 session_start();
 error_reporting(E_ALL);
 ini_set("display_errors",1);
@@ -60,6 +61,15 @@ if(isset($_GET['flower_id'])){
         $sale_price = $data['sale_price'];
         $description = $data['description'];
         $dir_path = $data['dir_path'];
+
+        echo "<head>
+                <meta charset='UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <title>Flower Information Update</title>
+                <link rel='stylesheet' href='../css/styles.css'> <!-- Link to your CSS file -->
+              </head>";
+
+        echo "<body>";
 
         echo "<div id='flower_image'>
                      <img src='../../$dir_path' alt='no image found' width='300px' height='300px'/> 

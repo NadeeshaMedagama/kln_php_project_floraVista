@@ -11,6 +11,15 @@ body {
     height: 100vh; /* Full height */
 }
 
+.content-box {
+    padding: 40px; /* Padding inside the box */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 10px; /* Rounded corners for the box */
+    background-color: #f5f5ef; /* White background for the box */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center all text inside the box */
+}
+
 /* Container styles */
 h1 {
     font-size: 2.5em; /* Larger font size for the heading */
@@ -33,6 +42,7 @@ a {
     border: 2px solid #4CAF50; /* Border to match the link color */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    font-weight: bold;
 }
 
 /* Link hover effect */

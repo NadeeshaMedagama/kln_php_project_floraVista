@@ -1,5 +1,6 @@
 <?php
 
+global $connection;
 session_start();
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
@@ -11,8 +12,26 @@ if(! isset($_SESSION["admin"]["islogin"]) || $_SESSION["admin"]["islogin"] != tr
     header("Location: ../admin.php");
 }
 
-echo "<a href='delivered_orders.php'>Suplier Deliverd Orders</a>
-          <a href='delivered_orders_history.php'>Suplier Deliverd Orders History</a>";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders Management</title>
+    <link rel="stylesheet" href="orders.css"> <!-- Adjust the path if needed -->
+</head>
+<body>
+
+<?php
+
+echo "
+<div class='button-container'>
+    <a class='button' href='delivered_orders.php'>Supplier Delivered Orders</a>
+    <a class='button' href='delivered_orders_history.php'>Supplier Delivered Orders History</a>
+</div>
+";
 
 if (isset($_POST['request_order'])){
     $flower_id = user_input($_POST['flower_id']);
@@ -42,7 +61,7 @@ if(isset($_POST['delete_order'])){
     }
 }
 
-echo "<h3> Request Order To Suplier </h3>";
+echo "<h2> Request Order To Suplier </h2>";
 
 echo "<div>
         <form action='orders.php' method='post'>
@@ -88,19 +107,19 @@ echo "</select> &nbsp;&nbsp;
 
 $query = "SELECT order_id, flower_id, quantity, order_date, suplier_id
                   FROM orders
-                  WHERE orders.isAccept_suplier = false";
+                  WHERE orders.isAccept_supplier = false";
 
 $result_set = mysqli_query($connection,$query);
 
 echo "<div id='pending_orders'>
-                <h3>Pending Order Requests</h3>
+                <h2>Pending Order Requests</h2>
                 <table border='1'>
                     <tr>
                         <th>Order ID</th>
                         <th>Flower Name</th>
                         <th>Quantity</th>
                         <th>Order Date</th>
-                        <th>Suplier</th>
+                        <th>Supplier</th>
                         <th></th>
                     
                     </tr>";
@@ -115,11 +134,11 @@ if(mysqli_num_rows($result_set)>0){
         $retrieve_flower = "SELECT flower_name FROM  flowers WHERE flower_id = '$flower_id'";
         $result_set_flower = mysqli_query($connection, $retrieve_flower);
 
-        $retrieve_suplier = "SELECT suplier_username FROM   supliers WHERE suplier_id = '$suplier_id'";
+        $retrieve_suplier = "SELECT supplier_username FROM   supliers WHERE suplier_id = '$suplier_id'";
         $result_set_suplier = mysqli_query($connection, $retrieve_suplier);
 
         $flower_name = mysqli_fetch_assoc($result_set_flower)['flower_name'];
-        $suplier_name = mysqli_fetch_assoc($result_set_suplier)['suplier_username'];
+        $suplier_name = mysqli_fetch_assoc($result_set_suplier)['supplier_username'];
 
         echo "
                 <tr>

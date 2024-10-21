@@ -9,6 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #99c2ff;
     color: #333;
+    border: 2px solid black;
 }
 
 h2{
@@ -71,7 +72,8 @@ nav ul li a {
 }
 
 .product-item img {
-    width: 100%; /* Responsive images */
+    width: auto;
+    height: 200px; /* Responsive images */
     border-radius: 5px;
 }
 
