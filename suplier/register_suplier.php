@@ -10,19 +10,17 @@ include_once __DIR__ . '/../Connection/connection.php';
 
 try {
 
-    // Create an error array
+
     $errors = array();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        // Get the user input details
         $username = user_input($_POST['username']);
         $email = user_input($_POST['email']);
         $password = user_input($_POST['password']);
         $mobile = user_input($_POST['mobile']);
 
 
-        // Check for validation
         if (empty($username) || empty($email) || empty($password) || empty($mobile)) {
 
             $errors[] = 'All fields are required';
@@ -40,7 +38,6 @@ try {
             $errors[] = "Username or password is too short";
         }
 
-        // Check email or mobile is taken
         try{
             $email = mysqli_real_escape_string($connection,$email);
             $mobile =  mysqli_real_escape_string($connection,$mobile);
@@ -58,14 +55,12 @@ try {
             logger("ERROR", $e->getMessage());
         }
 
-        // Check for no errors before inserting data into the database
         if (count($errors) == 0) {
 
-            // Password hash to sha1 algorithm
+
             $password = sha1($password);
 
 
-            //  Void for the sql injection
             $username = mysqli_real_escape_string($connection, $username);
             $email = mysqli_real_escape_string($connection, $email);
             $password = mysqli_real_escape_string($connection, $password);
@@ -75,11 +70,11 @@ try {
             $query = "INSERT INTO supliers (suplier_username, email, password, mobile) VALUES ('$username', '$email', '$password', '$mobile')";
 
             try {
-                // Insert data into the users table
+
                 if (mysqli_query($connection, $query)) {
                     logger("INFO", "register_suplier.php : Supplier data inserted successfully");
 
-                    // If the query executes successfully, redirect to the login page
+
                     header("Location: login_suplier.php?Register=true&Username=$username");
                     exit();
                 } else {

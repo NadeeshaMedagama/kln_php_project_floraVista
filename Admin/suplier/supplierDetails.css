@@ -1,49 +1,41 @@
-/* styles.css */
-
-/* General styles */
 body {
-    font-family: Arial, sans-serif; /* Clean and modern font */
-    background-color: #ccccb3; /* Light background color */
-    margin: 0; /* Remove default margin */
-    padding: 20px; /* Add padding to the body */
+    font-family: Arial, sans-serif;
+    background-color: #ccccb3;
+    margin: 0;
+    padding: 20px;
     border: 2px solid black;
 }
 
-/* Container for suppliers */
 .container {
-    max-width: 800px; /* Set max width for the container */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Inner padding */
-    background-color: #f5f5ef; /* White background for the container */
-    border: 1px solid #ccc; /* Border around the container */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5ef;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Table styling */
 table {
-    width: 100%; /* Full width */
-    border-collapse: collapse; /* Collapse borders */
-    margin-top: 20px; /* Space above the table */
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-/* Table header styling */
 th {
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    padding: 10px; /* Padding for header cells */
-    text-align: left; /* Align text to the left */
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: left;
     font-size: 18px;
 }
 
-/* Table cell styling */
 td {
-    border: 1px solid #dee2e6; /* Border for cells */
-    padding: 10px; /* Padding for cells */
+    border: 1px solid #dee2e6;
+    padding: 10px;
 }
 
-/* Heading styling */
 h3 {
-    color: #333; /* Dark color for the heading */
-    margin-bottom: 20px; /* Space below the heading */
+    color: #333;
+    margin-bottom: 20px;
 }

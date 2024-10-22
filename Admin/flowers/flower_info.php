@@ -66,7 +66,7 @@ if(isset($_GET['flower_id'])){
                 <meta charset='UTF-8'>
                 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                 <title>Flower Information Update</title>
-                <link rel='stylesheet' href='../css/styles.css'> <!-- Link to your CSS file -->
+                <link rel='stylesheet' href='flowersInfo.css'> 
               </head>";
 
         echo "<body>";
@@ -92,7 +92,9 @@ if(isset($_GET['flower_id'])){
                             <lable>Description : </lable><br/>
                             <textarea name='description' id='description' placeholder='Description' required/>$description</textarea><br/><br/>
 
-                            <button type='submit' name='update_flower'>Update</button>
+                            <button type='submit' name='update_flower'>Update</button><br><br>
+                            <a href='flower_search.php' class='button'>Back to Search Page</a>
+
                         </form>
                   <div>";
 

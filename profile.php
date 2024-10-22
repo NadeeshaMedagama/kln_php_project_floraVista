@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
 
-    <!-- Link to the external CSS file -->
+
     <link rel="stylesheet" href="/style/profile.css">
 </head>
 <body>
@@ -65,12 +65,12 @@ echo "<form action='profile.php' method='post' >
     
           </form>";
 
-    // Handle logout
+
     if (isset($_POST['logout'])) {
         session_unset();
         session_destroy();
         header("Location: Admin/home/home.php");
-        exit(); // Make sure to exit after header redirection
+        exit();
     }
 
 if(isset($_SESSION['user']['loyalty_id']) && isset($_SESSION['user']['points_blance'])){
@@ -104,7 +104,6 @@ if(mysqli_num_rows($result)>0){
 
 </div>
 
-<!-- Add a footer or any other page components if needed -->
 
 </body>
 </html>

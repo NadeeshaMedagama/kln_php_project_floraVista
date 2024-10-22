@@ -8,7 +8,6 @@ ini_set("display_errors", 1);
 include_once '../../Function/function.php';
 include_once '../../Connection/connection.php';
 
-// Admin protection page
 if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true) {
     header("Location: ../admin.php");
 }
@@ -26,11 +25,11 @@ echo "<head>
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Remove Loyalty Customers</title>
-        <link rel='stylesheet' href='remove.css'> <!-- Link to your CSS file -->
+        <link rel='stylesheet' href='remove.css'> 
       </head>";
 
 echo "<body>";
-echo "<div class='container'>"; // Start the container for styling
+echo "<div class='container'>";
 echo "<h2>Remove Loyalty Customers</h2>
         <table>
             <tr>
@@ -68,7 +67,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 echo "</table>";
-echo "</div>"; // End the container
+echo "</div>";
 echo "</body>";
 
 ?>

@@ -64,20 +64,19 @@ h1{
 }
 
 #error-box {
-    background-color: #ff3333; /* Light red background */
-    color: black; /* Dark red text color */
-    border: 2px solid black; /* Border color to match background */
-    padding: 15px; /* Space inside the box */
-    border-radius: 5px; /* Rounded corners */
-    margin: 20px 0; /* Space above and below the box */
-    font-family: Arial, sans-serif; /* Font style */
-    font-size: 1.3em; /* Slightly larger text */
-    animation: fadeIn 0.5s; /* Fade-in effect on display */
+    background-color: #ff3333;
+    color: black;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 1.3em;
+    animation: fadeIn 0.5s;
     font-weight: bold;
     cursor: not-allowed;
 }
 
-/* Animation for fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -87,9 +86,8 @@ h1{
     }
 }
 
-/* Additional styling for better readability */
 #error-box p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 

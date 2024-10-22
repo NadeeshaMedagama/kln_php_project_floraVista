@@ -7,7 +7,6 @@ ini_set("display_errors", 1);
 include_once "../../Connection/connection.php";
 include_once "../../Function/function.php";
 
-// Handle logout
 if (isset($_POST['logout'])) {
     session_unset();
     session_destroy();
@@ -15,14 +14,11 @@ if (isset($_POST['logout'])) {
     exit();
 }
 
-// Check if the user is logged in
 $isLoggedIn = isset($_SESSION['user']) && $_SESSION['user']['islogin'] == true;
 
-// Retrieve categories
 $category_q = "SELECT * FROM categories";
 $category_r = mysqli_query($connection, $category_q);
 
-// Handle adding items to the cart
 if (isset($_POST['add_cart'])) {
     if (!$isLoggedIn) {
         header("Location: login.php");
@@ -47,7 +43,6 @@ if (isset($_POST['add_cart'])) {
     }
 }
 
-// Get total items in cart
 $total_items = 0;
 if ($isLoggedIn) {
     $user_id = $_SESSION['user']['user_id'];
@@ -76,7 +71,6 @@ if ($isLoggedIn) {
         $query = "SELECT flowers.flower_id,flower_name,sale_price,quantity,dir_path FROM flowers
         INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id";
 
-        // Check if the search button is pressed and modify query
         if (isset($_GET['search_btn'])) {
             $search = user_input($_GET['search']);
             $query = "SELECT flowers.flower_id,flower_name,sale_price,quantity,dir_path
@@ -85,7 +79,6 @@ if ($isLoggedIn) {
         WHERE flower_name LIKE '%$search%'";
         }
 
-        // Check if a category is selected and modify query
         if (isset($_GET['category_id'])) {
             $category_id = user_input($_GET['category_id']);
             $query = "SELECT flowers.flower_id,flower_name,sale_price,quantity,dir_path
@@ -96,10 +89,10 @@ if ($isLoggedIn) {
         WHERE category_id = '$category_id')";
         }
 
-        // Execute the query
+
         $result = mysqli_query($connection, $query);
 
-        // Display the search form
+
         echo "
         <form action='' method='get' >
             <input type='text' name='search' placeholder='Search for anything...' class='search-bar' value='" . (isset($_GET['search']) ? $_GET['search'] : '') . "'>
@@ -107,9 +100,9 @@ if ($isLoggedIn) {
         </form>
         ";
 
-        // Fetch and display search results
+
         if (isset($_GET['search_btn'])) {
-            // Fetch and display search results if found
+
             if ($result && mysqli_num_rows($result) > 0) {
                 echo "<ul>";
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -117,7 +110,6 @@ if ($isLoggedIn) {
                 }
                 echo "</ul>";
             } else {
-                // Display "No results found" only if a search has been made and no matches are found
                 echo "<script>alert('No results found.');</script>";
             }
         }
@@ -170,7 +162,7 @@ if ($isLoggedIn) {
 </div>
 
 <script>
-    // Image slideshow script
+
     const images = ['style/banners/image1.png',
         'style/banners/image2.png',
         'style/banners/image3.png',
@@ -217,6 +209,19 @@ if ($isLoggedIn) {
         updateDots();
     };
 </script>
+
+<footer>
+    <div class="social-links">
+        <ul>
+            <li><a href="http://www.facebook.com"><img src="../../icons/img.png" alt="Facebook" class="social-icon"></a></li>
+            <li><a href="http://www.instagram.com"><img src="../../icons/img_1.png" alt="Instagram" class="social-icon"></a></li>
+            <li><a href="http://www.tikitok.com"><img src="../../icons/img_2.png" alt="TikTok" class="social-icon"></a></li>
+            <li><a href="http://www.youtube.com"><img src="../../icons/img_3.png" alt="YouTube" class="social-icon"></a></li>
+            <li><a href="http://www.twitter.com"><img src="../../icons/img_4.png" alt="Twitter" class="social-icon"></a></li>
+        </ul>
+    </div>
+    <p class="footer-text">©2024 Flora Vista, All rights reserved. Designed by <a href="#">Dev Team</a></p>
+</footer>
 
 </body>
 </html>

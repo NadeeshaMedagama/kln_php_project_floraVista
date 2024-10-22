@@ -1,73 +1,64 @@
-/* styles.css */
-
-/* General styles */
 body {
-    font-family: Arial, sans-serif; /* Set a clean font */
-    background-color: #ccccb3; /* Light background color */
+    font-family: Arial, sans-serif;
+    background-color: #ccccb3;
     margin-top: 10px;
-    padding: 20px; /* Add some padding */
+    padding: 20px;
+    border: 2px solid black;
 }
 
-/* Container for the search form */
 div {
-    margin-bottom: 20px; /* Space below each div */
+    margin-bottom: 20px;
 }
 
-/* Styles for the search form */
 form {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the form */
+    display: flex;
+    justify-content: center;
 }
 
-/* Input field styles */
 input[type="text"] {
-    padding: 10px; /* Add padding */
-    font-size: 16px; /* Set font size */
-    border: 1px solid #ced4da; /* Border style */
-    border-radius: 4px; /* Rounded corners */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
 }
 
-/* Button styles */
 button {
-    padding: 10px 15px; /* Padding for the button */
-    font-size: 16px; /* Set font size */
-    background-color: #007bff; /* Blue background */
-    color: white; /* White text */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    margin-left: 10px; /* Space between input and button */
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
 }
 
-/* Button hover effect */
 button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
-/* Styles for flower items */
 .flower-item {
-    display: inline-block; /* Inline-block to place items in a row */
-    text-align: center; /* Center-align text */
-    margin: 15px; /* Space around flower items */
-    background-color: white; /* White background for each item */
-    border: 1px solid #dee2e6; /* Border around each item */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px; /* Inner padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: transform 0.2s; /* Smooth scale effect */
-    width: 150px; /* Fixed width for boxes */
-    height: 250px; /* Fixed height for boxes */
-    overflow: hidden; /* Hide overflow */
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    background-color: white;
+    /*border: 1px solid #dee2e6;*/
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 150px;
+    height: 250px;
+    overflow: hidden;
+    border: 1px solid black;
 }
 
-/* Hover effect for flower items */
 .flower-item:hover {
-    transform: scale(1.05); /* Scale up on hover */
+    transform: scale(1.05);
 }
 
-/* Image styles */
 img {
-    border-radius: 4px; /* Rounded corners for images */
-    max-width: 100%; /* Ensure images fit within the container */
-    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
 }

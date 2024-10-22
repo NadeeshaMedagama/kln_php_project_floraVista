@@ -1,6 +1,5 @@
 <?php
 
-// Check for the user input data -> remove spaces , slash , specialchars
 function user_input($data){
     $data = trim($data);
     $data = stripslashes($data);
@@ -9,7 +8,6 @@ function user_input($data){
 }
 
 
-// Create a function  check the admin cookie is expired
 function cookie_checker_admin(){
     if ($_SESSION['admin']['token'] != $_COOKIE['token'] || !isset( $_COOKIE['token'] )) {
         echo "<script> window.alert('Cookie is expire. Please Login here')</script>";
@@ -19,13 +17,13 @@ function cookie_checker_admin(){
     }
 }
 
-// alert the info mation function
+
 function info_alert($msg){
     $msg = addslashes($msg);
     echo "<script>window.alert($msg)</script>";
 }
 
-// alert the error 
+
 function error_alert($msg){
     echo "<script>window.alert($msg)</script>";
 }

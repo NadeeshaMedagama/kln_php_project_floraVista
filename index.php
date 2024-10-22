@@ -7,7 +7,6 @@ ini_set("display_errors", 1);
 include_once "./Connection/connection.php";
 include_once "./Function/function.php";
 
-// Handle logout
 if (isset($_POST['logout'])) {
     session_unset();
     session_destroy();
@@ -15,14 +14,11 @@ if (isset($_POST['logout'])) {
     exit();
 }
 
-// Check if the user is logged in
 $isLoggedIn = isset($_SESSION['user']) && $_SESSION['user']['islogin'] == true;
 
-// Retrieve categories
 $category_q = "SELECT * FROM categories";
 $category_r = mysqli_query($connection, $category_q);
 
-// Handle adding items to the cart
 if (isset($_POST['add_cart'])) {
     if (!$isLoggedIn) {
         header("Location: login.php");
@@ -47,7 +43,6 @@ if (isset($_POST['add_cart'])) {
     }
 }
 
-// Get total items in cart
 $total_items = 0;
 if ($isLoggedIn) {
     $user_id = $_SESSION['user']['user_id'];
@@ -55,6 +50,17 @@ if ($isLoggedIn) {
     $result_total_items = mysqli_query($connection, $total_items_query);
     $total_items = mysqli_fetch_assoc($result_total_items)['total_items'];
 }
+
+$query = "SELECT flowers.flower_id, flower_name, sale_price, quantity, dir_path FROM flowers INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id";
+if (isset($_GET['search_btn'])) {
+    $search = user_input($_GET['search']);
+    $query = "SELECT flowers.flower_id, flower_name, sale_price, quantity, dir_path FROM flowers INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id WHERE flower_name LIKE '%$search%'";
+}
+if (isset($_GET['category_id'])) {
+    $category_id = user_input($_GET['category_id']);
+    $query = "SELECT flowers.flower_id, flower_name, sale_price, quantity, dir_path FROM flowers INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id WHERE flowers.flower_id IN (SELECT flower_categories.flower_id FROM flower_categories WHERE category_id = '$category_id')";
+}
+$result = mysqli_query($connection, $query);
 ?>
 
 <!DOCTYPE html>
@@ -68,65 +74,16 @@ if ($isLoggedIn) {
 <body>
 <header>
     <div class="logo-search">
-
         <img src="Admin/home/style/images/Flora Vista New.png" alt="Logo" class="logo">
-
-        <?php
-
-        $query = "SELECT flowers.flower_id,flower_name,sale_price,quantity,dir_path FROM flowers
-        INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id";
-
-        // Check if the search button is pressed and modify query
-        if (isset($_GET['search_btn'])) {
-        $search = user_input($_GET['search']);
-        $query = "SELECT flowers.flower_id,flower_name,sale_price,quantity,dir_path
-        FROM flowers
-        INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id
-        WHERE flower_name LIKE '%$search%'";
-        }
-
-        // Check if a category is selected and modify query
-        if (isset($_GET['category_id'])) {
-        $category_id = user_input($_GET['category_id']);
-        $query = "SELECT flowers.flower_id,flower_name,sale_price,quantity,dir_path
-        FROM flowers
-        INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id
-        WHERE flowers.flower_id IN (SELECT flower_categories.flower_id
-        FROM flower_categories
-        WHERE category_id = '$category_id')";
-        }
-
-        // Execute the query
-        $result = mysqli_query($connection, $query);
-
-        // Display the search form
-        echo "
-        <form action='' method='get' >
-            <input type='text' name='search' placeholder='Search for anything...' class='search-bar' value='" . (isset($_GET['search']) ? $_GET['search'] : '') . "'>
-            <button type='submit' name='search_btn' class='search-button' >Search</button>
+        <form action="" method="get">
+            <input type="text" name="search" placeholder="Search for anything..." class="search-bar" value="<?= isset($_GET['search']) ? $_GET['search'] : '' ?>">
+            <button type="submit" name="search_btn" class="search-button">Search</button>
         </form>
-        ";
-
-        // Fetch and display search results
-        if (isset($_GET['search_btn'])) {
-            // Fetch and display search results if found
-            if ($result && mysqli_num_rows($result) > 0) {
-                echo "<ul>";
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<li>" . $row['flower_name'] . " - $" . $row['sale_price'] . " (Quantity: " . $row['quantity'] . ")</li>";
-                }
-                echo "</ul>";
-            } else {
-                // Display "No results found" only if a search has been made and no matches are found
-                echo "<script>alert('No results found.');</script>";
-            }
-        }
-        ?>
     </div>
     <div class="header-info">
         <span class="phone">Happiness Hotline:<br>011 2001122</span>
-        <span class="account"><a href = "profile.php"><img src = "Admin/home/style/images/account.png" width="28px" height="28px" alt="account"><br>My Profile</a></span>
-        <span class="cart"><a href = "cart/cart.php"><img src = "Admin/home/style/images/cart.png" width="28px" height="28px" alt="cart"><br>Cart</a></span>
+        <span class="account"><a href="profile.php"><img src="Admin/home/style/images/account.png" width="28px" height="28px" alt="account"><br>My Profile</a></span>
+        <span class="cart"><a href="cart/cart.php"><img src="Admin/home/style/images/cart.png" width="28px" height="28px" alt="cart"><br>Cart</a></span>
     </div>
 </header>
 
@@ -146,9 +103,10 @@ if ($isLoggedIn) {
         <li><a class="dropdown-btn" href="loyalty program/loyalty.html">Loyalty Program</a></li>
         <li><a class="dropdown-btn" href="offers/offers.html">Special Offers</a></li>
         <li><a class="dropdown-btn" href="privacy policy/policy.html">Privacy Policy</a></li>
+        <li><a class="dropdown-btn" href="privacy policy/policy.html">Privacy Policy</a></li>
         <li><a class="dropdown-btn" href="contact/contact.html">Contact Us</a></li>
-        <li><a class="dropdown-btn" href="subscription/subscription.html">Subscriptions </a></li>
-        <li><a class="dropdown-btn" href="about/about.html">About Us </a></li>
+        <li><a class="dropdown-btn" href="subscription/subscription.html">Subscriptions</a></li>
+        <li><a class="dropdown-btn" href="about/about.html">About Us</a></li>
     </ul>
 </nav>
 
@@ -169,8 +127,50 @@ if ($isLoggedIn) {
     <span class="dot" onclick="showImage(9)"></span>
 </div>
 
+<div class="container">
+    <?php if (mysqli_num_rows($result) > 0): ?>
+        <?php while ($row = mysqli_fetch_assoc($result)): ?>
+            <div class="card">
+                <a href="flowers/flowers.php?flower_id=<?= $row['flower_id'] ?>">
+                    <img src="<?= $row['dir_path'] ?>" alt="flower image" style="width:300px; height:300px">
+                </a>
+                <h2><?= $row['flower_name'] ?></h2>
+                <p class="price">RS. <?= $row['sale_price'] ?>.00</p>
+                <?php
+                $query_discount = "SELECT * FROM flower_discounts WHERE flower_id = '{$row['flower_id']}'";
+                $data_set = mysqli_query($connection, $query_discount);
+                $data = mysqli_fetch_assoc($data_set);
+
+                $today_discount = isset($data['today_dicount']) ? $data['today_dicount'] : null;
+                $loyalty_discount = isset($data['loyalty_discount']) ? $data['loyalty_discount'] : null;
+                $price_off = isset($data['price_off']) ? $data['price_off'] : null;
+                $today_discount_end = isset($data['today_discount_end']) ? $data['today_discount_end'] : null;
+                $loyalty_discount_end = isset($data['loyalty_discount_end']) ? $data['loyalty_discount_end'] : null;
+                $price_off_end = isset($data['price_off_end']) ? $data['price_off_end'] : null;
+
+                if ($today_discount && date('Y-m-d') < $today_discount_end) {
+                    echo "<p class='discount'>Today's Discount: $today_discount%</p>";
+                }
+                if ($loyalty_discount && date('Y-m-d') < $loyalty_discount_end) {
+                    echo "<p class='loyalty-discount'>Loyalty Discount: $loyalty_discount%</p>";
+                }
+                if ($price_off && date('Y-m-d') < $price_off_end) {
+                    echo "<p class='price-off'>Price Off: $price_off%</p>";
+                }
+
+
+                if ($row['quantity'] > 0) {
+                    echo "<p><form action='' method='post'><input type='hidden' name='flower_id' value='{$row['flower_id']}'><button type='submit' name='add_cart'>Add to Cart</button></form></p>";
+                } else {
+                    echo "<p style='color: red; font-weight: bold;'>Out of Stock</p>";
+                }
+                ?>
+            </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
+
 <script>
-    // Image slideshow script
     const images = [
         'Admin/home/style/banners/image1.png',
         'Admin/home/style/banners/image2.png',
@@ -185,14 +185,13 @@ if ($isLoggedIn) {
     ];
 
     let currentIndex = 0;
-    const slideshowImage = document.getElementById('slideshow-image');
+    const imageElement = document.getElementById('slideshow-image');
     const dots = document.getElementsByClassName('dot');
 
     function showImage(index) {
         currentIndex = index;
-        slideshowImage.src = images[currentIndex];
+        imageElement.src = images[currentIndex];
         updateDots();
-        resetAutoChange();
     }
 
     function updateDots() {
@@ -202,22 +201,24 @@ if ($isLoggedIn) {
         dots[currentIndex].classList.add('active');
     }
 
-    function autoChange() {
+    setInterval(function() {
         currentIndex = (currentIndex + 1) % images.length;
-        slideshowImage.src = images[currentIndex];
+        imageElement.src = images[currentIndex];
         updateDots();
-    }
-
-    function resetAutoChange() {
-        clearInterval(autoChangeInterval);
-        autoChangeInterval = setInterval(autoChange, 3000);
-    }
-
-    let autoChangeInterval = setInterval(autoChange, 3000);
-    window.onload = function () {
-        updateDots();
-    };
+    }, 3000);
 </script>
 
+<footer>
+    <div class="social-links">
+        <ul>
+            <li><a href="http://www.facebook.com"><img src="icons/img.png" alt="Facebook" class="social-icon"></a></li>
+            <li><a href="http://www.instagram.com"><img src="icons/img_1.png" alt="Instagram" class="social-icon"></a></li>
+            <li><a href="http://www.tiktok.com"><img src="icons/img_2.png" alt="TikTok" class="social-icon"></a></li>
+            <li><a href="http://www.youtube.com"><img src="icons/img_3.png" alt="YouTube" class="social-icon"></a></li>
+            <li><a href="http://www.twitter.com"><img src="icons/img_4.png" alt="Twitter" class="social-icon"></a></li>
+        </ul>
+    </div>
+    <p class="footer-text">©2024 Flora Vista, All rights reserved. Designed by <a href="#">Dev Team</a></p>
+</footer>
 </body>
 </html>

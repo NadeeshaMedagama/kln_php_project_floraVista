@@ -20,7 +20,7 @@ if(!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] ==fals
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accepted Delivered Orders</title>
-    <link rel="stylesheet" href="deliverOrdersHistory.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="deliverOrdersHistory.css">
 </head>
 <body>
 

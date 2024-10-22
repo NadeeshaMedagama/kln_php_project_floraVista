@@ -7,12 +7,11 @@ ini_set("display_errors", 1);
 include_once '../../Function/function.php';
 include_once '../../Connection/connection.php';
 
-// Admin protection page
+
 if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true) {
     header("Location: ../admin.php");
 }
 
-// Handle deletion of a category
 if (isset($_POST['delete_category'])) {
     try {
         $category_id = (int) $_POST['category_id'];
@@ -24,7 +23,7 @@ if (isset($_POST['delete_category'])) {
     }
 }
 
-// Handle addition of a category
+// handle addition of a category
 if (isset($_POST["add_category"])) {
     $add_category = user_input($_POST['category_name']);
     $add_category = mysqli_real_escape_string($connection, $add_category);
@@ -48,7 +47,7 @@ if (isset($_POST["add_category"])) {
     }
 }
 
-// Flower upload
+// flower upload
 if (isset($_POST["flower_upload"])) {
     try {
         if (!isset($_POST['flower_name']) || !isset($_FILES['image'])) {
@@ -91,7 +90,7 @@ if (isset($_POST["flower_upload"])) {
     }
 }
 
-// Handling category selection
+// handling category selection
 if (isset($_POST['submit_flowers_categories'])) {
     $category_id = $_POST['category_id'];
     $flowers_id_array = $_POST['flower_id_array'];
@@ -120,15 +119,13 @@ if (isset($_POST['submit_flowers_categories'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Place</title>
 
-    <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="flowers.css"> <!-- Add your CSS file here -->
+    <link rel="stylesheet" href="flowers.css">
 </head>
 <body>
-<!-- Display navigation links -->
+
 <br><a href="discount.php" class="add">Add Discounts</a><br><br><br>
 <a href="flower_search.php" class="add">Flower Information</a><br><br><br>
 
-<!-- Show flowers category section -->
 <div id="flowers_category">
     <h2>&nbsp;&nbsp;Flowers Category</h2>
     <div id="show_category">
@@ -165,7 +162,6 @@ if (isset($_POST['submit_flowers_categories'])) {
         ?>
     </div>
 
-    <!-- Add category form -->
     <div id="add_category">
         <form action="flowers.php" method="post" id="add_flower_category">
             <label class="cat">Category Name :</label><br>
@@ -175,7 +171,7 @@ if (isset($_POST['submit_flowers_categories'])) {
     </div>
 </div>
 
-<!-- Upload flower section -->
+<!-- upload flower section -->
 <div id="upload_flowers">
     <div id="flower_upload_form">
         <h2>Upload Flower</h2>
@@ -193,7 +189,6 @@ if (isset($_POST['submit_flowers_categories'])) {
     </div>
 </div>
 
-<!-- Flower categories section -->
 <div id="flower_categories">
     <h2>&nbsp;&nbsp;Flowers Add to Categorize</h2>
     <form action="flowers.php" method="post" id="flowers-categories">
@@ -216,7 +211,7 @@ if (isset($_POST['submit_flowers_categories'])) {
     </form>
 
     <?php
-    // Get the flowers detail from flowers category
+    // get the flowers detail from flowers category
     if (isset($_POST['search_category'])) {
         $category_id = $_POST['category_id'];
         $query = "SELECT * FROM categories WHERE category_id='$category_id' LIMIT 1";

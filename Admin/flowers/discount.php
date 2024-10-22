@@ -27,12 +27,12 @@ if (isset($_POST['submit'])) {
 
         foreach ($flowers_id_array as $flower_id) {
             try {
-                // Check the flower in flower_discounts table
+
                 $check_query = "SELECT * FROM flower_discounts WHERE flower_id = '$flower_id'";
                 $check_result = mysqli_query($connection, $check_query);
 
                 if (mysqli_num_rows($check_result) > 0) {
-                    // Update query
+
                     $update_query = "UPDATE flower_discounts SET today_dicount ='$discount_presentage', today_discount_end='$end_date' WHERE flower_id ='$flower_id'";
                     mysqli_query($connection, $update_query);
                 } else {
@@ -47,12 +47,12 @@ if (isset($_POST['submit'])) {
     } elseif ($flower_discount == 'loyalty_discount') {
         foreach ($flowers_id_array as $flower_id) {
             try {
-                // Check the flower in flower_discounts table
+
                 $check_query = "SELECT * FROM flower_discounts WHERE flower_id = '$flower_id'";
                 $check_result = mysqli_query($connection, $check_query);
 
                 if (mysqli_num_rows($check_result) > 0) {
-                    // Update query
+
                     $update_query = "UPDATE flower_discounts SET loyalty_discount= '$discount_presentage', loyalty_discount_end= '$date' WHERE flower_id = '$flower_id'";
                     mysqli_query($connection, $update_query);
                 } else {
@@ -67,12 +67,12 @@ if (isset($_POST['submit'])) {
     } elseif ($flower_discount == 'price_off') {
         foreach ($flowers_id_array as $flower_id) {
             try {
-                // Check the flower in flower_discounts table
+
                 $check_query = "SELECT * FROM flower_discounts WHERE flower_id = '$flower_id'";
                 $check_result = mysqli_query($connection, $check_query);
 
                 if (mysqli_num_rows($check_result) > 0) {
-                    // Update query
+
                     $update_query = "UPDATE flower_discounts SET price_off = '$discount_presentage', price_off_end = '$date' WHERE flower_id = '$flower_id'";
                     mysqli_query($connection, $update_query);
                 } else {
@@ -104,18 +104,18 @@ echo "<!DOCTYPE html>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Discount Management</title>
-    <link rel='stylesheet' href='discount.css'> <!-- Link to your CSS file -->
+    <link rel='stylesheet' href='discount.css'> 
 </head>
 <body>";
 
-echo "<div class='container'> <!-- Box container -->
+echo "<div class='container'> 
         <form action='discount.php' method='get'>
             <input type='text' name='search' placeholder='Search'>
             <button type='submit'>Search</button>
         </form>
       </div>";
 
-echo "<div class='container'> <!-- Box container for the discount form -->
+echo "<div class='container'> 
         <form action='discount.php' method='post'>
             <select name='flower_discount' id='flower_discount'>
                 <option value='today_discount'>Today Discount</option>

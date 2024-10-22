@@ -14,11 +14,10 @@ try{
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
-        // Get the user input detail
         $email = user_input($_POST['email']);
         $password = user_input($_POST['password']);
 
-        // From validation
+
         if(empty($email) || empty($password)){
             $errors[] = 'Email or Password is Empty';
         }elseif(!(preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email))){
@@ -26,14 +25,12 @@ try{
         }
 
 
-
-        // Void sql injection
         $email = mysqli_real_escape_string($connection, $email);
         $password = mysqli_real_escape_string($connection, $password);
 
 
         if (count($errors) == 0){
-            // Check the database valid user
+
             try{
                 $password = sha1($password);
                 $query = "SELECT * From users WHERE email='$email' AND password='$password' LIMIT 1 ;";
@@ -52,7 +49,6 @@ try{
 
 
 
-                    // Generate unique token
                     $token = bin2hex(random_bytes(16));
                     // Data is added to the session
                     /*$_SESSION['user'] = [
@@ -80,10 +76,10 @@ try{
 
                     $username = $data['user_name'];
 
-                    // set the cookie with authentication token
+
                     setcookie('token',$token, time()+ 3600*2, "/");
 
-                    // Login successfully redirect to the index.php page
+
                     logger("INFO", "User : $username Login Successfully. Redirect to the Index page.");
                     header("Location: index.php");
                     exit();

@@ -1,11 +1,10 @@
-/* Reset some default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body style */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #ccccb3;
@@ -14,7 +13,6 @@ body {
     padding: 20px;
 }
 
-/* Main container */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -24,7 +22,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Form styling */
 form {
     margin-top: 20px;
 }
@@ -49,7 +46,7 @@ form input[type="hidden"] {
 
 button {
     display: inline-block;
-    background-color: #33ff33; /* Button color */
+    background-color: #33ff33;
     color: black;
     padding: 10px 20px;
     border: 2px solid black;
@@ -67,10 +64,9 @@ button:hover {
     margin-left: 535px;
 }
 
-/* Section headings */
 h2 {
     font-size: 1.8rem;
-    color: #7a7a52; /* Headings color */
+    color: #7a7a52;
     margin-bottom: 15px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
@@ -78,13 +74,12 @@ h2 {
 
 h3 {
     font-size: 1.8rem;
-    color: #7a7a52; /* Headings color */
+    color: #7a7a52;
     margin-bottom: 15px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
 }
 
-/* Loyalty section styling */
 .loyalty-info {
     background-color: #f9f9f9;
     padding: 15px;
@@ -93,7 +88,6 @@ h3 {
     border-left: 4px solid #7bbf6a;
 }
 
-/* Order table */
 .order-info {
     margin-top: 20px;
     padding: 15px;
@@ -117,7 +111,6 @@ h3 {
     margin-right: 10px;
 }
 
-/* Footer style */
 footer {
     text-align: center;
     margin-top: 40px;

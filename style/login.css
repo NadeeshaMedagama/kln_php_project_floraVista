@@ -1,39 +1,37 @@
-h1{
+h1 {
     text-align: center;
     margin-top: -25px;
     justify-content: center;
     position: relative;
-    left : 0;
+    left: 0;
 }
 
-.formHead{
+.formHead {
     background-color: #ffdb4d;
     color: #804000;
     text-align: center;
     font-size: 24px;
     border-radius: 10px;
     justify-content: center;
-
 }
 
-.container{
+.container {
     text-align: center;
     margin-bottom: 20px;
     margin-top: 10px;
 }
 
-#email , #password {
+#email, #password {
     font-size: 15px;
-    width :250px;
+    width: 250px;
     height: 35px;
     border-radius: 15px;
     padding: 2px;
     cursor: text;
     border: 2px solid black;
-
 }
 
-#submit-btn{
+#submit-btn {
     font-weight: bold;
     font-size: 15px;
     width: 255px;
@@ -42,16 +40,15 @@ h1{
     border-radius: 15px;
     cursor: pointer;
     text-decoration: none;
-
 }
 
-#submit-btn:hover{
+#submit-btn:hover {
     background-color: aqua;
     text-decoration: underline;
     transition: 0.3s;
 }
 
-#link{
+#link {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
@@ -60,27 +57,25 @@ h1{
     transition: 0.3s;
 }
 
-#link:hover{
+#link:hover {
     text-decoration: underline;
     color: black;
 }
 
-/* Welcome box styling */
 .welcome-box {
-    background-color: #3385ff; /* Light blue background */
-    color: black; /* Dark blue text color */
-    border: 2px solid black; /* Border color to match background */
-    padding: 20px; /* Space inside the box */
-    border-radius: 8px; /* Rounded corners */
-    margin: 20px 0; /* Space above and below the box */
-    font-family: Arial, sans-serif; /* Font style */
-    font-size: 1.3em; /* Slightly larger text */
-    text-align: center; /* Center the text */
-    animation: slideIn 0.5s; /* Slide-in effect on display */
+    background-color: #3385ff;
+    color: black;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    animation: slideIn 0.5s;
     font-weight: bold;
 }
 
-/* Animation for slide-in effect */
 @keyframes slideIn {
     from {
         transform: translateY(-20px);
@@ -92,23 +87,20 @@ h1{
     }
 }
 
-
-/* Error box styling */
 #error-box {
-    background-color: #ff3333; /* Light red background */
-    color: black; /* Dark red text color */
-    border: 2px solid black; /* Border color to match background */
-    padding: 15px; /* Space inside the box */
-    border-radius: 5px; /* Rounded corners */
-    margin: 20px 0; /* Space above and below the box */
-    font-family: Arial, sans-serif; /* Font style */
-    font-size: 1.3em; /* Slightly larger text */
-    animation: fadeIn 0.5s; /* Fade-in effect on display */
+    background-color: #ff3333;
+    color: black;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+    font-size: 1.3em;
+    animation: fadeIn 0.5s;
     font-weight: bold;
     cursor: not-allowed;
 }
 
-/* Animation for fade-in effect */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -118,11 +110,9 @@ h1{
     }
 }
 
-/* Additional styling for better readability */
 #error-box p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
-
 
 body {
     background-color: #f2f2f2;
@@ -150,9 +140,7 @@ body {
     align-items: center;
     border: 2px solid black;
     overflow: hidden;
-    /*background-image: url('Flower_Image_02.jpg');*/
     background-position: center;
     background-size: cover;
     padding-top: 65px;
-
 }

@@ -1,4 +1,4 @@
-/* General styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +12,10 @@ body {
     border: 1px solid black;
 }
 
-/* Specific button width */
+
 button[name="add_category"] {
     width: 100px;
-    padding: 10px 5px;  /* Adjust padding if necessary */
+    padding: 10px 5px;
     background-color: #28a745;
     color: white;
     border: none;
@@ -49,7 +49,7 @@ button[name="add_category"]:hover {
 
 button[name="flower_upload"] {
     width: 100px;
-    padding: 10px 5px;  /* Adjust padding if necessary */
+    padding: 10px 5px;
     background-color: #28a745;
     color: white;
     border: none;
@@ -65,7 +65,7 @@ button[name="flower_upload"]:hover {
 
 button[name="search_category"] {
     width: 100px;
-    padding: 10px 5px;  /* Adjust padding if necessary */
+    padding: 10px 5px;
     background-color: #28a745;
     color: white;
     border: none;
@@ -88,7 +88,7 @@ button[name="search_category"]:hover {
     border-radius: 10px;
 }
 
-/* Navigation */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -106,7 +106,7 @@ nav a:hover {
     color: #0056b3;
 }
 
-/* Section Styling */
+
 section {
     margin-bottom: 40px;
 }
@@ -116,7 +116,6 @@ h2 {
 
 }
 
-/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -136,7 +135,7 @@ th {
     background-color: #f2f2f2;
 }
 
-/* Form Styling */
+
 form {
     display: flex;
     flex-direction: column;
@@ -185,7 +184,6 @@ form button:hover {
     background-color: #218838;
 }
 
-/* Add Category Form */
 .add-category-form {
     margin-top: 20px;
 }

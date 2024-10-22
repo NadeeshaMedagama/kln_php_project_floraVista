@@ -30,7 +30,7 @@ if  (isset($_POST['delivered'])){
     $quantity = user_input($_POST['quantity']);
     $sale_price =  user_input($_POST['sale_price']);
 
-    // update the order table
+
     $update_orders = "UPDATE orders SET isDelivered=true, delivered_date = CURRENT_DATE, order_sale_price='$sale_price' WHERE order_id ='$order_id' ";
 
     //update the flowers table
@@ -51,7 +51,7 @@ if  (isset($_POST['delivered'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delivered Orders</title>
-    <link rel="stylesheet" href="deliverOrders.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="deliverOrders.css">
 </head>
 <body>
 

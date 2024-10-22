@@ -21,12 +21,12 @@ if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != tr
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payments</title>
-    <link rel="stylesheet" href="payment.css"> <!-- Update the path as needed -->
+    <link rel="stylesheet" href="payment.css">
 </head>
 <body>
 
 <div class='payments'>
-    <h3>Payments List</h3>
+    <h2>&nbsp;Payments List</h2>
     <table>
         <tr>
             <th>Reference No</th>

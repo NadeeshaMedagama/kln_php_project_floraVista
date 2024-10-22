@@ -111,7 +111,7 @@ if(isset($_GET['flower_id'])){
     $flower_id = user_input($_GET['flower_id']);
 
     $query = "SELECT f.flower_id, f.flower_name, f.quantity, f.sale_price, f.description, fi.dir_path, 
-                  fd.today_dicount, fd.loyalty_discount, fd.price_off, fd.today_discount_end, 
+                  fd.today_discount, fd.loyalty_discount, fd.price_off, fd.today_discount_end, 
                   fd.loyalty_discount_end, fd.price_off_end 
                   FROM flowers AS f
                   INNER JOIN flower_images AS fi ON f.flower_id = fi.flower_id
@@ -128,7 +128,7 @@ if(isset($_GET['flower_id'])){
     $description = $row['description'];
     $dir_path = $row['dir_path'];
 
-    $today_discount =  $row['today_dicount'];
+    $today_discount =  $row['today_discount'];
     $loyalty_discount =  $row['loyalty_discount'];
     $price_off = $row['price_off'];
     $today_discount_end = $row['today_discount_end'];

@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +25,7 @@ h1{
 }
 
 header {
-    background-color: #28a745; /* Green background for header */
+    background-color: #28a745;
     padding: 15px 0;
 }
 
@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 .hero {
-    background-image: url('images/img_8.png'); /* Hero image */
+    background-image: url('images/img_8.png');
     background-size: cover;
     color: white;
     text-align: center;
@@ -73,27 +73,27 @@ nav ul li a {
 
 .product-item img {
     width: auto;
-    height: 200px; /* Responsive images */
+    height: 200px;
     border-radius: 5px;
 }
 
 .product-info {
-    text-align: center; /* Center the text */
-    margin-bottom: 10px; /* Space above text */
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .btn {
-    background-color: #28a745; /* Green button */
+    background-color: #28a745;
     color: white;
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
-    margin-top: 10px; /* Space above button */
+    margin-top: 10px;
 }
 
 footer {
-    background-color: #28a745; /* Green background for footer */
+    background-color: #28a745;
     color: white;
     text-align: center;
     padding: 10px 0;

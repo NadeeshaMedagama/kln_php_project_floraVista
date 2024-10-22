@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #ccccb3;
@@ -22,7 +22,7 @@ h1{
     margin-top: 40px;
 }
 
-/* Navigation */
+
 header {
     background-color: #7bbf6a;
     padding: 10px;
@@ -50,7 +50,7 @@ header nav ul li a:hover {
     color: #e4e4e4;
 }
 
-/* Offers List */
+
 .offer-list {
     margin-top: 30px;
 }
@@ -76,7 +76,7 @@ header nav ul li a:hover {
     color: #333;
 }
 
-/* Footer */
+
 footer {
     background-color: #7bbf6a;
     padding: 10px;

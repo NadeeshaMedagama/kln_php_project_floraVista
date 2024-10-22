@@ -36,11 +36,11 @@ echo "<head>
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>User Profile</title>
-        <link rel='stylesheet' href='addCustomer.css'> <!-- Link to your CSS file -->
+        <link rel='stylesheet' href='addCustomer.css'> 
       </head>";
 
 echo "<body>";
-echo "<div class='container'>"; // Start the container for styling
+echo "<div class='container'>";
 echo "<h2>User Information</h2>";
 
 echo "<form action='profile.php' method='post'>
@@ -82,6 +82,6 @@ if(mysqli_num_rows($result) > 0){
               <label>Quantity: $quantity</label><br>";
     }
 }
-echo "</div>"; // End the container
+echo "</div>";
 echo "</body>";
 ?>

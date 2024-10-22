@@ -9,19 +9,17 @@ include_once __DIR__ . '/Connection/connection.php';
 
 try {
 
-    // Create an error array
+
     $errors = array();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        // Get the user input details
         $username = user_input($_POST['username']);
         $email = user_input($_POST['email']);
         $password = user_input($_POST['password']);
         $mobile = user_input($_POST['mobile']);
         $gender = user_input($_POST['gender']);
 
-        // Check for validation
         if (empty($username) || empty($email) || empty($password) || empty($mobile) || empty($gender)) {
 
             $errors[] = 'All fields are required';
@@ -39,7 +37,7 @@ try {
             $errors[] = "Username or Password is too short";
         }
 
-        // Check email or mobile is taken
+
         try{
             $email = mysqli_real_escape_string($connection,$email);
             $mobile =  mysqli_real_escape_string($connection,$mobile);
@@ -57,16 +55,15 @@ try {
             logger("ERROR", $e->getMessage());
         }
 
-        // Check for no errors before inserting data into the database
         if (count($errors) == 0) {
 
-            // Password hash to sha1 algorithm
+
             $password = sha1($password);
 
-            // Convert gender male -> true, female -> false
+
             $gender = ($gender == 'male') ? true : false;
 
-            //  Void for the sql injection
+
             $username = mysqli_real_escape_string($connection, $username);
             $email = mysqli_real_escape_string($connection, $email);
             $password = mysqli_real_escape_string($connection, $password);
@@ -76,11 +73,11 @@ try {
             $query = "INSERT INTO users (user_name, email, password, mobile, gender) VALUES ('$username', '$email', '$password', '$mobile', '$gender')";
 
             try {
-                // Insert data into the users table
+
                 if (mysqli_query($connection, $query)) {
                     logger("INFO", "register.php : User data inserted successfully");
 
-                    // If the query executes successfully, redirect to the login page
+
                     header("Location: login.php?UserRegister=true&Username=$username");
                     exit();
                 } else {

@@ -1,74 +1,86 @@
-/* Reset some default styles */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 50px;
     padding: 20px;
-    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.image-container {
-    flex: 1;
-    margin-right: 20px;
 }
 
 .image-container img {
-    max-width: 100%;
+    width: 400px;
+    height: auto;
     border-radius: 8px;
 }
 
 .flower-details {
-    flex: 2;
+    width: 50%;
 }
 
 .flower-details h2 {
-    color: #333;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.price,
+.quantity,
+.discount,
+.loyalty-discount,
+.price-off {
+    font-size: 18px;
     margin-bottom: 10px;
-}
-
-.price {
-    color: green;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-.quantity, .discount, .loyalty-discount, .price-off {
-    margin: 5px 0;
+    color: #333;
 }
 
 .button-container {
     margin-top: 20px;
 }
 
-.add-to-cart, .buy-now, .add-comment {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.add-to-cart {
+button {
     background-color: #28a745;
-    color: white;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     margin-right: 10px;
 }
 
-.buy-now {
-    background-color: #007bff;
-    color: white;
+button:hover {
+    background-color: #218838;
+}
+
+input[type="number"],
+input[type="text"],
+textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .add-comment {
-    margin-top: 10px;
-    background-color: #ffc107;
-    color: white;
+    background-color: #007bff;
+}
+
+.add-comment:hover {
+    background-color: #0069d9;
 }
 
 .comment {
@@ -76,12 +88,15 @@ body {
 }
 
 .comment h3 {
-    margin: 0;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
 .comment p {
-    background: #f1f1f1;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
     padding: 10px;
-    border-radius: 5px;
-    margin: 5px 0;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }

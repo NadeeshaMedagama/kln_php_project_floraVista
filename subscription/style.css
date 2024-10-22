@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #ccccb3;
@@ -22,7 +22,6 @@ h1, h2{
     margin-top: 40px;
 }
 
-/* Navigation */
 header {
     background-color: #7bbf6a;
     padding: 10px;
@@ -50,7 +49,6 @@ header nav ul li a:hover {
     color: #e4e4e4;
 }
 
-/* Form Styles */
 form {
     margin-top: 20px;
 }
@@ -85,7 +83,6 @@ form button:hover {
     background-color: #00ff00;
 }
 
-/* Footer */
 footer {
     background-color: #7bbf6a;
     padding: 10px;

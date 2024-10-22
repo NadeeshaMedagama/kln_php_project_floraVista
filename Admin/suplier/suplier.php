@@ -51,7 +51,6 @@ echo "<div id='supplier-verify'>";
 
 if(cookie_checker_admin()){
 
-    // Get the supplier details in db
     try{
 
         echo "<h1>Supplier Verify</h1><br>";
@@ -72,7 +71,7 @@ if(cookie_checker_admin()){
 
 
         while($row = mysqli_fetch_assoc($result)){
-            // Display the result
+
             $suplier_id = $row["suplier_id"];
             $suplier_username = $row["supplier_username"];
             $email = $row["email"];

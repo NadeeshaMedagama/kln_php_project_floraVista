@@ -132,7 +132,7 @@ nav {
     font-weight: bold;
 }
 
-/* Basic styling for the dropdown */
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -178,12 +178,10 @@ nav {
     border: 1px solid black;
 }
 
-/* Show dropdown content on button hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Dropdown button hover effect */
 .dropdown-btn:hover {
     background-color: #2db300;
 }
@@ -207,7 +205,7 @@ nav {
     margin-top: 3px;
 }
 
-/* Styles for each dot */
+
 .dot {
     height: 12px;
     width: 12px;
@@ -219,8 +217,63 @@ nav {
     transition: background-color 0.3s;
 }
 
-/* Style for the active dot */
+
 .active {
     background-color: #333;
 }
+
+footer {
+    background-color: #008000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links ul li a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.footer-text {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-text a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-text a:hover {
+    color: #f39c12;
+}
+
 
