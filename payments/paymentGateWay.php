@@ -14,16 +14,7 @@ if (isset($_POST['pay_success'])){
     header("Location: payment.php");
 }
 
-
-
-
-
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">

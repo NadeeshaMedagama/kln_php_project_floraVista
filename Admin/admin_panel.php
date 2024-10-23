@@ -8,12 +8,10 @@ ini_set("display_errors",1);
 include_once __DIR__ . '/../Function/function.php';
 include_once __DIR__ . '/../Connection/connection.php';
 
-// Check if the admin is logged in
 if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true) {
     header('Location: admin.php');
 }
 
-// Handle logout
 if (isset($_POST['logout'])) {
     session_unset();
     session_destroy();
@@ -27,16 +25,15 @@ if (isset($_POST['logout'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
-    <!-- Link to the CSS file -->
-    <link rel="stylesheet" href="panel.css"> <!-- Adjust the path as necessary -->
+
+    <link rel="stylesheet" href="panel.css">
 </head>
 <body>
 
 <div class="container">
 
-    <h1>Admin Panel</h1> <!-- Added title for admin panel -->
+    <h1>Admin Panel</h1>
 
-    <!-- Navigation Links -->
     <div class="nav-links">
         <a href='flowers/flowers.php'>Flowers</a>
         <a href='orders/orders.php'>Orders</a>
@@ -46,7 +43,7 @@ if (isset($_POST['logout'])) {
 
     <h4>Total Sale:
         <?php
-        // Total sales query
+
         $sum_q = "SELECT SUM(amount) AS amount FROM payments";
         $result = mysqli_query($connection, $sum_q);
         $sum = mysqli_fetch_assoc($result)['amount'];
@@ -55,7 +52,7 @@ if (isset($_POST['logout'])) {
     </h4>
 
     <?php
-    // Low quantity flowers query
+
     $query = "SELECT * FROM flowers WHERE quantity <20";
     $result = mysqli_query($connection, $query);
 
@@ -84,7 +81,6 @@ if (isset($_POST['logout'])) {
     }
     ?>
 
-    <!-- Logout button -->
     <form action='admin_panel.php' method='post' class="logout-form">
         <button type='submit' name='logout'>Logout</button>
     </form>

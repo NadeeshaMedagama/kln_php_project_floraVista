@@ -14,25 +14,21 @@ try{
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-        // Get the user input values
         $email = user_input($_POST['email']);
         $password = user_input($_POST['password']);
 
 
-        // From validation
         if(empty($email) || empty($password)){
             $errors[] = 'Email or Password is Empty';
         }elseif(!(preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email))){
             $errors[] = "Email is not valid";
         }
 
-        // Void the sql injection
         $email = mysqli_real_escape_string($connection, $email);
         $password = mysqli_real_escape_string($connection, $password);
 
         if (count($errors) == 0){
-            
-            // If not errors check the valid user
+
             try{
 
                 $password = sha1($password);
@@ -42,14 +38,11 @@ try{
                 $result = mysqli_query($connection, $query);
 
                 if(mysqli_num_rows($result) == 1){
-                    // Login successfully
 
-                    // Create the token
                     $token = bin2hex(random_bytes(16));
 
                     $data = mysqli_fetch_assoc($result);
 
-                    // Data save the session  asosiative array
                     $_SESSION['admin'] = [
                         'admin_id'=> $data['admin_id'],
                         'admin_name'=> $data['admin_name'],
@@ -99,8 +92,7 @@ try{
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
 
             <?php
-            
-                // Output the error message 
+
                 if(count($errors) > 0){
                     echo "<div id='error-box'> $errors[0] </div>";
                 }

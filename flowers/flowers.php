@@ -68,7 +68,8 @@ if(isset($_POST['buy_now'])){
     }
     if (isset($_SESSION['user']['loyalty_id'])){
         if (isset($loyalty_discount) && date('Y-m-d') < $loyalty_discount_end) {
-            $discount = $discount -  ($items_price * $loyalty_discount/ 100);
+//            $discount = $discount -  ($items_price * $loyalty_discount/ 100);
+            echo "<p class='loyalty-discount'>Loyalty Discount: $loyalty_discount%</p>";
         }
     }
     if (isset($price_off) && date('Y-m-d') < $price_off_end) {

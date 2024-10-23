@@ -8,7 +8,6 @@ ini_set("display_errors",1);
 include_once  '../../Function/function.php';
 include_once  '../../Connection/connection.php';
 
-// admin protection page
 
 if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true){
 
@@ -22,13 +21,12 @@ if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != tr
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registered Suppliers</title>
-    <link rel="stylesheet" href="supplier.css"> <!-- Update the path as needed -->
+    <link rel="stylesheet" href="supplier.css">
 </head>
 <body>
 
 <?php
 
-// verify the suplier sumbit the button
 if (isset($_POST['submit_verify'])){
     try{
         $suplier_id = (int) $_POST['suplier_id'];

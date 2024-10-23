@@ -64,7 +64,7 @@ $array = [];
     <nav>
         <ul>
             <li><a href="../index.php">Home</a></li>
-            <li><a href="shop.php">Shop</a></li>
+            <li><a href="../shop/shop.html">Shop</a></li>
             <li><a href="../offers/offers.html">Special Offers</a></li>
             <li><a href="../new arrivals/arrivals.html">New Arrivals</a></li>
             <li><a href="../contact/contact.html">Contact Us</a></li>
@@ -81,11 +81,11 @@ $array = [];
     <table>
         <thead>
         <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total</th>
-            <th>Action</th>
+            <th><h2 style="color: black">Item</h2></th>
+            <th><h2 style="color: black">Quantity</h2></th>
+            <th><h2 style="color: black">Price</h2></th>
+            <th><h2 style="color: black">Total</h2></th>
+            <th><h2 style="color: black">Action</h2></th>
         </tr>
         </thead>
         <tbody>
@@ -99,7 +99,7 @@ $array = [];
                 $img_result = mysqli_query($connection, $img_query);
                 $dir_path = mysqli_fetch_assoc($img_result)['dir_path'];
 
-                $flower_query = "SELECT * FROM flowers INNER JOIN flower_discounts ON flowers.flower_id=flower_discounts.flower_id WHERE flowers.flower_id = '$flower_id'";
+                $flower_query = "SELECT * FROM flowers  WHERE flower_id = '$flower_id'";
                 $flower_result = mysqli_query($connection, $flower_query);
                 $data = mysqli_fetch_assoc($flower_result);
 
@@ -111,20 +111,20 @@ $array = [];
                 $discount = 0;
 
                 // Calculate discounts
-                $today_discount = $data['today_dicount'];
-                if (isset($today_discount) && date('Y-m-d') < $data['today_discount_end']) {
-                    $discount += ($items_price * $today_discount / 100);
-                }
-
-                $loyalty_discount = $data['loyalty_discount'];
-                if (isset($_SESSION['user']['loyalty_id']) && isset($loyalty_discount) && date('Y-m-d') < $data['loyalty_discount_end']) {
-                    $discount += ($items_price * $loyalty_discount / 100);
-                }
-
-                $price_off = $data['price_off'];
-                if (isset($price_off) && date('Y-m-d') < $data['price_off_end']) {
-                    $discount += ($items_price * $price_off / 100);
-                }
+//                $today_discount = $data['today_dicount'];
+//                if (isset($today_discount) && date('Y-m-d') < $data['today_discount_end']) {
+//                    $discount += ($items_price * $today_discount / 100);
+//                }
+//
+//                $loyalty_discount = $data['loyalty_discount'];
+//                if (isset($_SESSION['user']['loyalty_id']) && isset($loyalty_discount) && date('Y-m-d') < $data['loyalty_discount_end']) {
+//                    $discount += ($items_price * $loyalty_discount / 100);
+//                }
+//
+//                $price_off = $data['price_off'];
+//                if (isset($price_off) && date('Y-m-d') < $data['price_off_end']) {
+//                    $discount += ($items_price * $price_off / 100);
+//                }
 
                 $items_total = $items_price - $discount;
                 $total += $items_total;
@@ -159,8 +159,10 @@ $array = [];
         <?php if ($num_of_items > 0): ?>
             <form action="../payments/payment.php" method="get">
                 <input type="text" name="address" placeholder="Enter your address" required>
-                <button type="submit">Buy Now</button>
+                <button type="submit">Buy Now</button><br>
             </form>
+            <a href = '../index.php'><button type="submit">Back to Home</button></a>
+            <br><br><br><br>
         <?php endif; ?>
     </div>
 </div>

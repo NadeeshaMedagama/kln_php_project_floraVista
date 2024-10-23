@@ -41,7 +41,7 @@ echo "<head>
 
 echo "<body>";
 echo "<div class='container'>";
-echo "<h2>User Information</h2>";
+echo "<h1>User Information</h1>";
 
 echo "<form action='profile.php' method='post'>
         <input type='hidden' name='user_id' value='$user_id'>

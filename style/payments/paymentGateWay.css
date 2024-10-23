@@ -6,15 +6,16 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #ccccb3;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    border: 2px solid black;
 }
 
 .payment-container {
-    background-color: white;
+    background-color: #f5f5ef;
     padding: 40px;
     width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -59,7 +60,7 @@ h2 {
     color: white;
     padding: 12px;
     font-size: 18px;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;

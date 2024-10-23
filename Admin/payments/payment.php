@@ -8,7 +8,7 @@ ini_set("display_errors", 1);
 include_once '../../Function/function.php';
 include_once '../../Connection/connection.php';
 
-// admin protection page
+
 if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true) {
     header("Location: ../admin.php");
 }

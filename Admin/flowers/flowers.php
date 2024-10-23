@@ -58,6 +58,7 @@ if (isset($_POST["flower_upload"])) {
         $flower_name = user_input($_POST["flower_name"]);
         $flower_description = user_input($_POST['description']);
         $sale_price = $_POST['sale_price'];
+        $quantity = $_POST['quantity'];
 
         $image_tmp_name = $_FILES['image']['tmp_name'];
         $image_size = $_FILES['image']['size'];
@@ -70,8 +71,8 @@ if (isset($_POST["flower_upload"])) {
         $upload_dir = "uploads/" . $unique_file_name;
 
         if (move_uploaded_file($image_tmp_name, $save_dir)) {
-            $insert_flower_query = "INSERT INTO flowers(flower_id, flower_name, description, sale_price) 
-                                    VALUES ('$flower_id', '$flower_name', '$flower_description', '$sale_price')";
+            $insert_flower_query = "INSERT INTO flowers(flower_id, flower_name, quantity, description, sale_price) 
+                                    VALUES ('$flower_id', '$flower_name', '$quantity', '$flower_description', '$sale_price')";
             $insert_image_query = "INSERT INTO flower_images(flower_id, dir_path) 
                                    VALUES ('$flower_id', '$upload_dir')";
 
@@ -182,6 +183,8 @@ if (isset($_POST['submit_flowers_categories'])) {
             <textarea name="description" id="description" placeholder="Description" required></textarea><br><br>
             <label>Sale Price:</label><br>
             <input type="number" name="sale_price" placeholder="Flower sale price" required/><br><br>
+            <label>Quantity : </label><br>
+            <input type='number' name='quantity' placeholder='Flower Quantity' step='1' min='0' required><br><br>
             <label>Image:</label><br>
             <input type="file" name="image" accept="image/*" required><br><br>
             <button type="submit" name="flower_upload">Upload</button><br>
