@@ -99,7 +99,7 @@ $array = [];
                 $img_result = mysqli_query($connection, $img_query);
                 $dir_path = mysqli_fetch_assoc($img_result)['dir_path'];
 
-                $flower_query = "SELECT * FROM flowers INNER JOIN flower_discounts ON flowers.flower_id=flower_discounts.flower_id WHERE flowers.flower_id = '$flower_id'";
+                $flower_query = "SELECT * FROM flowers  WHERE flower_id = '$flower_id'";
                 $flower_result = mysqli_query($connection, $flower_query);
                 $data = mysqli_fetch_assoc($flower_result);
 
@@ -110,21 +110,49 @@ $array = [];
                 $items_price = (float)$user_quantity * $sale_price;
                 $discount = 0;
 
+                $array[$flower_id] = $user_quantity;
+
+                $dis_q = "SELECT * FROM flower_discounts WHERE  flower_id='$flower_id'";
+                $dis_result = mysqli_query($connection, $dis_q);
+    
+                if(mysqli_num_rows($dis_result)>0){
+                    $data_d = mysqli_fetch_assoc($dis_result);
+                    
+                    $today_discount =  $data_d['today_dicount'];
+                    $loyalty_discount =  $data_d['loyalty_discount'];
+                    $price_off = $data_d['price_off'];
+                    $today_discount_end = $data_d['today_discount_end'];
+                    $loyalty_discount_end = $data_d['loyalty_discount_end'];
+                    $price_off_end = $data_d['price_off_end'];
+                }
+                if (isset($today_discount) && date('Y-m-d') < $today_discount_end) {
+                $discount = $discount -  ($items_price * $today_discount / 100);
+                }
+                if (isset($_SESSION['user']['loyalty_id'])){
+                    if (isset($loyalty_discount) && date('Y-m-d') < $loyalty_discount_end) {
+                        $discount = $discount -  ($items_price * $loyalty_discount/ 100);
+                    }
+                }
+                if (isset($price_off) && date('Y-m-d') < $price_off_end) {
+                    $discount = $discount -  ($items_price * $price_off / 100);
+                }
+
                 // Calculate discounts
-                $today_discount = $data['today_dicount'];
+                //$today_discount = $data['today_dicount'];
+                /*
                 if (isset($today_discount) && date('Y-m-d') < $data['today_discount_end']) {
                     $discount += ($items_price * $today_discount / 100);
                 }
 
-                $loyalty_discount = $data['loyalty_discount'];
+                //$loyalty_discount = $data['loyalty_discount'];
                 if (isset($_SESSION['user']['loyalty_id']) && isset($loyalty_discount) && date('Y-m-d') < $data['loyalty_discount_end']) {
                     $discount += ($items_price * $loyalty_discount / 100);
                 }
 
-                $price_off = $data['price_off'];
+                //$price_off = $data['price_off'];
                 if (isset($price_off) && date('Y-m-d') < $data['price_off_end']) {
                     $discount += ($items_price * $price_off / 100);
-                }
+                } */
 
                 $items_total = $items_price - $discount;
                 $total += $items_total;
@@ -156,12 +184,25 @@ $array = [];
     <div class="cart-summary">
         <h2>Cart Summary</h2>
         <p>Total: $<?php echo number_format($total, 2); ?></p>
-        <?php if ($num_of_items > 0): ?>
-            <form action="../payments/payment.php" method="get">
-                <input type="text" name="address" placeholder="Enter your address" required>
-                <button type="submit">Buy Now</button>
-            </form>
-        <?php endif; ?>
+        if(isset($num_of_items) && $num_of_items >0){
+
+        $_SESSION['payment'] = [
+            'type' => 'shopping_cart',
+            'total' => $total,
+            'items' => $array,
+            'user_id' => $user_id,
+            'success' => false
+        ];
+    
+            echo "<div class='buy_now'>
+                        <form action='../payments/payment.php' method='get'>
+                        <input type='text' name='address'  placeholder='Enter your address' required><br><br>
+                        <button type='submit' > Buy Now</button>
+                        </form>
+            
+                  </div>";
+    
+        }
     </div>
 </div>
 
