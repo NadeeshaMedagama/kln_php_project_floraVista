@@ -1362,3 +1362,5 @@
 [2024-10-24 07:05:09]  [INFO] - Retrieve data from Users table Successfully
 [2024-10-24 07:05:09]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
 [2024-10-24 11:53:32]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-10-24 11:55:28]  [INFO] - Get flowers_category data successfully
+[2024-10-24 11:55:34]  [INFO] - get the supplier data in db successfully
