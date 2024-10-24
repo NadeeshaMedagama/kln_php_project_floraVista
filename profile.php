@@ -64,6 +64,7 @@ echo "<form action='profile.php' method='post' >
             <button type='submit' name='logout' class='logout'>Logout</button><br>
     
           </form>";
+            echo "<br><a href = 'index.php'><button type='submit' class='back-home-btn'>Back to Home</button></a><br>";
 
 
     if (isset($_POST['logout'])) {

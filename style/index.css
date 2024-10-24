@@ -133,7 +133,6 @@ nav {
     font-weight: bold;
 }
 
-/* Basic styling for the dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -150,6 +149,7 @@ nav {
     display: flex;
     align-items: center;
     border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .dropdown-btn span {
@@ -179,14 +179,13 @@ nav {
     border: 1px solid black;
 }
 
-/* Show dropdown content on button hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Dropdown button hover effect */
 .dropdown-btn:hover {
     background-color: #2db300;
+    transform: scale(1.05);
 }
 
 .image-container {
@@ -208,7 +207,6 @@ nav {
     margin-top: 3px;
 }
 
-/* Styles for each dot */
 .dot {
     height: 12px;
     width: 12px;
@@ -220,7 +218,6 @@ nav {
     transition: background-color 0.3s;
 }
 
-/* Style for the active dot */
 .active {
     background-color: #333;
 }
@@ -231,6 +228,11 @@ nav {
     justify-content: space-around; /
     margin-top: 20px;
     gap: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container:hover{
+    transition: background-color 0.3s;
 }
 
 .card {
@@ -241,12 +243,18 @@ nav {
     text-align: center;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover{
+    transition: background-color 0.3s;
 }
 
 .card img {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+    transition: background-color 0.3s;
 }
 
 .card h2 {
@@ -268,14 +276,16 @@ nav {
     padding: 10px 15px;
     background-color: #77b300;
     color: white;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .card button:hover {
     background-color: #5c8f00;
+    transition: background-color 0.3s;
 }
 
 .container img {
@@ -284,6 +294,11 @@ nav {
     object-fit: cover;
     border-radius: 8px;
     margin: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.container img:hover {
+    transition: background-color 0.3s;
 }
 
 footer {

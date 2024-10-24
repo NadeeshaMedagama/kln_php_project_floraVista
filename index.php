@@ -103,7 +103,6 @@ $result = mysqli_query($connection, $query);
         <li><a class="dropdown-btn" href="loyalty program/loyalty.html">Loyalty Program</a></li>
         <li><a class="dropdown-btn" href="offers/offers.html">Special Offers</a></li>
         <li><a class="dropdown-btn" href="privacy policy/policy.html">Privacy Policy</a></li>
-        <li><a class="dropdown-btn" href="privacy policy/policy.html">Privacy Policy</a></li>
         <li><a class="dropdown-btn" href="contact/contact.html">Contact Us</a></li>
         <li><a class="dropdown-btn" href="subscription/subscription.html">Subscriptions</a></li>
         <li><a class="dropdown-btn" href="about/about.html">About Us</a></li>

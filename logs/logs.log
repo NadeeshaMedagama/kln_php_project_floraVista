@@ -1355,3 +1355,10 @@
 [2024-10-23 19:48:35]  [INFO] - Get flowers_category data successfully
 [2024-10-23 19:48:43]  [INFO] - get the supplier data in db successfully
 [2024-10-23 19:52:43]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-10-23 19:55:23]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-23 19:55:23]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-10-24 06:59:40]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-24 06:59:40]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-10-24 07:05:09]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-24 07:05:09]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-10-24 11:53:32]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
