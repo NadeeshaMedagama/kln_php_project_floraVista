@@ -57,10 +57,12 @@
     cursor: pointer;
     font-size: 16px;
     margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .button-container button:hover {
     background-color: #2980b9;
+    transform: scale(1.05);
 }
 
 .add-to-cart {

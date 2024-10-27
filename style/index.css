@@ -51,11 +51,14 @@ header {
     border-radius: 15px;
     border: 2px solid black;
     margin-left: 3px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
 }
 
 .search-button:hover {
     background-color:  #00e600;
-    color: black;
+    color: #663300;
+    transform: scale(1.05);
 }
 
 .header-info {

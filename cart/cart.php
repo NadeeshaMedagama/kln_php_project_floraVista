@@ -156,11 +156,16 @@ $array = [];
     <div class="cart-summary">
         <h2>Cart Summary</h2>
         <p>Total: $<?php echo number_format($total, 2); ?></p>
-        <?php if ($num_of_items > 0): ?>
+        <?php
+
+        if ($num_of_items > 0): ?>
+
+
             <form action="../payments/payment.php" method="get">
                 <input type="text" name="address" placeholder="Enter your address" required>
                 <button type="submit">Buy Now</button><br>
             </form>
+
             <a href = '../index.php'><button type="submit">Back to Home</button></a>
             <br><br><br><br>
         <?php endif; ?>

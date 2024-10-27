@@ -26,7 +26,10 @@ if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != tr
 <body>
 
 <div class='payments'>
-    <h2>&nbsp;Payments List</h2>
+    <h1>&nbsp;Payments List :</h1>
+
+    <div class='back'> <a href = '../admin_panel.php'><button type='submit' class='backBtn'>Back </button></a></div>
+
     <table>
         <tr>
             <th>Reference No</th>

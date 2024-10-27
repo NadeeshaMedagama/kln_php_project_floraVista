@@ -57,7 +57,7 @@ if (isset($_POST['logout'])) {
     $result = mysqli_query($connection, $query);
 
     if (mysqli_num_rows($result) > 0) {
-        echo "<h3>Low Quantity Flowers</h3>
+        echo "<h2>Low Quantity Flowers :</h2>
             <table>
                 <tr>
                     <th>Flower ID</th>

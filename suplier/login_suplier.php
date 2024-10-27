@@ -19,7 +19,7 @@ try{
         if(empty($email) || empty($password)){
             $errors[] = 'Email or Password is Empty';
         }elseif(!(preg_match("/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/", $email))){
-            $errors[] = "Email is not valied";
+            $errors[] = "Email is not Valid";
         }
 
 
@@ -48,7 +48,7 @@ try{
 
                         $_SESSION['suplier'] = [
                             'suplier_id'=> $data['suplier_id'],
-                            'suplier_username'=> $data['suplier_username'],
+                            'supplier_username'=> $data['supplier_username'],
                             'email'=> $data['email'],
                             'mobile'=> $data['mobile'],
                             'token'=> $token,

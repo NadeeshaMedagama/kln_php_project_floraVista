@@ -53,6 +53,8 @@ if(cookie_checker_admin()){
 
         echo "<h1>Supplier Verify</h1><br>";
 
+        echo "<div class='back'> <a href = '../admin_panel.php'><button type='submit' class='backBtn'>Back </button></a></div>";
+
         $query = "SELECT * FROM supliers WHERE verify=false ;";
 
         $result = mysqli_query($connection, $query);

@@ -14,7 +14,7 @@
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .card:hover {
@@ -26,6 +26,7 @@
     max-width: 100%;
     height: auto;
     margin-bottom: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .card h2 {
@@ -48,11 +49,12 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .card button:hover {
     background-color: #45a049;
+    transform: scale(1.05);
 }
 
 .card p {

@@ -32,10 +32,14 @@ echo "<!DOCTYPE html>
 <body>
 
 <div>
+
     <form action='flower_search.php' method='get'>
         <input type='text' name='search' placeholder='Search flower name'> &nbsp
         <button type='submit'>Search</button>
+        
     </form>
+    <a href='flowers.php'><button type='submit' class='back'> Back </button></a>
+    
 </div>";
 
 $result_set = mysqli_query($connection, $query);

@@ -63,10 +63,13 @@ form button {
     color: white;
     cursor: pointer;
     border: 1px solid black;
+    width: 160px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 form button:hover {
     background-color: #218838;
+    transform: scale(1.05);
 }
 
 table {
@@ -152,4 +155,35 @@ tr:hover {
 .button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
+}
+
+.backBtn{
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #40ff00;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.backBtn:hover{
+    background-color: #33cc00;
+    transform: scale(1.05);
+}
+
+.back{
+    justify-content: right;
+    display: flex;
+    position: absolute;
+    top: 25px;
+    right: 8px;
+}
+
+.request{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

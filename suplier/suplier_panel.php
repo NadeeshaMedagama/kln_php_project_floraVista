@@ -13,11 +13,11 @@ if(!isset($_SESSION['suplier']['islogin']) || $_SESSION['suplier']['islogin'] ==
 }
 
 $suplier_id = $_SESSION['suplier']['suplier_id'];
-$suplier_username = $_SESSION['suplier']['suplier_username'];
+$suplier_username = $_SESSION['suplier']['supplier_username'];
 $suplier_email = $_SESSION['suplier']['email'];
 $mobile = $_SESSION['suplier']['mobile'];
 
-echo "<a href='orders/suplier_order.php'>Request Orders</a>";
+echo "<div class='req'> <a href='orders/suplier_order.php'>Request Orders</a></div>";
 
 
 if(isset($_POST['submit'])){
@@ -26,14 +26,14 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
 
-    $_SESSION['suplier']['suplier_username'] = $suplier_username;
+    $_SESSION['suplier']['supplier_username'] = $suplier_username;
     $_SESSION['suplier']['email'] = $email;
     $_SESSION['suplier']['mobile'] = $mobile;
 
-    $query = "UPDATE supliers SET suplier_username='$suplier_username', email='$email', mobile='$mobile' WHERE  suplier_id='$suplier_id'";
+    $query = "UPDATE supliers SET supplier_username='$suplier_username', email='$email', mobile='$mobile' WHERE  suplier_id='$suplier_id'";
     if(mysqli_query($connection,$query)){
         header("Location: ./suplier_panel.php");
-    }
+    }echo "<div class='success'>Updated Successfully!</div>";
 }
 
 if (isset($_POST['logout'])) {
@@ -45,25 +45,32 @@ if (isset($_POST['logout'])) {
 
 }
 
+echo"<div class='container'>";
+
+echo "<head><link rel='stylesheet' href='panel.css'></head>";
+
+
 echo "<form action='suplier_panel.php' method='post'>
-            <button type='submit' name='logout'>Logout</button>
+            <div class='log'> <button type='submit' name='logout'>Logout</button></div>
            </form>";
 
-echo "<h4>User Information</h4>";
+echo "<h1>Supplier Panel</h1><br>";
+
+echo "<h2>User Information</h2>";
 
 echo "<form action='suplier_panel.php' method='post'>
             <input type='hidden' name='user_id'  value='$suplier_id'>
-            <lable>Username : </lable> <br>
+            <lable><b>Username : </b></lable> <br>
             <input type='text' name='username' value='$suplier_username' required>
             <br><br>
-            <lable>Email : </lable> <br>
+            <lable><b>Email : </b></lable> <br>
             <input type='email' name='email' value='$suplier_email' required>
             <br><br>
-            <lable>Mobile : </lable> <br>
+            <lable><b>Mobile : </b></lable> <br>
             <input type='text' name='mobile' value='$mobile' required><br><br>
             <button type='submit' name='submit'> Update</button>
     
-          </form>";
+          </form></div>";
 
 
 

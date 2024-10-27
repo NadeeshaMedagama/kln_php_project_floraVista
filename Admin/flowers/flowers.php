@@ -124,8 +124,8 @@ if (isset($_POST['submit_flowers_categories'])) {
 </head>
 <body>
 
-<br><a href="discount.php" class="add">Add Discounts</a><br><br><br>
-<a href="flower_search.php" class="add">Flower Information</a><br><br><br>
+<br><div class="head"> <a href="discount.php" class="added">Add Discounts&nbsp;</a><br><br>
+<a href="flower_search.php" class="added">Flower Information</a></div><br><br>
 
 <div id="flowers_category">
     <h2>&nbsp;&nbsp;Flowers Category</h2>
@@ -148,7 +148,7 @@ if (isset($_POST['submit_flowers_categories'])) {
                                 <td>
                                     <form action='flowers.php' method='post'>
                                         <input type='hidden' name='category_id' value='$category_id'>
-                                        <button type='submit' name='delete_category'>Delete</button>
+                                        <button type='submit' name='delete_category'><b>Delete</b></button>
                                     </form>
                                 </td>
                               </tr>";
@@ -169,6 +169,9 @@ if (isset($_POST['submit_flowers_categories'])) {
             <input type="text" name="category_name" id="category_name" placeholder="Category Name"><br><br>
             <button type="submit" name="add_category">ADD</button><br>
         </form>
+
+        <div class="back"> <a href = "../admin_panel.php"><button type="submit" class="backBtn">Back </button></a></div>
+
     </div>
 </div>
 
@@ -222,7 +225,7 @@ if (isset($_POST['submit_flowers_categories'])) {
         $category_name = mysqli_fetch_assoc($result)['category_name'];
 
         echo "<form action='flowers.php' method='post'>
-                    <h4>Select a flower - category name: $category_name</h4>
+                    <h3>&nbsp;&nbsp;Select a flower - Category name: $category_name<br></h3><br>
                     <input type='hidden' name='category_id' value='$category_id'/>";
 
         $query = "SELECT * FROM flowers";
@@ -238,7 +241,7 @@ if (isset($_POST['submit_flowers_categories'])) {
                           <label>$flower_name</label><br>";
             }
             echo "</div>";
-            echo "<button type='submit' name='submit_flowers_categories'>Add</button>";
+            echo "<div class='center-container'><br><button type='submit' class='add'>Add</button><br><br></div><br><br>";
             echo "</form>";
         } else {
             echo "No flowers available";

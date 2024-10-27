@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 750px;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
@@ -36,13 +36,21 @@ button {
     font-size: 16px;
     background-color: #007bff;
     color: white;
-    border: none;
+    border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
+    width: 250px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.addSearch{
+    justify-content: center;
+    display: flex;
 }
 
 .flower-item {
@@ -61,4 +69,34 @@ img {
     max-width: 100px;
     height: auto;
     margin-left: 10px;
+}
+
+h1, h2{
+    color: #33cc00;
+}
+
+.backBtn{
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #40ff00;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.backBtn:hover{
+    background-color: #33cc00;
+    transform: scale(1.05);
+}
+
+.back{
+    justify-content: right;
+    display: flex;
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 658px;
+
 }

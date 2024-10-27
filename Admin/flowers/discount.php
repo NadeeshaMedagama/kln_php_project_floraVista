@@ -109,9 +109,13 @@ echo "<!DOCTYPE html>
 <body>";
 
 echo "<div class='container'> 
+        <h1>Discount Page</h1>
+        
+        <div class='back'> <a href = 'flowers.php'><button type='submit' class='backBtn'>Back </button></a></div>
+        
         <form action='discount.php' method='get'>
-            <input type='text' name='search' placeholder='Search'>
-            <button type='submit'>Search</button>
+            <input type='text' name='search' placeholder='Search Flowers'>
+            <div class='addSearch'> <button type='submit'>Search </button></div>
         </form>
       </div>";
 
@@ -122,11 +126,11 @@ echo "<div class='container'>
                 <option value='loyalty_discount'>Loyalty Discount</option>
                 <option value='price_off'>Price Off</option>
             </select> &nbsp &nbsp &nbsp &nbsp 
-            <input type='number' name='discount_presentage' placeholder='Discount Percentage' required> &nbsp &nbsp &nbsp &nbsp 
+            <input type='number' name='discount_presentage' placeholder='Add Discount Percentage' required> &nbsp &nbsp &nbsp &nbsp 
             <input type='date' name='date'> &nbsp &nbsp &nbsp &nbsp
-            <button type='submit' name='submit'>Add</button> <br><br>
+            <div class='addSearch'><button type='submit' name='submit'>Add</button></div> <br>
 
-            <h3>Select Flowers</h3><br>";
+            <h2>Select Flowers</h2><br>";
 
 $result = mysqli_query($connection, $query);
 

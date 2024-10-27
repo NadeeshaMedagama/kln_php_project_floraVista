@@ -16,14 +16,14 @@ form {
 }
 
 input[type="text"] {
-    padding: 10px;
+    padding: 10px 70px;
     font-size: 16px;
     border: 1px solid black;
     border-radius: 4px;
 }
 
-button {
-    padding: 10px 15px;
+form button {
+    padding: 10px 20px;
     font-size: 16px;
     background-color: #007bff;
     color: white;
@@ -31,10 +31,32 @@ button {
     border-radius: 4px;
     cursor: pointer;
     margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
+form button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.back {
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #40ff00;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    position: fixed;
+    top: 32px;
+    right: 100px;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back:hover {
+    background-color: #33cc00;
+    transform: scale(1.05);
 }
 
 .flower-item {

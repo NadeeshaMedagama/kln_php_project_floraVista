@@ -1,5 +1,6 @@
 <?php
 
+global $connection;
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -12,7 +13,7 @@ if(!isset($_SESSION['suplier']['islogin']) ||  $_SESSION['suplier']['islogin'] =
 }
 
 $suplier_id = $_SESSION['suplier']['suplier_id'];
-$suplier_name = $_SESSION['suplier']['suplier_username'];
+$suplier_name = $_SESSION['suplier']['supplier_username'];
 
 if(isset($_POST['accept_admin_order_request'])){
 
@@ -35,8 +36,12 @@ if(isset($_POST['accept_admin_order_request'])){
 $query = "SELECT * FROM orders WHERE  suplier_id = '$suplier_id' AND isAccept_suplier=false";
 $result = mysqli_query($connection, $query);
 
-echo "<div>
-            <h3>Order Requests</h3>
+echo "<head><link rel='stylesheet' href='suppOrder.css'></head>";
+
+echo "<div class='container'>
+            <h1>Order Requests</h1>
+            
+            <div class='back'> <a href = '../suplier_panel.php'><button type='submit' class='backBtn'>Back </button></a></div>
             
             <table border='1'>
                 <tr>

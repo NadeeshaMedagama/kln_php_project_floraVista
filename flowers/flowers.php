@@ -120,21 +120,41 @@ if(isset($_GET['flower_id'])){
                   WHERE f.flower_id = '$flower_id'";
 
     $result = mysqli_query($connection,$query);
-    $row = mysqli_fetch_assoc($result);
 
-    $flower_id = $row['flower_id'];
-    $flower_name = $row['flower_name'];
-    $sale_price = $row['sale_price'];
-    $quantity = $row['quantity'];
-    $description = $row['description'];
-    $dir_path = $row['dir_path'];
+    if ($row = mysqli_fetch_assoc($result)) {
+        $flower_id = $row['flower_id'];
+        $flower_name = $row['flower_name'];
+        $sale_price = $row['sale_price'];
+        $quantity = $row['quantity'];
+        $description = $row['description'];
+        $dir_path = $row['dir_path'];
 
-    $today_discount =  $row['today_discount'];
-    $loyalty_discount =  $row['loyalty_discount'];
-    $price_off = $row['price_off'];
-    $today_discount_end = $row['today_discount_end'];
-    $loyalty_discount_end = $row['loyalty_discount_end'];
-    $price_off_end = $row['price_off_end'];
+        $today_discount = $row['today_discount'] ?? 0;
+        $loyalty_discount = $row['loyalty_discount'] ?? 0;
+        $price_off = $row['price_off'] ?? 0;
+        $today_discount_end = $row['today_discount_end'] ?? 0;
+        $loyalty_discount_end = $row['loyalty_discount_end'] ?? 0;
+        $price_off_end = $row['price_off_end'] ?? 0;
+    }else {
+        echo "<p>Flowers not found!</p>";
+        exit;
+    }
+
+//    $row = mysqli_fetch_assoc($result);
+//
+//    $flower_id = $row['flower_id'];
+//    $flower_name = $row['flower_name'];
+//    $sale_price = $row['sale_price'];
+//    $quantity = $row['quantity'];
+//    $description = $row['description'];
+//    $dir_path = $row['dir_path'];
+//
+//    $today_discount =  $row['today_discount'];
+//    $loyalty_discount =  $row['loyalty_discount'];
+//    $price_off = $row['price_off'];
+//    $today_discount_end = $row['today_discount_end'];
+//    $loyalty_discount_end = $row['loyalty_discount_end'];
+//    $price_off_end = $row['price_off_end'];
 
     echo "
             <div class='container'>

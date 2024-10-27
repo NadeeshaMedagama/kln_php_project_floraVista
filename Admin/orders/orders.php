@@ -30,6 +30,9 @@ echo "
 <div class='button-container'>
     <a class='button' href='delivered_orders.php'>Supplier Delivered Orders</a>
     <a class='button' href='delivered_orders_history.php'>Supplier Delivered Orders History</a>
+    
+    <div class='back'> <a href = '../admin_panel.php'><button type='submit' class='backBtn'>Back </button></a></div>
+
 </div>
 ";
 
@@ -98,7 +101,7 @@ if(mysqli_num_rows($result_set) > 0){
 
 echo "</select> &nbsp;&nbsp;
                 <input type='number' name='quantity' placeholder='Quantity' required/> &nbsp;&nbsp;
-                <button type='submit' name='request_order'> Request order</button>
+                <div class='request'><button type='submit' name='request_order'> Request order</button></div> 
                 </form>
                 </div>";
 
