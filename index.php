@@ -51,15 +51,40 @@ if ($isLoggedIn) {
     $total_items = mysqli_fetch_assoc($result_total_items)['total_items'];
 }
 
-$query = "SELECT flowers.flower_id, flower_name, sale_price, quantity, dir_path FROM flowers INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id";
+// Items per page and determine current page
+$itemsPerPage = 11;
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+if ($page < 1) $page = 1;
+
+// Calculate the offset
+$offset = ($page - 1) * $itemsPerPage;
+
+// Count total number of flowers for pagination
+$totalFlowersQuery = "SELECT COUNT(*) AS total FROM flowers";
 if (isset($_GET['search_btn'])) {
     $search = user_input($_GET['search']);
-    $query = "SELECT flowers.flower_id, flower_name, sale_price, quantity, dir_path FROM flowers INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id WHERE flower_name LIKE '%$search%'";
-}
-if (isset($_GET['category_id'])) {
+    $totalFlowersQuery = "SELECT COUNT(*) AS total FROM flowers WHERE flower_name LIKE '%$search%'";
+} elseif (isset($_GET['category_id'])) {
     $category_id = user_input($_GET['category_id']);
-    $query = "SELECT flowers.flower_id, flower_name, sale_price, quantity, dir_path FROM flowers INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id WHERE flowers.flower_id IN (SELECT flower_categories.flower_id FROM flower_categories WHERE category_id = '$category_id')";
+    $totalFlowersQuery = "SELECT COUNT(*) AS total FROM flowers WHERE flower_id IN 
+                          (SELECT flower_id FROM flower_categories WHERE category_id = '$category_id')";
 }
+$totalFlowersResult = mysqli_query($connection, $totalFlowersQuery);
+$totalFlowers = mysqli_fetch_assoc($totalFlowersResult)['total'];
+$totalPages = ceil($totalFlowers / $itemsPerPage);
+
+// Query to fetch flowers with optional search or category filter
+$query = "SELECT flowers.flower_id, flower_name, sale_price, quantity, dir_path FROM flowers 
+          INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id ";
+
+if (isset($_GET['search_btn'])) {
+    $query .= "WHERE flower_name LIKE '%$search%' ";
+} elseif (isset($_GET['category_id'])) {
+    $query .= "WHERE flowers.flower_id IN 
+               (SELECT flower_categories.flower_id FROM flower_categories WHERE category_id = '$category_id') ";
+}
+
+$query .= "LIMIT $itemsPerPage OFFSET $offset";
 $result = mysqli_query($connection, $query);
 ?>
 
@@ -127,7 +152,7 @@ $result = mysqli_query($connection, $query);
 </div>
 
 <div class="container">
-    <?php if (mysqli_num_rows($result) > 0): ?>
+<!--    --><?php //if (mysqli_num_rows($result) > 0): ?>
         <?php while ($row = mysqli_fetch_assoc($result)): ?>
             <div class="card">
                 <a href="flowers/flowers.php?flower_id=<?= $row['flower_id'] ?>">
@@ -168,8 +193,29 @@ $result = mysqli_query($connection, $query);
                 ?>
             </div>
         <?php endwhile; ?>
-    <?php endif; ?>
+<!--    --><?php //endif; ?>
 </div>
+
+<div class="pagination">
+
+    <div class="pagination-row">
+        <a href="?page=1" class="page-button <?= $page == 1 ? 'disabled' : '' ?>">First</a>
+        <a href="?page=<?= $page - 1 ?>" class="page-button <?= $page == 1 ? 'disabled' : '' ?>">Previous</a>
+    </div>
+
+    <div class="pagination-row">
+        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+            <a href="?page=<?= $i ?>" class="page-number <?= $i == $page ? 'active' : '' ?>"><?= $i ?></a>
+        <?php endfor; ?>
+    </div>
+
+    <div class="pagination-row">
+        <a href="?page=<?= $page + 1 ?>" class="page-button <?= $page == $totalPages ? 'disabled' : '' ?>">Next</a>
+        <a href="?page=<?= $totalPages ?>" class="page-button <?= $page == $totalPages ? 'disabled' : '' ?>">Last</a>
+    </div>
+</div>
+
+
 
 <script>
     const images = [

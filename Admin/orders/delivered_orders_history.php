@@ -25,7 +25,11 @@ if(!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] ==fals
 <body>
 
 <div id="container">
-    <h3>Accepted Delivered Orders</h3>
+    <h2>Accepted Delivered Orders</h2>
+
+    <div class='back'>
+        <a href = 'orders.php'><button type='submit' class='backBtn'>Back </button></a>
+    </div>
 
     <?php
 

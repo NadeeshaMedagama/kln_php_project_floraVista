@@ -56,10 +56,14 @@ if  (isset($_POST['delivered'])){
 <body>
 
 <div id="container">
-    <h3>Accept Delivered Orders</h3>
+    <h2>Accept Delivered Orders</h2>
+
+    <div class='back'>
+        <a href = 'orders.php'><button type='submit' class='backBtn'>Back </button></a>
+    </div>
 
     <?php
-$query = "SELECT * FROM orders WHERE isAccept_supplier=true  AND isDelivered=false";
+$query = "SELECT * FROM orders WHERE isAccept_suplier=true  AND isDelivered=false";
 
 $result = mysqli_query($connection,$query);
 

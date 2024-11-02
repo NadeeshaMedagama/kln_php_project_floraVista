@@ -23,7 +23,7 @@ if(isset($_POST['accept_admin_order_request'])){
     if (!isset($item_price)){
         echo "<script>window.alert('enter the item price')</script>";
     }
-    $update_query = "UPDATE orders SET isAccept_suplier=true ,accept_suplier_date = CURRENT_DATE, purchase_price= '$item_price' WHERE order_id = '$order_id' ";
+    $update_query = "UPDATE orders SET isAccept_suplier=true ,accept_supplier_date = CURRENT_DATE, purchase_price= '$item_price' WHERE order_id = '$order_id' ";
 
     if (mysqli_query($connection,$update_query)){
         header("Location: ./suplier_order.php");

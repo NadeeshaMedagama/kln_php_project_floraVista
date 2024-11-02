@@ -1606,3 +1606,128 @@
 [2024-10-27 12:38:56]  [INFO] - Retrieve data from Users table Successfully
 [2024-10-27 12:38:56]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
 [2024-10-27 13:17:21]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-10-28 03:58:27]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-28 03:58:27]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-10-29 02:55:10]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-29 02:55:10]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-10-29 02:58:25]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-29 02:58:25]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-10-30 08:55:45]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-30 08:55:45]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-10-30 09:24:43]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-30 09:24:43]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-10-30 09:27:43]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-10-30 09:27:53]  [INFO] - Get flowers_category data successfully
+[2024-10-30 09:28:20]  [INFO] - Get flowers_category data successfully
+[2024-10-30 09:28:36]  [INFO] - Get flowers_category data successfully
+[2024-10-30 09:29:11]  [INFO] - Get flowers_category data successfully
+[2024-10-30 09:29:45]  [INFO] - Get flowers_category data successfully
+[2024-10-30 09:30:24]  [INFO] - get the supplier data in db successfully
+[2024-10-30 09:31:18]  [INFO] - retrieve data from users table successfully
+[2024-10-30 09:31:18]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-10-30 10:00:43]  [INFO] - Get flowers_category data successfully
+[2024-10-30 11:10:58]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-30 11:11:05]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-30 11:11:12]  [INFO] - Retrieve data from Users table Successfully
+[2024-10-30 11:11:12]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-01 10:43:11]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-01 10:43:11]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-01 11:47:03]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-01 11:47:07]  [INFO] - Get flowers_category data successfully
+[2024-11-01 11:47:15]  [INFO] - Get flowers_category data successfully
+[2024-11-01 11:47:20]  [INFO] - Get flowers_category data successfully
+[2024-11-01 11:47:25]  [INFO] - Get flowers_category data successfully
+[2024-11-01 11:47:38]  [INFO] - Get flowers_category data successfully
+[2024-11-01 11:47:51]  [INFO] - get the supplier data in db successfully
+[2024-11-01 11:47:58]  [INFO] - Get flowers_category data successfully
+[2024-11-01 11:48:12]  [INFO] - Get flowers_category data successfully
+[2024-11-01 11:49:12]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 11:49:12]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 11:55:09]  [INFO] - get the supplier data in db successfully
+[2024-11-01 11:55:23]  [INFO] - get the supplier data in db successfully
+[2024-11-01 11:55:45]  [INFO] - retrieve data from users table successfully
+[2024-11-01 11:55:45]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-01 12:16:08]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-01 12:16:09]  [INFO] - get the supplier data in db successfully
+[2024-11-01 12:51:15]  [INFO] - Get flowers_category data successfully
+[2024-11-01 12:51:44]  [INFO] - Get flowers_category data successfully
+[2024-11-01 12:51:51]  [INFO] - get the supplier data in db successfully
+[2024-11-01 14:48:59]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-01 14:48:59]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-01 14:54:30]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-01 15:12:59]  [INFO] - get the supplier data in db successfully
+[2024-11-01 15:13:06]  [INFO] - Get flowers_category data successfully
+[2024-11-01 15:13:10]  [INFO] - Get flowers_category data successfully
+[2024-11-01 15:13:22]  [INFO] - Get flowers_category data successfully
+[2024-11-01 15:13:39]  [INFO] - get the supplier data in db successfully
+[2024-11-01 15:13:42]  [INFO] - Get flowers_category data successfully
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 15:15:17]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 19:47:07]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:03:00]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-01 20:05:41]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:07:31]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-01 20:08:55]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:09:09]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:13:46]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:13:52]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:13:55]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:14:05]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:14:25]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:44:37]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:44:44]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:44:47]  [INFO] - Get flowers_category data successfully
+[2024-11-01 20:45:35]  [INFO] - Get flowers_category data successfully
+[2024-11-02 05:04:39]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-02 05:04:39]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-02 05:05:10]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-02 05:05:10]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-02 05:05:24]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-02 05:06:05]  [INFO] - retrieve data from users table successfully
+[2024-11-02 05:06:05]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-02 05:08:55]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-02 05:08:56]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:09:06]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:09:16]  [INFO] - retrieve data from users table successfully
+[2024-11-02 05:09:16]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-02 05:11:24]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-02 05:11:25]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:11:28]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:11:54]  [INFO] - retrieve data from users table successfully
+[2024-11-02 05:11:54]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-02 05:12:33]  [INFO] - retrieve data from users table successfully
+[2024-11-02 05:12:33]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-02 05:12:37]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-02 05:12:38]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:12:41]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:15:48]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:15:56]  [INFO] - Get flowers_category data successfully
+[2024-11-02 05:18:32]  [INFO] - Get flowers_category data successfully
+[2024-11-02 05:18:34]  [INFO] - Get flowers_category data successfully
+[2024-11-02 05:18:36]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:20:46]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:20:48]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:20:49]  [INFO] - get the supplier data in db successfully
+[2024-11-02 05:27:30]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-02 05:27:30]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-02 10:06:43]  [INFO] - Get flowers_category data successfully
+[2024-11-02 10:06:57]  [INFO] - retrieve data from users table successfully
+[2024-11-02 10:06:57]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-02 10:07:03]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-02 10:07:04]  [INFO] - get the supplier data in db successfully

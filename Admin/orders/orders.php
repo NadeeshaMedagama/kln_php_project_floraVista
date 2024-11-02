@@ -31,7 +31,9 @@ echo "
     <a class='button' href='delivered_orders.php'>Supplier Delivered Orders</a>
     <a class='button' href='delivered_orders_history.php'>Supplier Delivered Orders History</a>
     
-    <div class='back'> <a href = '../admin_panel.php'><button type='submit' class='backBtn'>Back </button></a></div>
+    <div class='back'> 
+    <a href = '../admin_panel.php'><button type='submit' class='backBtn'>Back </button></a>
+    </div>
 
 </div>
 ";
@@ -41,7 +43,7 @@ if (isset($_POST['request_order'])){
     $quantity = (int) user_input($_POST['quantity']);
     $suplier_id =  user_input($_POST['suplier_id']);
 
-    $insert_query = "INSERT INTO orders(flower_id,quantity,suplier_id) VALUES  ('$flower_id',$quantity,'$suplier_id')";
+    $insert_query = "INSERT INTO orders(flower_id,order_date,quantity,suplier_id) VALUES  ('$flower_id',CURRENT_DATE,$quantity,'$suplier_id')";
 
     if(mysqli_query($connection,$insert_query)){
         header("Location: ./orders.php");
@@ -93,14 +95,14 @@ $result_set = mysqli_query($connection, $query);
 if(mysqli_num_rows($result_set) > 0){
     while($row = mysqli_fetch_assoc($result_set)){
         $suplier_id = $row['suplier_id'];
-        $suplier_name = $row['suplier_username'];
+        $suplier_name = $row['supplier_username'];
 
         echo "<option value='$suplier_id'>$suplier_name</option>";
     }
 }
 
 echo "</select> &nbsp;&nbsp;
-                <input type='number' name='quantity' placeholder='Quantity' required/> &nbsp;&nbsp;
+                <input type='number'  name='quantity' placeholder='Quantity' min='1' required/> &nbsp;&nbsp;
                 <div class='request'><button type='submit' name='request_order'> Request order</button></div> 
                 </form>
                 </div>";

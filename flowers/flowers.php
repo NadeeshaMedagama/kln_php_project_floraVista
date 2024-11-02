@@ -8,7 +8,8 @@ ini_set('display_errors', 1);
 include_once "../Connection/connection.php";
 include_once "../Function/function.php";
 
-echo "<link rel='stylesheet' href='style./flowers.css?v=". time()."'>";
+echo "<link rel='stylesheet' href='flowers.css?v=" . time() . "'>";
+
 
 if(isset($_POST['add_cart'])){
     if(!isset($_SESSION['user']['islogin']) ||  $_SESSION['user']['islogin'] == false){
@@ -111,34 +112,40 @@ if (isset($_POST['add_comment'])){
 if(isset($_GET['flower_id'])){
     $flower_id = user_input($_GET['flower_id']);
 
-    $query = "SELECT f.flower_id, f.flower_name, f.quantity, f.sale_price, f.description, fi.dir_path, 
-                  fd.today_discount, fd.loyalty_discount, fd.price_off, fd.today_discount_end, 
-                  fd.loyalty_discount_end, fd.price_off_end 
-                  FROM flowers AS f
-                  INNER JOIN flower_images AS fi ON f.flower_id = fi.flower_id
-                  INNER JOIN flower_discounts AS fd ON f.flower_id = fd.flower_id
-                  WHERE f.flower_id = '$flower_id'";
+//    $query = "SELECT f.flower_id, f.flower_name, f.quantity, f.sale_price, f.description, fi.dir_path,
+//                  fd.today_discount, fd.loyalty_discount, fd.price_off, fd.today_discount_end,
+//                  fd.loyalty_discount_end, fd.price_off_end
+//                  FROM flowers AS f
+//                  INNER JOIN flower_images AS fi ON f.flower_id = fi.flower_id
+//                  INNER JOIN flower_discounts AS fd ON f.flower_id = fd.flower_id
+//                  WHERE f.flower_id = '$flower_id'";
 
+
+    $query = "select * from flowers where flower_id = '$flower_id'";
+    $query1 = "select * from flower_images WHERE flower_id='$flower_id'";
+    $query2 = "select * from flower_discounts WHERE flower_id='$flower_id'";
     $result = mysqli_query($connection,$query);
-
-    if ($row = mysqli_fetch_assoc($result)) {
+    $result1 = mysqli_query($connection,$query1);
+    $result2 = mysqli_query($connection,$query2);
+    $row = mysqli_fetch_assoc($result);
+    $row1 = mysqli_fetch_assoc($result1);
+    $row2 = mysqli_fetch_assoc($result2);
         $flower_id = $row['flower_id'];
         $flower_name = $row['flower_name'];
         $sale_price = $row['sale_price'];
         $quantity = $row['quantity'];
         $description = $row['description'];
-        $dir_path = $row['dir_path'];
-
-        $today_discount = $row['today_discount'] ?? 0;
-        $loyalty_discount = $row['loyalty_discount'] ?? 0;
-        $price_off = $row['price_off'] ?? 0;
-        $today_discount_end = $row['today_discount_end'] ?? 0;
-        $loyalty_discount_end = $row['loyalty_discount_end'] ?? 0;
-        $price_off_end = $row['price_off_end'] ?? 0;
-    }else {
-        echo "<p>Flowers not found!</p>";
-        exit;
-    }
+        $dir_path = $row1['dir_path'];
+        $today_discount = $row2['today_discount'] ?? 0;
+        $loyalty_discount = $row2['loyalty_discount'] ?? 0;
+        $price_off = $row2['price_off'] ?? 0;
+        $today_discount_end = $row2['today_discount_end'] ?? 0;
+        $loyalty_discount_end = $row2['loyalty_discount_end'] ?? 0;
+        $price_off_end = $row2['price_off_end'] ?? 0;
+//    }else {
+//        echo "<p>Flowers not found!</p>";
+//        exit;
+//    }
 
 //    $row = mysqli_fetch_assoc($result);
 //
@@ -161,6 +168,11 @@ if(isset($_GET['flower_id'])){
                 <div class='image-container'>
                     <img src='../$dir_path' alt='$flower_name'>
                 </div>
+                
+                <div class='back'> 
+                    <a href = '../index.php'><button type='submit' class='backBtn'>Back </button></a>
+                </div>
+    
                 <div class='flower-details'>
                     <h2>$flower_name</h2>
                     <p class='description'>$description</p>
@@ -185,9 +197,11 @@ if(isset($_GET['flower_id'])){
                                 <input type='hidden' name='sale_price' value='$sale_price'>
                                 <lable>Quantity :  </lable>
                                 <input type='number' id='quantity' name='quantity' min='1' max='$quantity' value='1' step='1' required><br><br>
+                                
+                                <textarea name='address'  class= 'address' placeholder='Enter your address'></textarea><br><br>
+                                
                                 <button  type='submit'  name='add_cart' class='add-to-cart'>Add to Cart</button>
                                 <button name='buy_now' class='buy-now'>Buy Now</button>
-                                <input type='text' name='address'  placeholder='Enter your address'>
                                 </form>
                             </div>";
     }else{
@@ -205,7 +219,7 @@ if(isset($_GET['flower_id'])){
                     <form action='' method='post'>
                         <input type='hidden' name='flower_id' value='$flower_id'>
                         <textarea name='comment' placeholder='Write your comment here...' required></textarea>
-                        <button type='submit' name='add_comment' class='add-comment'>Add Comment</button>
+                        <button type='submit' name='add_comment' class='add-comment'>Add Comment</button><br>
                     </form>
             ";
 
@@ -223,14 +237,15 @@ if(isset($_GET['flower_id'])){
             $user_name = mysqli_fetch_assoc($user_result)['user_name'];
 
             echo "
-                        <h3>$user_name</h3> <br>
-                        <p>$comment</p>
+                        <br>
+                        <h3>Name : $user_name</h3> <br>
+                        <p><b>Comment : </b>$comment</p>
                     ";
         }
     }
 
 
-    echo "</div>";
+    echo "</div><br>";
 }
 
 

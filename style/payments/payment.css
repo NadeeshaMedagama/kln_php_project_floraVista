@@ -190,3 +190,28 @@ table tr:hover {
     background-color: #0066ff;
     transform: translateY(1px);
 }
+
+.backBtn{
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #40ff00;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.backBtn:hover{
+    background-color: #33cc00;
+    transform: scale(1.05);
+}
+
+.back{
+    justify-content: right;
+    display: flex;
+    position: absolute;
+    top: 45px;
+    right: 45px;
+}

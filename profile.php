@@ -95,9 +95,9 @@ if(mysqli_num_rows($result)>0){
         $flower_result = mysqli_query($connection,$flower_q);
         $flower_name = mysqli_fetch_assoc($flower_result)['flower_name'];
 
-        echo  "<lable>Order ID : $reference_no</lable> &nbsp;
-                    <lable>Flower Name: $flower_name</lable> &nbsp;
-                    <lable>Quantity : $quantity </lable><br>";
+        echo  "<lable><b>Order ID : </b>$reference_no</lable><br> 
+               <lable><b>Flower Name: </b>$flower_name</lable><br> 
+               <lable><b>Quantity : </b>$quantity </lable><br>";
     }
 }
 

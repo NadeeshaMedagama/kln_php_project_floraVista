@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
 
     $query = "UPDATE users SET user_name='$user_name', email='$email', mobile='$mobile' WHERE  user_id='$user_id'";
     if(mysqli_query($connection,$query)){
-        header("Location: ./profile.php");
+        header("Location: ../../profile.php");
     }
 }
 
@@ -43,7 +43,7 @@ echo "<body>";
 echo "<div class='container'>";
 echo "<h1>User Information</h1>";
 
-echo "<form action='profile.php' method='post'>
+echo "<form action='../../profile.php' method='post'>
         <input type='hidden' name='user_id' value='$user_id'>
         <label>Username: </label> <br>
         <input type='text' name='username' value='$user_name' required>

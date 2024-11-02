@@ -110,21 +110,28 @@ $array = [];
                 $items_price = (float)$user_quantity * $sale_price;
                 $discount = 0;
 
-                // Calculate discounts
-//                $today_discount = $data['today_dicount'];
-//                if (isset($today_discount) && date('Y-m-d') < $data['today_discount_end']) {
-//                    $discount += ($items_price * $today_discount / 100);
-//                }
-//
-//                $loyalty_discount = $data['loyalty_discount'];
-//                if (isset($_SESSION['user']['loyalty_id']) && isset($loyalty_discount) && date('Y-m-d') < $data['loyalty_discount_end']) {
-//                    $discount += ($items_price * $loyalty_discount / 100);
-//                }
-//
-//                $price_off = $data['price_off'];
-//                if (isset($price_off) && date('Y-m-d') < $data['price_off_end']) {
-//                    $discount += ($items_price * $price_off / 100);
-//                }
+
+                $today_discount = isset($data['today_discount']) ? $data['today_discount'] : 0;
+                $today_discount_end = isset($data['today_discount_end']) ? $data['today_discount_end'] : '';
+
+                if ($today_discount > 0 && date('Y-m-d') < $today_discount_end) {
+                    $discount += ($items_price * $today_discount / 100);
+                }
+
+                $loyalty_discount = isset($data['loyalty_discount']) ? $data['loyalty_discount'] : 0;
+                $loyalty_discount_end = isset($data['loyalty_discount_end']) ? $data['loyalty_discount_end'] : '';
+
+                if (isset($_SESSION['user']['loyalty_id']) && $loyalty_discount > 0 && date('Y-m-d') < $loyalty_discount_end) {
+                    $discount += ($items_price * $loyalty_discount / 100);
+                }
+
+                $price_off = isset($data['price_off']) ? $data['price_off'] : 0;
+                $price_off_end = isset($data['price_off_end']) ? $data['price_off_end'] : '';
+
+                if ($price_off > 0 && date('Y-m-d') < $price_off_end) {
+                    $discount += ($items_price * $price_off / 100);
+                }
+
 
                 $items_total = $items_price - $discount;
                 $total += $items_total;
@@ -132,7 +139,7 @@ $array = [];
                 echo "<tr>
                             <td>
                                 <img src='../$dir_path' alt='flower image' width='100' height='100'>
-                                <p>$flower_name</p>
+                                <p><b>$flower_name</b></p>
                             </td>
                             <td>
                                 <form action='cart.php' method='post'>
@@ -155,7 +162,7 @@ $array = [];
 
     <div class="cart-summary">
         <h2>Cart Summary</h2>
-        <p>Total: $<?php echo number_format($total, 2); ?></p>
+        <p><b>Total: </b>$<?php echo number_format($total, 2); ?></p>
         <?php
 
         if ($num_of_items > 0): ?>

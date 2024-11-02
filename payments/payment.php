@@ -54,7 +54,7 @@ if(isset($_POST['add']) && $_POST['points']>0){
 
 
 
-    header("Location: ./payment.php");
+//    header("Location: ./payment.php");
 
 }
 
@@ -83,12 +83,16 @@ if(isset($_SESSION['payment']) && $_SESSION['payment']['success'] == false){
     }
 
 
-    echo "<form action='payment.php' method='post'>
+    echo "<div class='back'>
+        <a href = '../cart/cart.php'><button type='submit' class='backBtn'>Back </button></a>
+          </div>
+
+            <form action='payment.php' method='post'>
                  <input type='hidden' name='total' value='$total'>
                  <lable> <h2>User Name :</h2> $user_name </lable><br><br>
                  <lable> <h2>Total Price:</h2> ". $_SESSION['payment']['total'] . "</lable><br><br>
                  <lable> <h2>Shipping  Address:</h2> $address </lable><br><br>
-                <button type='submit' name='pay_online'>Pay Online</button>
+                 <button type='submit' name='pay_online'>Pay Online</button>
         
                </form>";
 }
@@ -100,7 +104,7 @@ if(isset($_SESSION['payment']['reference_no'])  && $_SESSION['payment']['success
     } else {
         $address = "No address provided";
     }
-
+echo"$total";
     $reference_no = $_SESSION['payment']['reference_no'];
     $total = $_SESSION['payment']['total'];
     $current_points = $_SESSION['user']['points_blance'];

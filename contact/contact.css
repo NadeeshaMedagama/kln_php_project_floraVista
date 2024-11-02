@@ -95,6 +95,11 @@ form button:hover {
 .social-media li {
     display: inline;
     margin-right: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-media li:hover {
+    transform: scale(1.05);
 }
 
 footer {
