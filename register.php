@@ -88,6 +88,7 @@ try {
             }
         }
     }
+
 } catch (Exception $e) {
     logger("ERROR", "register.php: " . $e->getMessage());
 }
