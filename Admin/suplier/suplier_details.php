@@ -30,6 +30,8 @@ $result = mysqli_query($connection, $query);
 <div class='container'>
     <h1>Registered Suppliers Details</h1><br>
 
+    <div class='back'> <a href = 'suplier.php'><button type='submit' class='backBtn'>Back </button></a></div>
+
     <table border='1'>
         <tr>
             <th>Supplier ID</th>

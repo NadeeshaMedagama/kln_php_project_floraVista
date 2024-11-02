@@ -65,6 +65,7 @@ h4 {
     border-radius: 4px;
     cursor: pointer;
     width: 90px;
+    font-weight: normal;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -81,3 +82,30 @@ h4 {
     right: 170px;
 
 }
+
+.regBtn{
+    padding: 10px 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.regBtn:hover{
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.reg{
+    justify-content: right;
+    display: flex;
+    position: absolute;
+    top: 60px;
+    right: 280px;
+
+}
+

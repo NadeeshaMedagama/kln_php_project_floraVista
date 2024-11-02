@@ -110,6 +110,7 @@ $array = [];
                 $items_price = (float)$user_quantity * $sale_price;
                 $discount = 0;
 
+                $array[$flower_id] = $user_quantity;
 
                 $today_discount = isset($data['today_discount']) ? $data['today_discount'] : 0;
                 $today_discount_end = isset($data['today_discount_end']) ? $data['today_discount_end'] : '';
@@ -165,7 +166,14 @@ $array = [];
         <p><b>Total: </b>$<?php echo number_format($total, 2); ?></p>
         <?php
 
-        if ($num_of_items > 0): ?>
+        if ($num_of_items > 0):
+            $_SESSION['payment'] = [
+                'type' => 'shopping_cart',
+                'total' => $total,
+                'items' => $array,
+                'user_id' => $user_id,
+                'success' => false
+            ];?>
 
 
             <form action="../payments/payment.php" method="get">

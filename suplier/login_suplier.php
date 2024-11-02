@@ -64,7 +64,7 @@ try{
                         header("Location: suplier_panel.php");
                         exit();
                     }else{
-                        $suplier_username = $data["suplier_username"];
+                        $suplier_username = $data["supplier_username"];
                         logger("INFO", "$suplier_username is not verified");
                         $errors[] = "Account is Not Verified";
                     }

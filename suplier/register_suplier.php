@@ -10,7 +10,6 @@ include_once __DIR__ . '/../Connection/connection.php';
 
 try {
 
-
     $errors = array();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -19,7 +18,6 @@ try {
         $email = user_input($_POST['email']);
         $password = user_input($_POST['password']);
         $mobile = user_input($_POST['mobile']);
-
 
         if (empty($username) || empty($email) || empty($password) || empty($mobile)) {
 
@@ -57,7 +55,6 @@ try {
 
         if (count($errors) == 0) {
 
-
             $password = sha1($password);
 
 
@@ -66,13 +63,12 @@ try {
             $password = mysqli_real_escape_string($connection, $password);
             $mobile = mysqli_real_escape_string($connection, $mobile);
 
-
-            $query = "INSERT INTO supliers (suplier_username, email, password, mobile) VALUES ('$username', '$email', '$password', '$mobile')";
+            $query = "INSERT INTO supliers (supplier_username, email, password, mobile) VALUES ('$username', '$email', '$password', '$mobile')";
 
             try {
 
                 if (mysqli_query($connection, $query)) {
-                    logger("INFO", "register_suplier.php : Supplier data inserted successfully");
+                    logger("INFO", "register_suplier.php : Supplier data Inserted Successfully");
 
 
                     header("Location: login_suplier.php?Register=true&Username=$username");
@@ -131,14 +127,6 @@ $connection->close();
 
             <label for="password">
                 <input type="password" name="password" id="password" placeholder="Password" required/>
-            </label><br><br>
-
-            <label for="Male">
-                <input type="radio" id="Male" name="gender" value="male"/>Male
-            </label>
-
-            <label for="Female">
-                <input type="radio" id="Female" name="gender" value="female"/>Female
             </label><br><br>
 
             <button id="submit-btn" type="submit">Register</button><br><br>

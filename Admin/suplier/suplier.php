@@ -11,7 +11,7 @@ include_once  '../../Connection/connection.php';
 
 if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != true){
 
-    header("Location: ../Admin.php");
+    header("Location: ../admin.php");
 }
 ?>
 
@@ -55,12 +55,13 @@ if(cookie_checker_admin()){
 
         echo "<div class='back'> <a href = '../admin_panel.php'><button type='submit' class='backBtn'>Back </button></a></div>";
 
+        echo "<div class='reg'> <a href = 'suplier_details.php'><button type='submit' class='regBtn'>Registered Suppliers </button></a></div>";
+
         $query = "SELECT * FROM supliers WHERE verify=false ;";
 
         $result = mysqli_query($connection, $query);
         logger("INFO", "get the supplier data in db successfully");
 
-        // Create a table
         echo "<table id='table-supplier-verify border='1'>
                 <th>Supplier id</th>
                 <th>Username</th>
@@ -79,7 +80,7 @@ if(cookie_checker_admin()){
 
             echo "<tr><td> $suplier_id </td> <td> $suplier_username </td> <td>$email</td> <td> $mobile </td>
                 <td> 
-                    <form action='admin_panel.php' method='post'>
+                    <form action='' method='post'>
                         <input type='hidden' value='$suplier_id' name='suplier_id'>
                         <button type='submit' name='submit_verify'>Verify</button>
                     </form>

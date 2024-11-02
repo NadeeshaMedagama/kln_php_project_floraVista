@@ -44,6 +44,7 @@ if (isset($_POST['add_cart'])) {
 }
 
 $total_items = 0;
+
 if ($isLoggedIn) {
     $user_id = $_SESSION['user']['user_id'];
     $total_items_query = "SELECT COUNT(*) AS total_items FROM shopping_cart WHERE user_id = '$user_id'";
@@ -51,29 +52,28 @@ if ($isLoggedIn) {
     $total_items = mysqli_fetch_assoc($result_total_items)['total_items'];
 }
 
-// Items per page and determine current page
 $itemsPerPage = 11;
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
 if ($page < 1) $page = 1;
 
-// Calculate the offset
 $offset = ($page - 1) * $itemsPerPage;
 
-// Count total number of flowers for pagination
 $totalFlowersQuery = "SELECT COUNT(*) AS total FROM flowers";
 if (isset($_GET['search_btn'])) {
     $search = user_input($_GET['search']);
     $totalFlowersQuery = "SELECT COUNT(*) AS total FROM flowers WHERE flower_name LIKE '%$search%'";
+
 } elseif (isset($_GET['category_id'])) {
     $category_id = user_input($_GET['category_id']);
     $totalFlowersQuery = "SELECT COUNT(*) AS total FROM flowers WHERE flower_id IN 
                           (SELECT flower_id FROM flower_categories WHERE category_id = '$category_id')";
 }
+
 $totalFlowersResult = mysqli_query($connection, $totalFlowersQuery);
 $totalFlowers = mysqli_fetch_assoc($totalFlowersResult)['total'];
 $totalPages = ceil($totalFlowers / $itemsPerPage);
 
-// Query to fetch flowers with optional search or category filter
 $query = "SELECT flowers.flower_id, flower_name, sale_price, quantity, dir_path FROM flowers 
           INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id ";
 
@@ -91,13 +91,16 @@ $result = mysqli_query($connection, $query);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Shop</title>
     <link rel="stylesheet" href="style/index.css?v=<?= time(); ?>">
+
 </head>
 <body>
 <header>
+
     <div class="logo-search">
         <img src="Admin/home/style/images/Flora Vista New.png" alt="Logo" class="logo">
         <form action="" method="get">
@@ -105,16 +108,19 @@ $result = mysqli_query($connection, $query);
             <button type="submit" name="search_btn" class="search-button">Search</button>
         </form>
     </div>
+
     <div class="header-info">
         <span class="phone">Happiness Hotline:<br>011 2001122</span>
         <span class="account"><a href="profile.php"><img src="Admin/home/style/images/account.png" width="28px" height="28px" alt="account"><br>My Profile</a></span>
         <span class="cart"><a href="cart/cart.php"><img src="Admin/home/style/images/cart.png" width="28px" height="28px" alt="cart"><br>Cart</a></span>
     </div>
+
 </header>
 
 <nav>
     <ul class="main-menu">
         <li>
+
             <div class="dropdown">
                 <button class="dropdown-btn">Categories <span>&#9654;</span></button>
                 <div class="dropdown-content">
@@ -123,6 +129,7 @@ $result = mysqli_query($connection, $query);
                     <?php endwhile; ?>
                 </div>
             </div>
+
         </li>
         <li><a class="dropdown-btn" href="new arrivals/arrivals.html">New Arrivals</a></li>
         <li><a class="dropdown-btn" href="loyalty program/loyalty.html">Loyalty Program</a></li>
@@ -175,24 +182,29 @@ $result = mysqli_query($connection, $query);
                 if ($today_discount && date('Y-m-d') < $today_discount_end) {
                     echo "<p class='discount'>Today's Discount: $today_discount%</p>";
                 }
+
                 if (isset($_SESSION['user']['loyalty_id'])){
+
                     if (isset($loyalty_discount) && date('Y-m-d') < $loyalty_discount_end) {
                         echo "<p class='loyalty-discount'>Loyalty Discount: $loyalty_discount%</p>";
                     }
                 }
+
                 if ($price_off && date('Y-m-d') < $price_off_end) {
                     echo "<p class='price-off'>Price Off: $price_off%</p>";
                 }
 
-
                 if ($row['quantity'] > 0) {
                     echo "<p><form action='' method='post'><input type='hidden' name='flower_id' value='{$row['flower_id']}'><button type='submit' name='add_cart'>Add to Cart</button></form></p>";
+
                 } else {
                     echo "<p style='color: red; font-weight: bold;'>Out of Stock</p>";
                 }
+
                 ?>
             </div>
         <?php endwhile; ?>
+
 <!--    --><?php //endif; ?>
 </div>
 
@@ -257,15 +269,21 @@ $result = mysqli_query($connection, $query);
 <br><br>
 <footer>
     <div class="social-links">
+
         <ul>
+
             <li><a href="http://www.facebook.com"><img src="icons/img.png" alt="Facebook" class="social-icon"></a></li>
             <li><a href="http://www.instagram.com"><img src="icons/img_1.png" alt="Instagram" class="social-icon"></a></li>
             <li><a href="http://www.tiktok.com"><img src="icons/img_2.png" alt="TikTok" class="social-icon"></a></li>
             <li><a href="http://www.youtube.com"><img src="icons/img_3.png" alt="YouTube" class="social-icon"></a></li>
             <li><a href="http://www.twitter.com"><img src="icons/img_4.png" alt="Twitter" class="social-icon"></a></li>
+
         </ul>
+
     </div>
+
     <p class="footer-text">©2024 Flora Vista, All rights reserved. Designed by <a href="#">Dev Team</a></p>
+
 </footer>
 </body>
 </html>
