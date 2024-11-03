@@ -7,12 +7,10 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #ccccb3;
     color: #333;
-    margin-left: 10px;
-    margin-right: 10px;
     border: 2px solid black;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 h1{
@@ -23,7 +21,7 @@ h1{
     width: 80%;
     margin: 20px auto;
     padding: 20px;
-    background: white;
+    background: #f5f5ef;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -181,8 +179,8 @@ tr:hover {
     justify-content: right;
     display: flex;
     position: absolute;
-    top: 33px;
-    right: 23px;
+    top: 50px;
+    right: 135px;
 
 }
 
@@ -208,8 +206,8 @@ tr:hover {
     justify-content: right;
     display: flex;
     position: absolute;
-    top: 33px;
-    right: 130px;
+    top: 50px;
+    right: 240px;
 
 }
 

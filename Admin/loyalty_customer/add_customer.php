@@ -8,7 +8,7 @@ include_once "../../Connection/connection.php";
 include_once "../../Function/function.php";
 
 if(!isset($_SESSION['user']['islogin']) || $_SESSION['user']['islogin'] == false){
-    header("Location: login.php");
+    header("Location: ../../login.php");
 }
 
 $user_id = $_SESSION['user']['user_id'];

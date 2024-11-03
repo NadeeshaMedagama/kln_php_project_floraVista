@@ -25,7 +25,7 @@ if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != tr
 </head>
 <body>
 
-<div class='payments'>
+<div class='container'>
     <h1>&nbsp;Payments List :</h1>
 
     <div class='loyal'> <a href = '../loyalty_customer/add_customer.php'><button type='submit' class='add'>Add Loyalty Customer</button></a></div>
