@@ -206,7 +206,7 @@ $result = mysqli_query($connection, $query);
         <?php endwhile; ?>
 
 <!--    --><?php //endif; ?>
-</div>
+</div><br>
 
 <div class="pagination">
 
