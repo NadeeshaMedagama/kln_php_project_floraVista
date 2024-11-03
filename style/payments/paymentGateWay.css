@@ -63,9 +63,10 @@ h2 {
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn:hover {
     background-color: #218838;
+    transform: scale(1.05);
 }

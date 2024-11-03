@@ -31,6 +31,12 @@ header {
     margin-right: 10px;
     margin-left: 20px;
     margin-top: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid #df80ff;
+}
+
+.logo:hover{
+    transform: scale(1.05);
 }
 
 .search-bar {
@@ -51,11 +57,13 @@ header {
     border-radius: 15px;
     border: 2px solid black;
     margin-left: 3px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .search-button:hover {
     background-color:  #00e600;
     color: black;
+    transform: scale(1.05);
 }
 
 .header-info {
@@ -79,10 +87,12 @@ header {
     background-color: white;
     padding: 5px 10px;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .account:hover, .cart:hover {
     background-color: #e6e6e6;
+    transform: scale(1.05);
 }
 
 nav {
@@ -149,6 +159,7 @@ nav {
     display: flex;
     align-items: center;
     border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .dropdown-btn span {
@@ -184,6 +195,7 @@ nav {
 
 .dropdown-btn:hover {
     background-color: #2db300;
+    transform: scale(1.05);
 }
 
 .image-container {

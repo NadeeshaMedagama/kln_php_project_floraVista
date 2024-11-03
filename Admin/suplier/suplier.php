@@ -47,7 +47,7 @@ if (isset($_POST['submit_verify'])){
 
 echo "<div id='supplier-verify'>";
 
-if(cookie_checker_admin()){
+//if(cookie_checker_admin()){
 
     try{
 
@@ -82,7 +82,11 @@ if(cookie_checker_admin()){
                 <td> 
                     <form action='' method='post'>
                         <input type='hidden' value='$suplier_id' name='suplier_id'>
+                        
+                        <div class='verify'>
                         <button type='submit' name='submit_verify'>Verify</button>
+                        </div>
+                        
                     </form>
 
                 </td></tr>";
@@ -95,7 +99,7 @@ if(cookie_checker_admin()){
     }catch(Exception $e){
         logger("ERROR", $e->getMessage());
     }
-}
+//}
 
 echo "</div>";
 

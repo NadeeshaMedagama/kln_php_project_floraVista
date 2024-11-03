@@ -1,5 +1,6 @@
 <?php
 
+global $connection;
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -33,18 +34,27 @@ if (isset($_POST['submit'])) {
 
                 if (mysqli_num_rows($check_result) > 0) {
 
-                    $update_query = "UPDATE flower_discounts SET today_dicount ='$discount_presentage', today_discount_end='$end_date' WHERE flower_id ='$flower_id'";
+                    $update_query = "UPDATE flower_discounts SET today_discount ='$discount_presentage', today_discount_end='$end_date' WHERE flower_id ='$flower_id'";
                     mysqli_query($connection, $update_query);
                 } else {
-                    $insert_query = "INSERT INTO flower_discounts(flower_id, today_dicount, today_discount_end) VALUES ('$flower_id', $discount_presentage, '$end_date')";
+                    $insert_query = "INSERT INTO flower_discounts(flower_id, today_discount, today_discount_end) VALUES ('$flower_id', $discount_presentage, '$end_date')";
                     mysqli_query($connection, $insert_query);
                 }
+                header("Location: ./discount.php");
+
             } catch (Exception $e) {
                 logger('ERROR', $e->getMessage());
             }
         }
-        header("Location: ./discount.php");
+
+//        header("Location: ./discount.php");
+
     } elseif ($flower_discount == 'loyalty_discount') {
+
+        if (isset($date)){
+            echo "<script>window.alert('Date is Required')</script>";
+        }
+
         foreach ($flowers_id_array as $flower_id) {
             try {
 
@@ -59,12 +69,22 @@ if (isset($_POST['submit'])) {
                     $insert_query = "INSERT INTO flower_discounts(flower_id, loyalty_discount, loyalty_discount_end) VALUES ('$flower_id', $discount_presentage, '$date')";
                     mysqli_query($connection, $insert_query);
                 }
+
+                header("Location: ./discount.php");
+
             } catch (Exception $e) {
                 logger('ERROR', $e->getMessage());
             }
         }
-        header("Location: ./discount.php");
+
+//        header("Location: ./discount.php");
+
     } elseif ($flower_discount == 'price_off') {
+
+        if (isset($date)){
+            echo "<script>window.alert('Date is Required')</script>";
+        }
+
         foreach ($flowers_id_array as $flower_id) {
             try {
 
@@ -79,13 +99,17 @@ if (isset($_POST['submit'])) {
                     $insert_query = "INSERT INTO flower_discounts(flower_id, price_off, price_off_end) VALUES ('$flower_id', $discount_presentage, '$date')";
                     mysqli_query($connection, $insert_query);
                 }
+
+                header("Location: ./discount.php");
+
             } catch (Exception $e) {
                 logger('ERROR', $e->getMessage());
             }
         }
-        header("Location: ./discount.php");
+//        header("Location: ./discount.php");
+
     } else {
-        logger('ERROR', 'Invalid flower discount type');
+        logger('ERROR', 'Invalid Flower Discount type!');
     }
 }
 

@@ -63,7 +63,7 @@ if  (isset($_POST['delivered'])){
     </div>
 
     <?php
-$query = "SELECT * FROM orders WHERE isAccept_suplier=true  AND isDelivered=false";
+$query = "SELECT * FROM orders WHERE isAccept_supplier=true  AND isDelivered=false";
 
 $result = mysqli_query($connection,$query);
 
@@ -73,14 +73,14 @@ echo "<table border='1'>
                         <th>Order Date</th>
                         <th>Flower ID</th>
                         <th>Flower Name</th>
-                        <th>Suplier ID</th>
-                        <th>Suplier Name</th>
+                        <th>Supplier ID</th>
+                        <th>Supplier Name</th>
                         <th>Quantity</th>
                         <th>Item Price</th>
                         <th>Sale Price</th>
                         <th>Total Price</th>
-                        <th></th>
-                        <th></th>
+                        <th>Delivered or Not</th>
+                        <th>Delete Order</th>
                         
                     </tr>";
 

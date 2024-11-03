@@ -181,10 +181,12 @@ $array = [];
                 <button type="submit">Buy Now</button><br>
             </form>
 
-            <a href = '../index.php'><button type="submit">Back to Home</button></a>
-            <br><br><br><br>
+            <br><br>
         <?php endif; ?>
-    </div>
+
+    </div><br>
+    <a href = '../index.php'><button type="submit">Back to Home</button><br><br></a>
+    <br><br>
 </div>
 
 <footer>

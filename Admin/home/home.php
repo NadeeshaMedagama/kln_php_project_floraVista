@@ -135,7 +135,7 @@ if ($isLoggedIn) {
             </div>
         </li>
         <li><a class="dropdown-btn" href="../../new arrivals/arrivals.html">New Arrivals</a></li>
-        <li><a class="dropdown-btn" href="../../loyalty program/loyalty.html">Loyalty Program</a></li>
+        <li><a class="dropdown-btn" href="../../shop/shop.html">Sample Flowers</a></li>
         <li><a class="dropdown-btn" href="../../offers/offers.html">Special Offers</a></li>
         <li><a class="dropdown-btn" href="../../privacy policy/policy.html">Privacy Policy</a></li>
         <li><a class="dropdown-btn" href="../../contact/contact.html">Contact Us</a></li>

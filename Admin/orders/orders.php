@@ -66,13 +66,15 @@ if(isset($_POST['delete_order'])){
     }
 }
 
-echo "<h2> Request Order To Suplier </h2>";
+echo "<h2> Request Order To Supplier </h2>";
 
 echo "<div>
         <form action='orders.php' method='post'>
             <label>Select a flower Name: </label> &nbsp;
             <select name='flower_id' required>";
+
 //get the flower names
+
 $query = "SELECT * FROM flowers";
 $result_set = mysqli_query($connection, $query);
 
@@ -85,6 +87,7 @@ if(mysqli_num_rows($result_set) > 0){
         echo "<option value='$flower_id'>$flower_name</option>";
     }
 }
+
 echo "</select> &nbsp;&nbsp;
                 <label>Select Supplier: </label> &nbsp;
                 <select name='suplier_id' required>";

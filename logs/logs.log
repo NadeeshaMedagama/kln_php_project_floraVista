@@ -1883,3 +1883,97 @@
 [2024-11-03 04:22:53]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
 [2024-11-03 04:22:54]  [INFO] - get the supplier data in db successfully
 [2024-11-03 04:22:58]  [INFO] - get the supplier data in db successfully
+[2024-11-03 05:38:44]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 05:38:44]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 05:57:03]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-03 05:57:05]  [INFO] - get the supplier data in db successfully
+[2024-11-03 07:37:49]  [WARNING] - anura@gmail.com or 0777666444 is already taken
+[2024-11-03 07:37:49]  [INFO] - register.php : User data inserted successfully
+[2024-11-03 07:38:03]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 07:38:03]  [INFO] - User : anura Login Successfully. Redirect to the Index page.
+[2024-11-03 09:12:16]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-03 09:12:19]  [INFO] - get the supplier data in db successfully
+[2024-11-03 09:12:22]  [INFO] - Get flowers_category data successfully
+[2024-11-03 09:13:06]  [WARNING] - anura@gmail.com or 0777666444 is already taken
+[2024-11-03 09:13:06]  [INFO] - register_suplier.php : Supplier data Inserted Successfully
+[2024-11-03 09:13:28]  [INFO] - retrieve data from users table successfully
+[2024-11-03 09:13:28]  [INFO] - anura is not verified
+[2024-11-03 09:13:32]  [INFO] - get the supplier data in db successfully
+[2024-11-03 09:13:35]  [INFO] - supplier verify successfully
+[2024-11-03 09:13:35]  [INFO] - get the supplier data in db successfully
+[2024-11-03 09:13:38]  [INFO] - retrieve data from users table successfully
+[2024-11-03 09:13:38]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-03 09:13:51]  [INFO] - retrieve data from users table successfully
+[2024-11-03 09:13:51]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-03 10:27:53]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-03 10:27:54]  [INFO] - get the supplier data in db successfully
+[2024-11-03 10:28:38]  [INFO] - retrieve data from users table successfully
+[2024-11-03 10:28:38]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-03 10:29:00]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-03 10:29:02]  [INFO] - get the supplier data in db successfully
+[2024-11-03 10:29:07]  [INFO] - get the supplier data in db successfully
+[2024-11-03 10:29:10]  [INFO] - get the supplier data in db successfully
+[2024-11-03 12:22:28]  [INFO] - get the supplier data in db successfully
+[2024-11-03 12:22:34]  [INFO] - get the supplier data in db successfully
+[2024-11-03 12:22:36]  [INFO] - get the supplier data in db successfully
+[2024-11-03 12:22:39]  [INFO] - Get flowers_category data successfully
+[2024-11-03 12:22:47]  [INFO] - Get flowers_category data successfully
+[2024-11-03 13:29:11]  [INFO] - retrieve data from users table successfully
+[2024-11-03 13:29:11]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-03 13:30:57]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-03 13:30:59]  [INFO] - get the supplier data in db successfully
+[2024-11-03 13:32:45]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 13:32:45]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 14:08:26]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-03 14:08:37]  [INFO] - Get flowers_category data successfully
+[2024-11-03 14:09:13]  [INFO] - Get flowers_category data successfully
+[2024-11-03 14:09:47]  [INFO] - Get flowers_category data successfully
+[2024-11-03 14:32:45]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-03 14:34:14]  [ERROR] - Unknown column 'today_dicount' in 'field list'
+[2024-11-03 17:02:07]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 17:02:07]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 17:03:06]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 17:03:06]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 17:03:33]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 17:03:33]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 17:06:14]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 17:06:14]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 17:21:58]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 17:21:58]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 17:22:32]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 17:22:32]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 17:23:25]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-03 17:23:25]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-03 17:23:58]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-03 17:24:00]  [INFO] - get the supplier data in db successfully
+[2024-11-03 17:24:03]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:06:13]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:07:10]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:12:30]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:12:36]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:14:40]  [INFO] - get the supplier data in db successfully
+[2024-11-03 18:14:45]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:16:59]  [INFO] - get the supplier data in db successfully
+[2024-11-03 18:17:03]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:17:10]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:24:09]  [INFO] - get the supplier data in db successfully
+[2024-11-03 18:24:17]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:56:30]  [INFO] - Get flowers_category data successfully
+[2024-11-03 18:58:42]  [INFO] - Get flowers_category data successfully
+[2024-11-03 19:00:11]  [INFO] - retrieve data from users table successfully
+[2024-11-03 19:00:11]  [INFO] - Suplier :  login successfully. redirect to the suplier_panel page.
+[2024-11-03 19:22:45]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:23:00]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:25:16]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:25:18]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:25:39]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:25:53]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:26:18]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:26:37]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:26:45]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:26:50]  [INFO] - Get flowers_category data successfully
+[2024-11-03 19:26:58]  [INFO] - Get flowers_category data successfully
+[2024-11-03 19:27:00]  [INFO] - Get flowers_category data successfully
+[2024-11-03 19:27:56]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:28:08]  [INFO] - get the supplier data in db successfully
+[2024-11-03 19:29:14]  [INFO] - get the supplier data in db successfully

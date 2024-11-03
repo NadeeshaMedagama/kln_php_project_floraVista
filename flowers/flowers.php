@@ -175,9 +175,9 @@ if(isset($_GET['flower_id'])){
     
                 <div class='flower-details'>
                     <h2>$flower_name</h2>
-                    <p class='description'>$description</p>
-                    <p class='price'>Price: RS. $sale_price</p>
-                    <p class='quantity'>Available Quantity: $quantity</p>";
+                    <p class='description'><b>Description : </b>$description</p>
+                    <p class='price'><b>Price: </b> RS. $sale_price</p>
+                    <p class='quantity'><b>Available Quantity: </b> $quantity</p>";
 
     if (isset($today_discount) && date('Y-m-d') < $today_discount_end) {
         echo "<p class='discount'>Today's Discount: $today_discount%</p>";

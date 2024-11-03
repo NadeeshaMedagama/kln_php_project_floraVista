@@ -104,7 +104,7 @@ if(isset($_SESSION['payment']['reference_no'])  && $_SESSION['payment']['success
     } else {
         $address = "No address provided";
     }
-echo"$total";
+//echo"$total";
     $reference_no = $_SESSION['payment']['reference_no'];
     $total = $_SESSION['payment']['total'];
     $current_points = $_SESSION['user']['points_blance'];

@@ -167,6 +167,10 @@ table tr:hover {
     }
 }
 
+.success_payment{
+    text-align: center;
+}
+
 .success_payment button {
     background-color: #66a3ff;
     color: black;

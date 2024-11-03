@@ -14,7 +14,8 @@ if (isset($_POST['logout'])) {
     exit();
 }
 
-$isLoggedIn = isset($_SESSION['user']) && $_SESSION['user']['islogin'] == true;
+//$isLoggedIn = isset($_SESSION['user']) && $_SESSION['user']['islogin'] == true;
+$isLoggedIn = isset($_SESSION['user']['islogin']) && $_SESSION['user']['islogin'] == true;
 
 $category_q = "SELECT * FROM categories";
 $category_r = mysqli_query($connection, $category_q);
@@ -46,10 +47,12 @@ if (isset($_POST['add_cart'])) {
 $total_items = 0;
 
 if ($isLoggedIn) {
+
     $user_id = $_SESSION['user']['user_id'];
     $total_items_query = "SELECT COUNT(*) AS total_items FROM shopping_cart WHERE user_id = '$user_id'";
     $result_total_items = mysqli_query($connection, $total_items_query);
     $total_items = mysqli_fetch_assoc($result_total_items)['total_items'];
+
 }
 
 $itemsPerPage = 11;
@@ -168,11 +171,12 @@ $result = mysqli_query($connection, $query);
                 <h2><?= $row['flower_name'] ?></h2>
                 <p class="price">RS. <?= $row['sale_price'] ?>.00</p>
                 <?php
+
                 $query_discount = "SELECT * FROM flower_discounts WHERE flower_id = '{$row['flower_id']}'";
                 $data_set = mysqli_query($connection, $query_discount);
                 $data = mysqli_fetch_assoc($data_set);
 
-                $today_discount = isset($data['today_dicount']) ? $data['today_dicount'] : null;
+                $today_discount = isset($data['today_discount']) ? $data['today_discount'] : null;
                 $loyalty_discount = isset($data['loyalty_discount']) ? $data['loyalty_discount'] : null;
                 $price_off = isset($data['price_off']) ? $data['price_off'] : null;
                 $today_discount_end = isset($data['today_discount_end']) ? $data['today_discount_end'] : null;

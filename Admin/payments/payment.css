@@ -185,3 +185,31 @@ tr:hover {
     right: 23px;
 
 }
+
+.add{
+    padding: 9px 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 220px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.add:hover{
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.loyal{
+    justify-content: right;
+    display: flex;
+    position: absolute;
+    top: 33px;
+    right: 130px;
+
+}
+

@@ -36,6 +36,7 @@ table th, table td {
 table th {
     background-color: #007bff;
     color: #fff;
+    font-size: 18px;
 }
 
 table tr:nth-child(even) {
@@ -58,15 +59,17 @@ button {
     padding: 8px 12px;
     background-color: #28a745;
     color: white;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 15px;
 }
 
 button:hover {
     background-color: #218838;
+    transform: scale(1.05);
 }
 
 .backBtn{
@@ -79,6 +82,7 @@ button:hover {
     cursor: pointer;
     width: 90px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: normal;
 }
 
 .backBtn:hover{

@@ -74,10 +74,10 @@ echo "<form action='profile.php' method='post' >
         exit();
     }
 
-if(isset($_SESSION['user']['loyalty_id']) && isset($_SESSION['user']['points_blance'])){
+if(isset($_SESSION['user']['loyalty_id']) && isset($_SESSION['user']['points_balance'])){
     echo "<h4>Loyalty Information</h4>";
     echo "Loyalty ID : ".$_SESSION['user']['loyalty_id']."<br>";
-    echo "Points Balance : ".$_SESSION['user']['points_blance']."<br>";
+    echo "Points Balance : ".$_SESSION['user']['points_balance']."<br>";
 }
 
 echo "<br><h3>My Orders</h3>";
@@ -95,9 +95,9 @@ if(mysqli_num_rows($result)>0){
         $flower_result = mysqli_query($connection,$flower_q);
         $flower_name = mysqli_fetch_assoc($flower_result)['flower_name'];
 
-        echo  "<lable><b>Order ID : </b>$reference_no</lable><br> 
+        echo  "<lable><b>Order ID :   </b>$reference_no</lable><br> 
                <lable><b>Flower Name: </b>$flower_name</lable><br> 
-               <lable><b>Quantity : </b>$quantity </lable><br>";
+               <lable><b>Quantity :   </b>$quantity </lable><br><br>";
     }
 }
 

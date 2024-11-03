@@ -30,7 +30,12 @@ echo "<head>
 
 echo "<body>";
 echo "<div class='container'>";
-echo "<h2>Remove Loyalty Customers</h2>
+echo "<h1>Remove Loyalty Customers</h1><br>
+
+    <div class='back'>
+     <a href = 'add_customer.php'><button type='submit' class='backBtn'>Back </button></a>
+    </div>
+    
         <table>
             <tr>
                 <th>Loyalty ID</th>

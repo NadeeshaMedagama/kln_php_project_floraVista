@@ -31,6 +31,12 @@ header {
     margin-right: 10px;
     margin-left: 20px;
     margin-top: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid #df80ff;
+}
+
+.logo:hover{
+    transform: scale(1.05);
 }
 
 .search-bar {
@@ -83,10 +89,12 @@ header {
     background-color: white;
     padding: 5px 10px;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .account:hover, .cart:hover {
     background-color: #e6e6e6;
+    transform: scale(1.05);
 }
 
 nav {
@@ -218,7 +226,11 @@ nav {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot:hover{
+    transform: scale(1.05);
 }
 
 .active {
@@ -240,13 +252,14 @@ nav {
 
 .card {
     width: 300px;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     border-radius: 10px;
     padding: 15px;
     text-align: center;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 3px solid  #ecb3ff;
 }
 
 .card:hover{
@@ -258,6 +271,7 @@ nav {
     height: auto;
     margin-bottom: 10px;
     transition: background-color 0.3s;
+    border: 2px solid #b3b300;
 }
 
 .card h2 {

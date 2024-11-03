@@ -65,6 +65,7 @@ form button {
     border: 1px solid black;
     width: 160px;
     transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
 }
 
 form button:hover {
@@ -150,11 +151,12 @@ tr:hover {
     text-decoration: none;
     text-align: center;
     transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
 }
 
 .button:hover {
     background-color: #0056b3;
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
 .backBtn{
