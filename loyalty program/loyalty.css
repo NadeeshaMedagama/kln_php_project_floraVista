@@ -23,6 +23,10 @@ header {
     text-align: center;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 header nav ul {
     list-style: none;
     margin: 0;

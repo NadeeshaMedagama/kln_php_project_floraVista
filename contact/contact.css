@@ -15,6 +15,10 @@ h2{
     color: #00cc00;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;

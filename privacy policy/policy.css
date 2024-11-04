@@ -18,6 +18,10 @@ body {
     margin-top: 40px;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 header {
     background-color: #7bbf6a;
     padding: 10px;

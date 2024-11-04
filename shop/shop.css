@@ -24,6 +24,10 @@ h1{
     color: #00cc00;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 header {
     background-color: #28a745;
     padding: 15px 0;

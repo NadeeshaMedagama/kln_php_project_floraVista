@@ -8,6 +8,10 @@ body {
     padding: 0;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 h2{
     color: #00cc00;
 }

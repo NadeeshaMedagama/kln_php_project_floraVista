@@ -60,7 +60,7 @@ try{
 
                         setcookie('token',$token, time()+ 3600*2, "/");
 
-                        logger("INFO", "Suplier : $username login successfully. redirect to the suplier_panel page.");
+                        logger("INFO", "Supplier : $username login successfully. Redirect to the suplier_panel page.");
                         header("Location: suplier_panel.php");
                         exit();
                     }else{

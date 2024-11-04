@@ -190,6 +190,10 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 button:hover {
     background-color: #0066ff;
     transform: scale(1.05);

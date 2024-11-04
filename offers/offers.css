@@ -76,6 +76,9 @@ header nav ul li a:hover {
     color: #333;
 }
 
+a:hover{
+    text-decoration: underline;
+}
 
 footer {
     background-color: #7bbf6a;
