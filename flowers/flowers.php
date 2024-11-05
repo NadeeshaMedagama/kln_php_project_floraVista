@@ -38,12 +38,18 @@ if(isset($_POST['buy_now'])){
     if(!isset($_SESSION['user']['islogin']) ||  $_SESSION['user']['islogin']){
         header("Location:  ../login.php");
     }
+
+//    if(!isset($address)|| $address ==''){
+//        echo "<script>window.alert('Enter the shipping address')</script>";
+//    }
+
     $array = [];
     $user_id = $_SESSION['user']['user_id'];
     $flower_id =  $_POST['flower_id'];
     $quantity =  $_POST['quantity'];
     $sale_price = $_POST['sale_price'];
     $address = $_POST['address'];
+
     if(!isset($address)|| $address ==''){
         echo "<script>window.alert('Enter the shipping address')</script>";
     }
@@ -130,6 +136,7 @@ if(isset($_GET['flower_id'])){
     $row = mysqli_fetch_assoc($result);
     $row1 = mysqli_fetch_assoc($result1);
     $row2 = mysqli_fetch_assoc($result2);
+
         $flower_id = $row['flower_id'];
         $flower_name = $row['flower_name'];
         $sale_price = $row['sale_price'];

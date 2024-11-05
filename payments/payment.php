@@ -13,8 +13,8 @@ if (!isset($_SESSION['payment']['total'])) {
     $_SESSION['payment']['total'] = 0;
 }
 
-if (!isset($_SESSION['user']['points_blance'])) {
-    $_SESSION['user']['points_blance'] = 0;
+if (!isset($_SESSION['user']['points_balance'])) {
+    $_SESSION['user']['points_balance'] = 0;
 }
 
 error_reporting(E_ALL);
@@ -48,23 +48,25 @@ if(isset($_POST['add']) && $_POST['points']>0){
     $points =(float) $_POST['points'];
 
     $_SESSION['payment']['total'] =  $_SESSION['payment']['total'] -  $points;
-    $_SESSION['user']['points_blance'] = $_SESSION['user']['points_blance'] - ((int) $points);
-//    $_SESSION['user']['points_blance'] =  $new_blance;
+    $_SESSION['user']['points_balance'] = $_SESSION['user']['points_balance'] - ((int) $points);
+//    $_SESSION['user']['points_balance'] =  $new_balance;
     $_SESSION['payment']['total'] =  $total;
 
 
 
-//    header("Location: ./payment.php");
+    header("Location: ./payment.php");
 
 }
 
-if(isset($_SESSION['user']['loyalty_id']) &&  $_SESSION['user']['points_blance'] > 0 && $_SESSION['payment']['success'] == false){
-    $points =  $_SESSION['user']['points_blance'];
+if(isset($_SESSION['user']['loyalty_id']) &&  $_SESSION['user']['points_balance'] > 0 && $_SESSION['payment']['success'] == false){
+    $points =  $_SESSION['user']['points_balance'];
     echo "<form action='payment.php' method='post'>
-                <lable> Loyalty Points: ".$points."</lable><br><br>";
-    echo  "<lable> Enter Points: </lable>";
-    echo "<input type='number' id='points' name='points' min='0' max='$points' value='0' step='1' >
+                <lable> <h2>Loyalty Points: </h2><h4>".$points."</h4></lable><br><br>";
+    echo  "<lable> <h2>Enter Points: </h2></lable>";
+    echo "<input type='number' id='points' name='points' min='0' max='$points' value='0' step='1' ><br>
+                <div class='submit'>
                 <button type='submit' name='add'>Add Points</button>
+                </div> 
         <br><br>";
 
 }
@@ -89,10 +91,12 @@ if(isset($_SESSION['payment']) && $_SESSION['payment']['success'] == false){
 
             <form action='payment.php' method='post'>
                  <input type='hidden' name='total' value='$total'>
-                 <lable> <h2>User Name :</h2> $user_name </lable><br><br>
-                 <lable> <h2>Total Price:</h2> ". $_SESSION['payment']['total'] . "</lable><br><br>
-                 <lable> <h2>Shipping  Address:</h2> $address </lable><br><br>
+                 <lable> <h2>User Name :</h2> <h4>$user_name </h4></lable><br><br>
+                 <lable> <h2>Total Price:</h2> <h4>". $_SESSION['payment']['total'] . "</h4></lable><br><br>
+                 <lable> <h2>Shipping  Address:</h2> <h4>$address </h4></lable><br><br>
+                 <div class='submit'>
                  <button type='submit' name='pay_online'>Pay Online</button>
+                 </div>
         
                </form>";
 }
@@ -107,11 +111,11 @@ if(isset($_SESSION['payment']['reference_no'])  && $_SESSION['payment']['success
 //echo"$total";
     $reference_no = $_SESSION['payment']['reference_no'];
     $total = $_SESSION['payment']['total'];
-    $current_points = $_SESSION['user']['points_blance'];
+    $current_points = $_SESSION['user']['points_balance'];
 
 
     $new_points = $current_points + (int)($total / 100);
-    $_SESSION['user']['points_blance'] = $new_points;
+    $_SESSION['user']['points_balance'] = $new_points;
     $query = "UPDATE loyalty_users SET points_balance = '$new_points' WHERE user_id = '$user_id'";
     mysqli_query($connection, $query);
 
@@ -141,14 +145,18 @@ if(isset($_SESSION['payment']['reference_no'])  && $_SESSION['payment']['success
 
     unset($_SESSION['payment']);
 
-    echo "<div class='success_payment'>
+    echo "<div class='container'>
+            <div class='success_payment'>
                     <h3> Your Payment has been Successfully Done. </h3> <br>
                     <lable>  <h2>Reference No: </h2>$reference_no </lable><br><br>
                     <lable>  <h2>Total Price: </h2>$total </lable><br><br>
                     <lable>  <h2>Shipping Address: </h2>$address </lable><br><br>
                     
-                    <a href='../index.php'><button type='submit' name='home'> Go to home page </button></a>
-              </div>";
+                    <a href='../index.php'>                    
+                    <button type='submit' name='home'> Go to home page </button>
+                    </a><br>
+              </div>
+            </div>";
 }
 
 ?>`

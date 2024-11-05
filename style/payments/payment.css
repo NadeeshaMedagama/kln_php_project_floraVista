@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    margin-left: 10px;
 }
 
 
@@ -10,7 +11,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5ef;
+    background-color: #ccccb3;
     margin: 0 auto;
     padding: 20px;
     border: 2px solid black;
@@ -18,12 +19,13 @@ body {
 
 
 .container {
-    width: 85%;
+    width: 700px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f5f5ef;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 
@@ -70,11 +72,14 @@ form button {
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin: 0 15px;
     text-align: center;
+    font-weight: bold;
+    width: 200px;
 }
 
 form button:hover {
     background-color: #0066ff;
     transition: background-color 0.3s;
+    transform: scale(1.05);
 }
 
 /* Links */
@@ -143,12 +148,13 @@ table tr:hover {
     border: none;
     border-radius: 8px;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
 }
 
 .button:hover {
     background-color: #507D6A;
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -179,7 +185,7 @@ table tr:hover {
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     text-align: center;
     display: inline-block;
     font-weight: bold;
@@ -187,7 +193,7 @@ table tr:hover {
 
 .success_payment button:hover {
     background-color: #0066ff;
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
 .success_payment button:active {
@@ -205,6 +211,7 @@ table tr:hover {
     cursor: pointer;
     width: 90px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: normal;
 }
 
 .backBtn:hover{
@@ -218,4 +225,15 @@ table tr:hover {
     position: absolute;
     top: 45px;
     right: 45px;
+}
+
+.submit{
+    display: flex;
+    justify-content: center;
+    left: 100px;
+
+}
+
+h4{
+    font-size: 17px;
 }

@@ -75,9 +75,9 @@ echo "<form action='profile.php' method='post' >
     }
 
 if(isset($_SESSION['user']['loyalty_id']) && isset($_SESSION['user']['points_balance'])){
-    echo "<h4>Loyalty Information</h4>";
-    echo "Loyalty ID : ".$_SESSION['user']['loyalty_id']."<br>";
-    echo "Points Balance : ".$_SESSION['user']['points_balance']."<br>";
+    echo "<br><h3>Loyalty Information</h3>";
+    echo "<b>Loyalty ID : </b>".$_SESSION['user']['loyalty_id']."<br>";
+    echo "<b>Points Balance : </b>".$_SESSION['user']['points_balance']."<br>";
 }
 
 echo "<br><h3>My Orders</h3>";

@@ -7,13 +7,14 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 870px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f5f5ef;
     border: 1px solid #dee2e6;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /*border-bottom: 10px;*/
 }
 
 h1{
@@ -25,6 +26,8 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
 th {
@@ -39,7 +42,7 @@ td {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 15px;
     background-color: #dc3545;
     color: white;
@@ -81,7 +84,7 @@ h3 {
     justify-content: right;
     display: flex;
     position: absolute;
-    top: 60px;
-    right: 220px;
+    top: 65px;
+    right: 188px;
 
 }

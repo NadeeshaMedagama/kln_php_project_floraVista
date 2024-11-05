@@ -30,7 +30,7 @@ echo "<head>
 
 echo "<body>";
 echo "<div class='container'>";
-echo "<h1>Remove Loyalty Customers</h1><br>
+echo "<h1>Loyalty Customers Details</h1><br>
 
     <div class='back'>
      <a href = 'add_customer.php'><button type='submit' class='backBtn'>Back </button></a>
@@ -43,7 +43,7 @@ echo "<h1>Remove Loyalty Customers</h1><br>
                 <th>Username</th>
                 <th>Email</th>
                 <th>Mobile</th>
-                <th></th>
+                <th>Remove</th>
             </tr>";
 
 $query = "SELECT users.user_id, loyalty_id, user_name, email, mobile FROM users INNER JOIN loyalty_users ON users.user_id = loyalty_users.user_id";
@@ -71,7 +71,7 @@ while ($row = mysqli_fetch_assoc($result)) {
           </tr>";
 }
 
-echo "</table>";
+echo "</table><br>";
 echo "</div>";
 echo "</body>";
 
