@@ -58,12 +58,13 @@ if(isset($_POST['add']) && $_POST['points']>0){
 
 }
 
+echo "<div class='back'>
+        <a href = '../cart/cart.php'><button type='submit' class='backBtn'>Back </button></a>
+          </div>";
+
 if(isset($_SESSION['user']['loyalty_id']) &&  $_SESSION['user']['points_balance'] > 0 && $_SESSION['payment']['success'] == false){
     $points =  $_SESSION['user']['points_balance'];
-    echo "<div class='back'>
-        <a href = '../cart/cart.php'><button type='submit' class='backBtn'>Back </button></a>
-          </div>
-          
+    echo "        
             <form action='payment.php' method='post'>
                 <lable> <h2>Loyalty Points: </h2><h4>".$points."</h4></lable><br><br>";
     echo  "<lable> <h2>Enter Points: </h2></lable>";
@@ -94,7 +95,7 @@ if(isset($_SESSION['payment']) && $_SESSION['payment']['success'] == false){
             <form action='payment.php' method='post'>
                  <input type='hidden' name='total' value='$total'>
                  <lable> <h2>User Name :</h2> <h4>$user_name </h4></lable><br><br>
-                 <lable> <h2>Total Price:</h2> <h4>". $_SESSION['payment']['total'] . "</h4></lable><br><br>
+                 <lable> <h2>Total Price:</h2> <h4>Rs : ". $_SESSION['payment']['total'] . ".00</h4></lable><br><br>
                  <lable> <h2>Shipping  Address:</h2> <h4>$address </h4></lable><br><br>
                  <div class='submit'>
                  <button type='submit' name='pay_online'>Pay Online</button>
@@ -151,7 +152,7 @@ if(isset($_SESSION['payment']['reference_no'])  && $_SESSION['payment']['success
             <div class='success_payment'>
                     <h3> Your Payment has been Successfully Done. </h3> <br>
                     <lable>  <h2>Reference No: </h2>$reference_no </lable><br><br>
-                    <lable>  <h2>Total Price: </h2>$total </lable><br><br>
+                    <lable>  <h2>Total Price: </h2>Rs : $total </lable><br><br>
                     <lable>  <h2>Shipping Address: </h2>$address </lable><br><br>
                     
                     <a href='../index.php'>                    

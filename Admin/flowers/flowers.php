@@ -138,7 +138,7 @@ if (isset($_POST['submit_flowers_categories'])) {
 
             if (mysqli_num_rows($result) > 0) {
                 echo "<table id='show_category_table' border='1'>
-                            <tr><th>Category</th><th>Delete</th></tr>";
+                            <tr><th>Category</th><th>Remove Category</th></tr>";
                 while ($row = mysqli_fetch_assoc($result)) {
                     $category_id = $row["category_id"];
                     $category_name = $row["category_name"];
@@ -148,7 +148,9 @@ if (isset($_POST['submit_flowers_categories'])) {
                                 <td>
                                     <form action='flowers.php' method='post'>
                                         <input type='hidden' name='category_id' value='$category_id'>
+                                        <div class='delete'>
                                         <button type='submit' name='delete_category'><b>Delete</b></button>
+                                        </div>
                                     </form>
                                 </td>
                               </tr>";
@@ -164,7 +166,7 @@ if (isset($_POST['submit_flowers_categories'])) {
     </div>
 
     <div id="add_category">
-        <form action="flowers.php" method="post" id="add_flower_category">
+        <form action="flowers.php" method="post" id="add_flower_category"><br>
             <label class="cat">Category Name :</label><br>
             <input type="text" name="category_name" id="category_name" placeholder="Category Name"><br><br>
             <button type="submit" name="add_category">ADD</button><br>
@@ -178,17 +180,17 @@ if (isset($_POST['submit_flowers_categories'])) {
 <!-- upload flower section -->
 <div id="upload_flowers">
     <div id="flower_upload_form">
-        <h2>Upload Flower</h2>
+        <h2>Upload Flowers</h2><br>
         <form action="flowers.php" method="post" id="upload_flower_form" enctype="multipart/form-data">
-            <label>Flower Name:</label><br>
+            <label class="abc">Flower Name :</label><br>
             <input type="text" name="flower_name" id="flower_name" placeholder="Flower Name" required><br><br>
-            <label>Description:</label><br>
+            <label class="abc">Description :</label><br>
             <textarea name="description" id="description" placeholder="Description" required></textarea><br><br>
-            <label>Sale Price:</label><br>
+            <label class="abc">Sale Price :</label><br>
             <input type="number" name="sale_price" placeholder="Flower sale price" required/><br><br>
-            <label>Quantity : </label><br>
+            <label class="abc">Quantity : </label><br>
             <input type='number' name='quantity' placeholder='Flower Quantity' step='1' min='0' required><br><br>
-            <label>Image:</label><br>
+            <label class="abc">Add Image :</label><br>
             <input type="file" name="image" accept="image/*" required><br><br>
             <button type="submit" name="flower_upload">Upload</button><br>
         </form>
@@ -196,9 +198,9 @@ if (isset($_POST['submit_flowers_categories'])) {
 </div>
 
 <div id="flower_categories">
-    <h2>&nbsp;&nbsp;Flowers Add to Categorize</h2>
+    <h2>&nbsp;&nbsp;Flowers Add to Categorize</h2><br>
     <form action="flowers.php" method="post" id="flowers-categories">
-        <label>Select Category:</label><br>
+        <label class="abc"><b>Select Category : </b></label><br>
         <select id="category_name" name="category_id">
             <?php
             $query = "SELECT * FROM categories";

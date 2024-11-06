@@ -38,6 +38,7 @@ $result = mysqli_query($connection, $query);
             <th>Supplier Name</th>
             <th>Supplier Email</th>
             <th>Supplier Mobile</th>
+            <th>Remove Suppliers</th>
         </tr>
 
         <?php
@@ -53,6 +54,16 @@ $result = mysqli_query($connection, $query);
                         <td>$supplier_name</td>
                         <td>$email</td>
                         <td>$mobile</td>
+                        <td>
+                            <form action='delete_supplier.php' method='POST'>
+                                <input type='hidden' name='suplier_id' value='$supplier_id'>
+                                
+                                <div class='delete'>
+                                <button type='submit' name='delete' class='deleteBtn'>Delete</button>
+                                </div>
+                                
+                            </form>
+                        </td>
                       </tr>";
             }
         }

@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    max-width: 850px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f5f5ef;
@@ -20,6 +20,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #ffffff;
 }
 
 th {
@@ -50,6 +51,7 @@ h3 {
     cursor: pointer;
     width: 90px;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: normal;
 }
 
 .backBtn:hover{
@@ -64,4 +66,26 @@ h3 {
     top: 60px;
     right: 200px;
 
+}
+
+button {
+    padding: 8px 20px;
+    font-size: 15px;
+    background-color: #dc3545;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.delete{
+    justify-content: center;
+    display: flex;
 }

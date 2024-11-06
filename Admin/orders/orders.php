@@ -128,7 +128,7 @@ echo "<div id='pending_orders'>
                         <th>Quantity</th>
                         <th>Order Date</th>
                         <th>Supplier</th>
-                        <th></th>
+                        <th>Remove Order Request</th>
                     
                     </tr>";
 if(mysqli_num_rows($result_set)>0){
@@ -158,7 +158,9 @@ if(mysqli_num_rows($result_set)>0){
                     <td>
                         <form action='orders.php' method='post'>
                         <input type='hidden' name='order_id' value='$order_id'>
+                        <div class='delete'>
                         <button type='submit' name='delete_order'>Delete Order</button>
+                        </div>
                         </form>
                     </td>
                 </tr>

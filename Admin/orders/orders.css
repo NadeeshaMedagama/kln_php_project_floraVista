@@ -73,10 +73,16 @@ form button:hover {
     transform: scale(1.05);
 }
 
+.delete{
+    justify-content: center;
+    display: flex;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #ffffff;
 }
 
 table, th, td {

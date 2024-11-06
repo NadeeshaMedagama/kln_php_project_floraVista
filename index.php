@@ -179,6 +179,7 @@ $result = mysqli_query($connection, $query);
                 $today_discount = isset($data['today_discount']) ? $data['today_discount'] : null;
                 $loyalty_discount = isset($data['loyalty_discount']) ? $data['loyalty_discount'] : null;
                 $price_off = isset($data['price_off']) ? $data['price_off'] : null;
+
                 $today_discount_end = isset($data['today_discount_end']) ? $data['today_discount_end'] : null;
                 $loyalty_discount_end = isset($data['loyalty_discount_end']) ? $data['loyalty_discount_end'] : null;
                 $price_off_end = isset($data['price_off_end']) ? $data['price_off_end'] : null;
