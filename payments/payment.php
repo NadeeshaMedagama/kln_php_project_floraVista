@@ -60,7 +60,11 @@ if(isset($_POST['add']) && $_POST['points']>0){
 
 if(isset($_SESSION['user']['loyalty_id']) &&  $_SESSION['user']['points_balance'] > 0 && $_SESSION['payment']['success'] == false){
     $points =  $_SESSION['user']['points_balance'];
-    echo "<form action='payment.php' method='post'>
+    echo "<div class='back'>
+        <a href = '../cart/cart.php'><button type='submit' class='backBtn'>Back </button></a>
+          </div>
+          
+            <form action='payment.php' method='post'>
                 <lable> <h2>Loyalty Points: </h2><h4>".$points."</h4></lable><br><br>";
     echo  "<lable> <h2>Enter Points: </h2></lable>";
     echo "<input type='number' id='points' name='points' min='0' max='$points' value='0' step='1' ><br>
@@ -85,9 +89,7 @@ if(isset($_SESSION['payment']) && $_SESSION['payment']['success'] == false){
     }
 
 
-    echo "<div class='back'>
-        <a href = '../cart/cart.php'><button type='submit' class='backBtn'>Back </button></a>
-          </div>
+    echo "
 
             <form action='payment.php' method='post'>
                  <input type='hidden' name='total' value='$total'>

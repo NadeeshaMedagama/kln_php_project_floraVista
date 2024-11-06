@@ -14,6 +14,7 @@ echo "<link rel='stylesheet' href='flowers.css?v=" . time() . "'>";
 if(isset($_POST['add_cart'])){
     if(!isset($_SESSION['user']['islogin']) ||  $_SESSION['user']['islogin'] == false){
         header("Location:  ../login.php");
+        exit;
     }else{
         $user_id = $_SESSION['user']['user_id'];
         $flower_id =  $_POST['flower_id'];
@@ -35,12 +36,15 @@ if(isset($_POST['add_cart'])){
 }
 
 if(isset($_POST['buy_now'])){
-    if(!isset($_SESSION['user']['islogin']) ||  $_SESSION['user']['islogin']){
+//    if(!isset($_SESSION['user']['islogin']) ||  $_SESSION['user']['islogin'])
+      if(!isset($_SESSION['user']['islogin']) || $_SESSION['user']['islogin'] == false){
+
         header("Location:  ../login.php");
     }
 
-//    if(!isset($address)|| $address ==''){
-//        echo "<script>window.alert('Enter the shipping address')</script>";
+//    if(!isset($address) || $address ==''){
+//        echo "<script>window.alert('Enter the Shipping Address')</script>";
+//        return;
 //    }
 
     $array = [];
@@ -59,12 +63,21 @@ if(isset($_POST['buy_now'])){
     $data =  mysqli_fetch_assoc($flower_result);
 
 
-    $today_discount =  $data['today_discount'];
-    $loyalty_discount =  $data['loyalty_discount'];
-    $price_off = $data['price_off'];
-    $today_discount_end = $data['today_discount_end'];
-    $loyalty_discount_end = $data['loyalty_discount_end'];
-    $price_off_end = $data['price_off_end'];
+//    $today_discount =  $data['today_discount'];
+//    $loyalty_discount =  $data['loyalty_discount'];
+//    $price_off = $data['price_off'];
+//    $today_discount_end = $data['today_discount_end'];
+//    $loyalty_discount_end = $data['loyalty_discount_end'];
+//    $price_off_end = $data['price_off_end'];
+
+    $dir_path = isset($row1['dir_path']) ? $row1['dir_path'] : '';
+    $today_discount = isset($row2['today_discount']) ? $row2['today_discount'] : 0;
+    $loyalty_discount = isset($row2['loyalty_discount']) ? $row2['loyalty_discount'] : 0;
+    $price_off = isset($row2['price_off']) ? $row2['price_off'] : 0;
+    $today_discount_end = isset($row2['today_discount_end']) ? $row2['today_discount_end'] : '';
+    $loyalty_discount_end = isset($row2['loyalty_discount_end']) ? $row2['loyalty_discount_end'] : '';
+    $price_off_end = isset($row2['price_off_end']) ? $row2['price_off_end'] : '';
+
 
     $items_price = (float) $quantity * $sale_price;
 
@@ -92,10 +105,8 @@ if(isset($_POST['buy_now'])){
         'user_id' => $user_id,
         'success' => false
     ];
-
     header("Location: ../payments/payment.php?address=$address");
-
-
+    exit;
 }
 
 if (isset($_POST['add_comment'])){
@@ -245,7 +256,7 @@ if(isset($_GET['flower_id'])){
 
             echo "
                         <br>
-                        <h3>Name : $user_name</h3> <br>
+                        <h3><b>Name : </b>$user_name</h3> <br>
                         <p><b>Comment : </b>$comment</p>
                     ";
         }
