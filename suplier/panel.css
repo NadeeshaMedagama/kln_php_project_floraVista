@@ -33,7 +33,7 @@ h2 {
     text-align: center;
 }
 
-form lable {
+form label {
     font-size: 16px;
     color: #555;
 }
@@ -55,9 +55,7 @@ form input[type="email"]:focus {
     box-shadow: 0 0 4px #5a9;
 }
 
-form button[type="submit"],
-button[name="logout"],
-a {
+.updateBtn{
     background-color: #40ff00;
     color: black;
     padding: 12px 20px;
@@ -71,12 +69,11 @@ a {
     text-decoration: none;
     display: inline-block;
     margin: 8px 4px;
-
+    height: 45px;
+    width: 150px;
 }
 
-form button[type="submit"]:hover,
-button[name="logout"]:hover,
-a:hover {
+.updateBtn:hover{
     background-color: #33cc00;
     transform: scale(1.05);
 }
@@ -119,8 +116,9 @@ a {
 .req{
     display: flex;
     position: absolute;
-    top: 405px;
-    right: 350px;
+    top: 413px;
+    right: 355px;
+
 }
 
 .success{
@@ -136,4 +134,44 @@ a {
     animation: slideIn 0.5s;
     font-weight: bold;
     cursor: auto;
+}
+
+.order{
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px;
+    height: 45px;
+    font-weight: bold;
+}
+
+.order:hover{
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.logout{
+    background-color: #ff3333;
+    color: white;
+    padding: 12px 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 8px 4px;
+}
+
+.logout:hover{
+    background-color: #ff0000;
+    transform: scale(1.05);
 }

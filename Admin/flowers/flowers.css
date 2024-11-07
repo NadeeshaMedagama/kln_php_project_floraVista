@@ -175,7 +175,7 @@ form input, form textarea, form select {
 form button {
     padding: 10px 15px;
     border: 1px solid black;
-    background-color: #dc3545;
+    background-color: #ff3333;
     color: white;
     cursor: pointer;
     border-radius: 5px;
@@ -183,7 +183,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #c82333;
+    background-color: #ff0000;
     transform: scale(1.05);
 }
 

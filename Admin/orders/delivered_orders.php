@@ -128,7 +128,9 @@ if(mysqli_num_rows($result)>0){
                                     <td>
                                         <form action='delivered_orders.php' method='post'>
                                             <input type='hidden' name='order_id' value='$order_id'>
-                                            <button type='submit' name='delete'>Delete</button>
+                                            <div class='delete'>
+                                            <button type='submit' name='delete' class='deleteBtn'>Delete</button>
+                                            </div>
                                         </form>
                                     </td>
                                 </tr>";

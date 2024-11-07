@@ -13,6 +13,29 @@ if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != tr
     header("Location: ../admin.php");
 }
 
+if(isset($_POST['delete_flower'])){
+    try {
+        $flower_id = $_POST['flower_id'];
+
+        if (!isset($flower_id)) {
+            echo "<script> window.alert('Flower ID is Missing!')</script>";
+        } else {
+
+            $query = "DELETE FROM flowers WHERE flower_id = '$flower_id'";
+
+            if (mysqli_query($connection, $query)) {
+
+                header("Location: flower_search.php");
+                exit();
+            } else {
+                throw new Exception("Failed to Delete Flower with ID: $flower_id !");
+            }
+        }
+    } catch (Exception $e) {
+        logger("ERROR", $e->getMessage());
+    }
+}
+
 
 if(isset($_POST['update_flower'])){
     try{
@@ -33,6 +56,7 @@ if(isset($_POST['update_flower'])){
 
         if (mysqli_query($connection, $query)){
             header("Location: ./flower_info.php?flower_id=$flower_id");
+            exit();
         }else{
             throw new Exception("flower_id : $flower_id Update fail");
         }
@@ -71,6 +95,8 @@ if(isset($_GET['flower_id'])){
 
         echo "<body>";
 
+        echo "<div class= 'container'>";
+
         echo "<div id='flower_image'>
                      <img src='../../$dir_path' alt='no image found' width='300px' height='300px'/> 
                    </div>";
@@ -92,11 +118,18 @@ if(isset($_GET['flower_id'])){
                             <lable>Description : </lable><br/>
                             <textarea name='description' id='description' placeholder='Description' required/>$description</textarea><br/><br/>
 
-                            <button type='submit' name='update_flower'>Update</button><br><br>
+                            <button type='submit' name='update_flower'>Update</button>
+                            
+                            <div class='delete'>
+                            <button type='submit' name='delete_flower' class='deleteBtn' onclick='return confirm('Are you sure you want to delete this flower?')'>Delete Flower</button>
+                            </div>
+                            <br><br> 
+
                             <a href='flower_search.php' class='button'>Back to Search Page</a>
 
                         </form>
-                  <div>";
+                        </div>
+                  </div>";
 
 
 

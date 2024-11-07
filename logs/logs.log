@@ -2202,3 +2202,90 @@
 [2024-11-06 18:09:39]  [INFO] - Supplier :  login successfully. Redirect to the suplier_panel page.
 [2024-11-06 18:30:52]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
 [2024-11-06 18:30:53]  [INFO] - Get flowers_category data successfully
+[2024-11-07 09:09:13]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-07 09:09:13]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-07 09:09:44]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-07 09:09:47]  [INFO] - Get flowers_category data successfully
+[2024-11-07 09:09:51]  [INFO] - Get flowers_category data successfully
+[2024-11-07 09:11:22]  [ERROR] - Incorrect date value: '' for column 'loyalty_discount_end' at row 1
+[2024-11-07 09:15:12]  [INFO] - Get flowers_category data successfully
+[2024-11-07 09:15:15]  [INFO] - Get flowers_category data successfully
+[2024-11-07 09:15:23]  [INFO] - Get flowers_category data successfully
+[2024-11-07 09:15:36]  [INFO] - Get flowers_category data successfully
+[2024-11-07 09:16:10]  [INFO] - get the supplier data in db successfully
+[2024-11-07 09:57:11]  [INFO] - retrieve data from users table successfully
+[2024-11-07 09:57:11]  [INFO] - Supplier :  login successfully. Redirect to the suplier_panel page.
+[2024-11-07 13:40:05]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-07 13:40:36]  [INFO] - retrieve data from users table successfully
+[2024-11-07 13:40:36]  [INFO] - Supplier :  login successfully. Redirect to the suplier_panel page.
+[2024-11-07 13:42:13]  [INFO] - Get flowers_category data successfully
+[2024-11-07 13:42:18]  [INFO] - Get flowers_category data successfully
+[2024-11-07 13:55:01]  [INFO] - Get flowers_category data successfully
+[2024-11-07 13:55:05]  [INFO] - get the supplier data in db successfully
+[2024-11-07 13:55:34]  [INFO] - retrieve data from users table successfully
+[2024-11-07 13:55:34]  [INFO] - Supplier :  login successfully. Redirect to the suplier_panel page.
+[2024-11-07 13:55:45]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-07 13:55:46]  [INFO] - get the supplier data in db successfully
+[2024-11-07 14:24:20]  [INFO] - get the supplier data in db successfully
+[2024-11-07 14:35:42]  [INFO] - get the supplier data in db successfully
+[2024-11-07 14:35:46]  [INFO] - Get flowers_category data successfully
+[2024-11-07 14:49:47]  [INFO] - Get flowers_category data successfully
+[2024-11-07 14:49:58]  [INFO] - Get flowers_category data successfully
+[2024-11-07 14:50:01]  [INFO] - Get flowers_category data successfully
+[2024-11-07 14:56:56]  [INFO] - Get flowers_category data successfully
+[2024-11-07 14:58:24]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:03:54]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:04:00]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:40:23]  [INFO] - Upload file successfully
+[2024-11-07 15:40:23]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:40:23]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:42:45]  [INFO] - Upload file successfully
+[2024-11-07 15:42:45]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:42:45]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:45:48]  [INFO] - Upload file successfully
+[2024-11-07 15:45:48]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:45:48]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:46:58]  [INFO] - Upload file successfully
+[2024-11-07 15:46:58]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:46:58]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:47:57]  [INFO] - Upload file successfully
+[2024-11-07 15:47:57]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:47:57]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:49:18]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:49:22]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:49:36]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:49:53]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:50:45]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:52:20]  [INFO] - Get flowers_category data successfully
+[2024-11-07 15:52:25]  [INFO] - get the supplier data in db successfully
+[2024-11-07 15:52:41]  [INFO] - get the supplier data in db successfully
+[2024-11-07 15:58:00]  [INFO] - Get flowers_category data successfully
+[2024-11-07 16:26:38]  [INFO] - Get flowers_category data successfully
+[2024-11-07 16:26:40]  [INFO] - Get flowers_category data successfully
+[2024-11-07 16:26:43]  [INFO] - Get flowers_category data successfully
+[2024-11-07 16:26:50]  [INFO] - get the supplier data in db successfully
+[2024-11-07 16:26:52]  [INFO] - get the supplier data in db successfully
+[2024-11-07 16:29:05]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-07 16:29:05]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-07 17:02:32]  [INFO] - Get flowers_category data successfully
+[2024-11-07 17:02:59]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:03:06]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:03:10]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:05:45]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:07:09]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:07:14]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:15:42]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:15:50]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:17:31]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:23:54]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:24:01]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:26:38]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:26:45]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:34:20]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:35:38]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:46:14]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:46:19]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:46:25]  [ERROR] - Data too long for column 'flower_name' at row 1
+[2024-11-07 17:47:15]  [INFO] - Get flowers_category data successfully
+[2024-11-07 17:47:19]  [INFO] - Get flowers_category data successfully
+[2024-11-07 18:13:08]  [ERROR] - Data too long for column 'flower_name' at row 1

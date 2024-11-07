@@ -84,3 +84,17 @@ input[type="hidden"] {
     top: 45px;
     right: 45px;
 }
+
+.deleteBtn{
+    background-color: #ff3333;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+.deleteBtn:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}

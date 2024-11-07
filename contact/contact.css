@@ -85,10 +85,12 @@ form button {
     cursor: pointer;
     font-weight: bold;
     font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
     background-color: #00ff00;
+    transform: scale(1.05);
 }
 
 .social-media {

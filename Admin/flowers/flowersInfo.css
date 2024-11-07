@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 850px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f5f5ef;
@@ -40,12 +40,14 @@ button {
     border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
-    width: 300px;
-
+    width: 250px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 #flower_image {
@@ -57,7 +59,8 @@ button:hover {
     border-radius: 8px;
     max-width: 100%;
     height: auto;
-    border: 1px solid black;
+    border: 2px solid #ffe066;
+    cursor: pointer;
 }
 
 label {
@@ -68,7 +71,27 @@ label {
 .button {
     padding: 10px 15px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #40ff00;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    width: 220px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #33cc00;
+    transform: scale(1.05);
+}
+
+.deleteBtn{
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff3333;
     color: white;
     border: 1px solid black;
     border-radius: 4px;
@@ -76,11 +99,18 @@ label {
     display: inline-block;
     text-align: center;
     cursor: pointer;
-    width: 270px;
-
+    width: 240px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.deleteBtn:hover{
+    background-color: #ff0000;
+    transform: scale(1.05);
 }
 
+.delete{
+    right: 185px;
+    display: flex;
+    position: absolute;
+    top: 891px;
+}

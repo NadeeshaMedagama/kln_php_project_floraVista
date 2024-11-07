@@ -162,11 +162,13 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         $flower_id = $row['flower_id'];
         echo "<div class='flower-item'>
+
+                <img src='../../" . $row['dir_path'] . "' alt='" . $row['flower_name'] . "'><br>
                 <label>
-                    <input type='checkbox' name='flowers_id[]' value='$flower_id'>
-                    " . $row['flower_name'] . "
+                    &nbsp;<input type='checkbox' name='flowers_id[]' value='$flower_id'>
+                    <b>" . $row['flower_name'] . "</b>
                 </label>
-                <img src='" . $row['dir_path'] . "' alt='" . $row['flower_name'] . "'>
+                
               </div>";
     }
 } else {

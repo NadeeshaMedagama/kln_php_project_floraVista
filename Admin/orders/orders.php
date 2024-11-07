@@ -159,7 +159,7 @@ if(mysqli_num_rows($result_set)>0){
                         <form action='orders.php' method='post'>
                         <input type='hidden' name='order_id' value='$order_id'>
                         <div class='delete'>
-                        <button type='submit' name='delete_order'>Delete Order</button>
+                        <button type='submit' name='delete_order' class='delete_order'>Delete Order</button>
                         </div>
                         </form>
                     </td>

@@ -52,7 +52,7 @@ echo "<div class='container'>
                     <th>Request Quantity</th>
                     <th>Admin Requested Date</th>
                     <th>Add Item Price</th>
-                    <th></th>
+                    <th>Deliver Order</th>
                 </tr>";
 
 if(mysqli_num_rows($result)>0){

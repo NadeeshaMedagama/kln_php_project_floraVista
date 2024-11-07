@@ -221,7 +221,7 @@ $result = mysqli_query($connection, $query);
     </div>
 
     <div class="pagination-row">
-        <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+        <?php for ($i = 1; $i < $totalPages; $i++): ?>
             <a href="?page=<?= $i ?>" class="page-number <?= $i == $page ? 'active' : '' ?>"><?= $i ?></a>
         <?php endfor; ?>
     </div>

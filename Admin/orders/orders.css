@@ -195,3 +195,18 @@ tr:hover {
     justify-content: center;
     align-items: center;
 }
+
+.delete_order{
+    background-color: #ff3333;
+    color: white;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 160px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+.delete_order:hover {
+    background-color: #ff0000;
+    transform: scale(1.05);
+}

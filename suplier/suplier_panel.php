@@ -17,7 +17,10 @@ $suplier_username = $_SESSION['suplier']['supplier_username'];
 $suplier_email = $_SESSION['suplier']['email'];
 $mobile = $_SESSION['suplier']['mobile'];
 
-echo "<div class='req'> <a href='orders/suplier_order.php'>Request Orders</a></div>";
+echo "<div class='req'> 
+        <a href='orders/suplier_order.php'>
+        <button type='submit' class='order'>Request Orders </button>
+        </a></div>";
 
 
 if(isset($_POST['submit'])){
@@ -51,7 +54,7 @@ echo "<head><link rel='stylesheet' href='panel.css'></head>";
 
 
 echo "<form action='suplier_panel.php' method='post'>
-            <div class='log'> <button type='submit' name='logout'>Logout</button></div>
+            <div class='log'> <button type='submit' class='logout'>Logout</button></div>
            </form>";
 
 echo "<h1>Supplier Panel</h1><br>";
@@ -59,7 +62,7 @@ echo "<h1>Supplier Panel</h1><br>";
 echo "<h2>User Information</h2>";
 
 echo "<form action='suplier_panel.php' method='post'>
-            <input type='hidden' name='user_id'  value='$suplier_id'>
+            <input type='hidden' name='suplier_id'  value='$suplier_id'>
             <lable><b>Username : </b></lable> <br>
             <input type='text' name='username' value='$suplier_username' required>
             <br><br>
@@ -67,8 +70,9 @@ echo "<form action='suplier_panel.php' method='post'>
             <input type='email' name='email' value='$suplier_email' required>
             <br><br>
             <lable><b>Mobile : </b></lable> <br>
-            <input type='text' name='mobile' value='$mobile' required><br><br>
-            <button type='submit' name='submit'> Update</button>
+            <input type='text' name='mobile' value='$mobile' required><br><br>         
+            <button type='submit' name='submit' class='updateBtn'> Update</button>
+            
     
           </form></div>";
 
