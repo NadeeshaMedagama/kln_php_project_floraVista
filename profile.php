@@ -61,7 +61,9 @@ echo "<form action='profile.php' method='post' >
             <lable>Mobile : </lable> <br>
             <input type='text' name='mobile' value='$mobile' required><br><br>
             <button type='submit' name='submit'>Update</button>
-            <button type='submit' name='logout' class='logout'>Logout</button><br>
+            <div class='logoutBtn'>
+            <button type='submit' name='logout' class='logout'>Logout</button>
+            </div><br>
     
           </form>";
             echo "<br><a href = 'index.php'><button type='submit' class='back-home-btn'>Back to Home</button></a><br>";

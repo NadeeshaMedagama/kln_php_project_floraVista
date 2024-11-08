@@ -186,12 +186,11 @@ $array = [];
 
     </div><br>
     <a href = '../index.php'><button type="submit">Back to Home</button><br><br></a>
-    <br><br>
-</div>
+</div><br><br><br>
 
 <footer>
     <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
-</footer>
+</footer><br>
 
 </body>
 </html>
