@@ -12,8 +12,13 @@ h1{
     color: #00cc00;
 }
 
+a{
+    font-weight: bold;
+}
+
 a:hover{
     text-decoration: underline;
+    transform: scale(1.05);
 }
 
 .container {
@@ -74,6 +79,13 @@ header nav ul li a:hover {
     width: auto;
     height: auto;
     border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: 2px solid  #ffcc00;
+}
+
+.flower-item img:hover {
+    transform: scale(1.05);
 }
 
 .flower-item h2 {

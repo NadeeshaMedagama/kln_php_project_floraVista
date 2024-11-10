@@ -164,8 +164,8 @@ if (mysqli_num_rows($result) > 0) {
         echo "<div class='flower-item'>
 
                 <img src='../../" . $row['dir_path'] . "' alt='" . $row['flower_name'] . "'><br>
-                <label>
-                    &nbsp;<input type='checkbox' name='flowers_id[]' value='$flower_id'>
+                <label class='fname'>
+                    &nbsp;<input type='checkbox' name='flowers_id[]' value='$flower_id' class='fname'>
                     <b>" . $row['flower_name'] . "</b>
                 </label>
                 

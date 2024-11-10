@@ -73,7 +73,7 @@ if(mysqli_num_rows($result)>0){
                                 
                                     <form action='suplier_order.php' method='post'>
                                         <input type='hidden' name='order_id' value='$order_id'>
-                                        <td>
+                                        <td>Rs: 
                                             <input type='number' name='item_price' required>
                                         </td>
                                         <td>

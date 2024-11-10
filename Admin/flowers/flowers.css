@@ -7,9 +7,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ccccb3;
     color: #333;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 
@@ -95,7 +95,7 @@ button[name="search_category"]:hover {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white;
+    background-color: #f5f5ef;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -118,6 +118,9 @@ nav a:hover {
     color: #0056b3;
 }
 
+tr:hover {
+    background-color: #ddd;
+}
 
 section {
     margin-bottom: 40px;
@@ -291,8 +294,8 @@ h2{
     justify-content: right;
     display: flex;
     position: absolute;
-    top: 33px;
-    right: 23px;
+    top: 45px;
+    right: 35px;
 
 }
 

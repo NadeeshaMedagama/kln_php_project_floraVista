@@ -53,8 +53,10 @@ echo"<div class='container'>";
 echo "<head><link rel='stylesheet' href='panel.css'></head>";
 
 
-echo "<form action='suplier_panel.php' method='post'>
-            <div class='log'> <button type='submit' class='logout'>Logout</button></div>
+echo "<form action='./logout.php' method='post'>
+            <div class='log'>
+             <button type='submit' class='logout'>Logout</button>
+             </div>
            </form>";
 
 echo "<h1>Supplier Panel</h1><br>";

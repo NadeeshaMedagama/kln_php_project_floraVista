@@ -56,10 +56,14 @@ if  (isset($_POST['delivered'])){
 <body>
 
 <div id="container">
-    <h2>Accept Delivered Orders</h2>
+    <h1>To Accept Delivered Orders</h1>
 
     <div class='back'>
         <a href = 'orders.php'><button type='submit' class='backBtn'>Back </button></a>
+    </div>
+
+    <div class='reg'>
+        <a href = 'delivered_orders_history.php'><button type='submit' class='regBtn'>Supplier Delivered Orders History </button></a>
     </div>
 
     <?php
@@ -114,10 +118,10 @@ if(mysqli_num_rows($result)>0){
                                     <td>$suplier_id</td>
                                     <td>$suplier_name</td>
                                     <td>$quantity</td>
-                                    <td>$item_price</td>
+                                    <td>Rs: $item_price.00</td>
                                     <form action='delivered_orders.php' method='post'>
                                         <td><input type='number' name='sale_price' value='$flower_sale_price'></td>
-                                        <td>$total_price</td>
+                                        <td>Rs: $total_price.00</td>
                                         <td>
                                             <input type='hidden' name='order_id' value='$order_id'>
                                             <input type='hidden' name='flower_id' value='$flower_id'>

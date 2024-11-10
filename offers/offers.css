@@ -12,6 +12,10 @@ h1{
     color: #00cc00;
 }
 
+a{
+    font-weight: bold;
+}
+
 .container {
     max-width: 900px;
     margin: 0 auto;

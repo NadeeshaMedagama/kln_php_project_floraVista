@@ -27,9 +27,10 @@ if(! isset($_SESSION["admin"]["islogin"]) || $_SESSION["admin"]["islogin"] != tr
 <?php
 
 echo "
+<div class='container'>
 <div class='button-container'>
     <a class='button' href='delivered_orders.php'>Supplier Delivered Orders</a>
-    <a class='button' href='delivered_orders_history.php'>Supplier Delivered Orders History</a>
+    <a class='button' href='../purchase_items/pending_items_delivery.php'>Pending Deliver Items</a>
     
     <div class='back'> 
     <a href = '../admin_panel.php'><button type='submit' class='backBtn'>Back </button></a>
@@ -168,6 +169,7 @@ if(mysqli_num_rows($result_set)>0){
     }
 }
 echo "</table>
+        </div>
         </div>";
 
 

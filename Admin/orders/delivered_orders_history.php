@@ -25,10 +25,10 @@ if(!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] ==fals
 <body>
 
 <div id="container">
-    <h2>Accepted Delivered Orders</h2>
+    <h1>Accepted Delivered Orders History</h1>
 
     <div class='back'>
-        <a href = 'orders.php'><button type='submit' class='backBtn'>Back </button></a>
+        <a href = 'delivered_orders.php'><button type='submit' class='backBtn'>Back </button></a>
     </div>
 
     <?php
@@ -84,10 +84,10 @@ if(mysqli_num_rows($result)>0){
                                     <td>$suplier_id</td>
                                     <td>$suplier_name</td>
                                     <td>$quantity</td>
-                                    <td>$item_price</td>
+                                    <td>Rs: $item_price.00</td>
                                     
-                                    <td>$flower_sale_price</td>
-                                    <td>$total_price</td>
+                                    <td>Rs: $flower_sale_price.00</td>
+                                    <td>Rs: $total_price.00</td>
                                     <td>$delivered_date</td>
                                         
                                     

@@ -124,6 +124,8 @@ if (isset($_POST['submit_flowers_categories'])) {
 </head>
 <body>
 
+<div class="container">
+
 <br><div class="head"> <a href="discount.php" class="added">Add Discounts&nbsp;</a><br><br>
 <a href="flower_search.php" class="added">Flower Information</a></div><br><br>
 
@@ -250,6 +252,7 @@ if (isset($_POST['submit_flowers_categories'])) {
         }
     }
     ?>
+</div>
 </div>
 </body>
 </html>

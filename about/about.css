@@ -12,6 +12,10 @@ a:hover{
     text-decoration: underline;
 }
 
+a{
+    font-weight: bold;
+}
+
 h2{
     color: #00cc00;
 }

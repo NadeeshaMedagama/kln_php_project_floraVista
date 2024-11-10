@@ -1,0 +1,250 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ccccb3;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: #f5f5ef;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0047b3;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input, button {
+    font-size: 16px;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+label{
+    display: block;
+    font-weight: bold;
+    left: 100px;
+    margin-left: 50px;
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    max-width: 300px;
+}
+
+.createBtn {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    width: 200px;
+    padding: 12px;
+    border: 1px solid black;
+}
+
+.createBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+.activeBtn {
+    background-color: #6b8e23;
+    color: #fff;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+.activeBtn:hover {
+    background-color: #556b2f;
+    transform: scale(1.05);
+}
+
+.activateBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.activateBtn:hover {
+    background-color: #45a049;
+    text-decoration: underline;
+}
+
+.deactivateBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+.deactivateBtn:hover {
+    background-color: #d32f2f;
+    text-decoration: underline;
+}
+
+button[name="change_employe_status"] {
+    padding: 8px 10px;
+    width: 150px;
+}
+
+.emp{
+    width: 55%;
+    margin: 35px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.emp label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.emp input[type="text"],
+.emp input[type="email"],
+.emp input[type="password"] {
+    width: 400px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+}
+
+table {
+    width: 95%;
+    max-width: 950px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .emp {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+}
+
+tr {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #e8f5e9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    background-color: #8fbc8f;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header label {
+    font-size: 18px;
+}
+
+header button {
+    background-color: #d2691e;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+header button:hover {
+    background-color: #a0522d;
+}
+
+@media (max-width: 600px) {
+    table, input, button {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+.active{
+    width: 50px;
+}
+
+.activate{
+    justify-content: center;
+}
+
+.backBtn{
+    padding: 8px 10px;
+    font-size: 16px;
+    background-color: #40ff00;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 90px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.backBtn:hover{
+    background-color: #33cc00;
+    transform: scale(1.05);
+}
+
+.back{
+    justify-content: right;
+    display: flex;
+    position: absolute;
+    top: 50px;
+    right: 110px;
+
+}

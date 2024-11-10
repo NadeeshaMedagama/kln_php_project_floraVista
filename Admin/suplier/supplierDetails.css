@@ -36,6 +36,10 @@ td {
     padding: 10px;
 }
 
+tr:hover {
+    background-color: #e8f5e9;
+}
+
 h3 {
     color: #333;
     margin-bottom: 20px;

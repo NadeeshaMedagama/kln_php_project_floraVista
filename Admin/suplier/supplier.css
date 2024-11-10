@@ -35,6 +35,10 @@ td {
     padding: 10px;
 }
 
+tr:hover {
+    background-color: #e8f5e9;
+}
+
 button {
     padding: 10px 20px;
     background-color: #28a745;

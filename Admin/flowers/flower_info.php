@@ -112,7 +112,7 @@ if(isset($_GET['flower_id'])){
                             <lable>Quantity : </lable><br/>
                             <input type='number' name='quantity' value='$quantity' placeholder='Quantity' required/><br/><br/>
 
-                            <lable>Sale Price : </lable><br/>
+                            <lable>Sale Price : Rs.</lable><br/>
                             <input type='text' name='sale_price' value='$sale_price' placeholder='Sale Price' required/><br/><br/>
 
                             <lable>Description : </lable><br/>

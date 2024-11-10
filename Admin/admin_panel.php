@@ -41,13 +41,13 @@ if (isset($_POST['logout'])) {
         <a href='payments/payment.php'>Payments Details</a>
     </div>
 
-    <h4>Total Sale:
+    <h4>Total Sale : Rs.
         <?php
 
         $sum_q = "SELECT SUM(amount) AS amount FROM payments";
         $result = mysqli_query($connection, $sum_q);
         $sum = mysqli_fetch_assoc($result)['amount'];
-        echo $sum;
+        echo ($sum . '.00');
         ?>
     </h4>
 

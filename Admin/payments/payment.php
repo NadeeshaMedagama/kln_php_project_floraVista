@@ -60,7 +60,7 @@ if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != tr
                         <td>$reference_no</td>
                         <td>$user_id</td>
                         <td>$user_name</td>
-                        <td>$amount</td>
+                        <td>Rs: $amount.00</td>
                         <td>$date</td>
                      </tr>";
             }

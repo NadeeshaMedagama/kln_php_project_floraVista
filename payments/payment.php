@@ -136,10 +136,12 @@ if(isset($_SESSION['payment']['reference_no'])  && $_SESSION['payment']['success
             mysqli_query($connection, $delete_cart_query);
 
 
-            $insert_delivery_query = "INSERT INTO delivery_items (flower_id, user_id, quantity, reference_no) 
-                                  VALUES ('$flower_id', '$user_id', '$quantity', '$reference_no')";
+            $insert_delivery_query = "INSERT INTO delivery_items (flower_id, user_id, quantity, reference_no, order_date) 
+                                  VALUES ('$flower_id', '$user_id', '$quantity', '$reference_no', CURRENT_DATE)";
+
             mysqli_query($connection, $insert_delivery_query);
         }
+
     } else {
 
         echo "<h2>No items found in the session to process.</h2>";
