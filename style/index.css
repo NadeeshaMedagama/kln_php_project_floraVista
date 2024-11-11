@@ -93,7 +93,7 @@ header {
 }
 
 .account:hover, .cart:hover {
-    background-color: #e6e6e6;
+    background-color: #ccf2ff;
     transform: scale(1.05);
 }
 
