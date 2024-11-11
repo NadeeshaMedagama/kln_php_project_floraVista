@@ -12,7 +12,7 @@
 body {
     background-color: #ccccb3;
     color: #333;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
 }
 
 h1 {
@@ -100,3 +100,14 @@ button:hover {
 
 }
 
+footer {
+    background-color: #7bbf6a;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 17px;
+}

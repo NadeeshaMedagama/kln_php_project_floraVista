@@ -137,21 +137,33 @@ $array = [];
                 $items_total = $items_price - $discount;
                 $total += $items_total;
 
+                $sale_price = number_format($sale_price, 2);
+                $items_total = number_format($items_total, 2);
+
                 echo "<tr>
                             <td>
                                 <img src='../$dir_path' alt='flower image' width='100' height='100'>
                                 <p><b>$flower_name</b></p>
                             </td>
+                            
                             <td>
                                 <form action='cart.php' method='post'>
                                     <input type='number' name='user_quantity' min='1' max='$max_quantity' value='$user_quantity' required>
                                     <input type='hidden' name='flower_id' value='$flower_id'>
-                                    <button type='submit' name='change_quantity'>Change</button>
-                                    <button type='submit' name='delete'>Delete</button>
                                 </form>
                             </td>
-                            <td>\$$sale_price</td>
-                            <td>\$$items_total</td>
+                            
+                            <td><b>Rs: $sale_price</b></td>
+                            <td><b>Rs: $items_total</b></td>
+                            
+                            <td>    
+                                    <form action='cart.php' method='post'>    
+                                    <button type='submit' name='change_quantity'>Change</button>
+                                    <button type='submit' name='delete'>Delete</button>   
+                                    </form>    
+                                                           
+                            </td>
+                            
                         </tr>";
             }
         } else {
@@ -163,7 +175,7 @@ $array = [];
 
     <div class="cart-summary">
         <h2>Cart Summary</h2>
-        <p><b>Total: </b>$<?php echo number_format($total, 2); ?></p>
+        <p><b>Total: </b>Rs: <?php echo number_format($total, 2); ?></p>
         <?php
 
         if ($num_of_items > 0):

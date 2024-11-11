@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
-
-
     <link rel="stylesheet" href="/style/profile.css">
+
 </head>
 <body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="shop/shop.html">Shop</a></li>
+            <li><a href="offers/offers.html">Special Offers</a></li>
+            <li><a href="new arrivals/arrivals.html">New Arrivals</a></li>
+            <li><a href="contact/contact.html">Contact Us</a></li>
+            <li><a href="subscription/subscription.html">Subscribe</a></li>
+            <li><a href="about/about.html">About Us</a></li>
+
+        </ul>
+    </nav>
+</header>
 
 <div class="container">
 
@@ -105,8 +120,11 @@ if(mysqli_num_rows($result)>0){
 
 ?>
 
-</div>
+</div><br><br><br>
 
+<footer>
+    <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer><br>
 
 </body>
 </html>

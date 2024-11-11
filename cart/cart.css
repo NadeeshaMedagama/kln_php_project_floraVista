@@ -47,10 +47,12 @@ header nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
+    font-weight: bold;
 }
 
 header nav ul li a:hover {
     color: #e4e4e4;
+    text-decoration: underline;
 }
 
 table {
@@ -205,4 +207,15 @@ button[type="button"] {
 
 button[type="button"]:hover {
     background-color: #1976D2;
+}
+
+img{
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: 2px solid  #ffd633;
+}
+
+img:hover{
+    transform: scale(1.05);
 }

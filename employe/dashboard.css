@@ -123,3 +123,13 @@ button[type="submit"]:hover {
     background-color: #33cc00;
     transform: scale(1.05);
 }
+
+footer {
+    background-color: #7bbf6a;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

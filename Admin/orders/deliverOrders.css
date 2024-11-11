@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 20px;
     border: 2px solid black;
+    height: auto;
 }
 
 #container {
@@ -16,7 +17,7 @@ body {
 }
 
 h1 {
-    color: #0047b3; /* Green color matching flower theme */
+    color: #0047b3;
     margin-left: 20px;
 }
 

@@ -88,7 +88,12 @@ if(mysqli_num_rows($result)>0){
 
 
 echo "</table>
-    </div>";
+    </div><br><br><br>
+    
+<footer>
+    <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer><br>";
+
 
 
 ?>

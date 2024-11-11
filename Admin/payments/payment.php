@@ -55,12 +55,13 @@ if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != tr
                 $user_q = "SELECT * FROM users WHERE user_id = '$user_id'";
                 $user_result = mysqli_query($connection, $user_q);
                 $user_name = mysqli_fetch_assoc($user_result)['user_name'];
+                $amount = number_format($amount, 2);
 
                 echo "<tr>
                         <td>$reference_no</td>
                         <td>$user_id</td>
                         <td>$user_name</td>
-                        <td>Rs: $amount.00</td>
+                        <td>Rs: $amount</td>
                         <td>$date</td>
                      </tr>";
             }

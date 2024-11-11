@@ -76,6 +76,10 @@ if(mysqli_num_rows($result)>0){
 
         $suplier_name = mysqli_fetch_assoc($retrieve_suplier_result)['supplier_username'];
 
+        $item_price = number_format($item_price, 2);
+        $flower_sale_price = number_format($flower_sale_price, 2);
+        $total_price = number_format($total_price, 2);
+
         echo "<tr>
                                     <td>$order_id</td>
                                     <td>$order_date</td>
@@ -84,10 +88,10 @@ if(mysqli_num_rows($result)>0){
                                     <td>$suplier_id</td>
                                     <td>$suplier_name</td>
                                     <td>$quantity</td>
-                                    <td>Rs: $item_price.00</td>
+                                    <td>Rs: $item_price</td>
                                     
-                                    <td>Rs: $flower_sale_price.00</td>
-                                    <td>Rs: $total_price.00</td>
+                                    <td>Rs: $flower_sale_price</td>
+                                    <td>Rs: $total_price</td>
                                     <td>$delivered_date</td>
                                         
                                     

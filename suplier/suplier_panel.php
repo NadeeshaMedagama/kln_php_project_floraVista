@@ -76,7 +76,11 @@ echo "<form action='suplier_panel.php' method='post'>
             <button type='submit' name='submit' class='updateBtn'> Update</button>
             
     
-          </form></div>";
+          </form></div><br><br><br>
+          
+<footer>
+    <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer><br>";
 
 
 

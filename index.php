@@ -277,10 +277,10 @@ $result = mysqli_query($connection, $query);
 
         <ul>
 
-            <li><a href="http://www.facebook.com"><img src="icons/img.png" alt="Facebook" class="social-icon"></a></li>
+            <li><a href="http://www.facebook.com"><img src="icons/img_5.png" alt="Facebook" class="social-icon"></a></li>
             <li><a href="http://www.instagram.com"><img src="icons/img_1.png" alt="Instagram" class="social-icon"></a></li>
-            <li><a href="http://www.tiktok.com"><img src="icons/img_2.png" alt="TikTok" class="social-icon"></a></li>
-            <li><a href="http://www.youtube.com"><img src="icons/img_3.png" alt="YouTube" class="social-icon"></a></li>
+            <li><a href="http://www.tiktok.com"><img src="icons/img_6.png" alt="TikTok" class="social-icon"></a></li>
+            <li><a href="http://www.youtube.com"><img src="icons/img_7.png" alt="YouTube" class="social-icon"></a></li>
             <li><a href="http://www.twitter.com"><img src="icons/img_4.png" alt="Twitter" class="social-icon"></a></li>
 
         </ul>

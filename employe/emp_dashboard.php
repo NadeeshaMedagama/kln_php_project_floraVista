@@ -124,7 +124,11 @@ if(isset($_POST['send'])){
             <?php endwhile;
             endif; ?>
     </table>
-</div>
+</div><br><br><br>
+
+<footer>
+    <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer><br>
 
 </body>
 </html>

@@ -47,7 +47,7 @@ if (isset($_POST['logout'])) {
         $sum_q = "SELECT SUM(amount) AS amount FROM payments";
         $result = mysqli_query($connection, $sum_q);
         $sum = mysqli_fetch_assoc($result)['amount'];
-        echo ($sum . '.00');
+        echo number_format($sum, 2);
         ?>
     </h4>
 
@@ -85,7 +85,11 @@ if (isset($_POST['logout'])) {
         <button type='submit' name='logout'>Logout</button>
     </form>
 
-</div>
+</div><br><br><br>
+
+<footer>
+    <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer><br>
 
 </body>
 </html>

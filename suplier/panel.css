@@ -76,6 +76,7 @@ form input[type="email"]:focus {
 .updateBtn:hover{
     background-color: #33cc00;
     transform: scale(1.05);
+    text-decoration: underline;
 }
 
 a {
@@ -153,6 +154,7 @@ a {
 .order:hover{
     background-color: #0056b3;
     transform: scale(1.05);
+    text-decoration: underline;
 }
 
 .logout{
@@ -174,4 +176,15 @@ a {
 .logout:hover{
     background-color: #ff0000;
     transform: scale(1.05);
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #7bbf6a;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
