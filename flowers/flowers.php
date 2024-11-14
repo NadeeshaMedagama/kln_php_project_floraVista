@@ -181,7 +181,27 @@ if(isset($_GET['flower_id'])){
 //    $loyalty_discount_end = $row['loyalty_discount_end'];
 //    $price_off_end = $row['price_off_end'];
 
-    echo "
+    echo "<header>
+    <nav>
+        <ul>
+        
+            <li><a href='../index.php'>Home</a></li>
+            <li><a href='../shop/shop.html'>Shop</a></li>
+            <li><a href='../offers/offers.html'>Special Offers</a></li>
+            <li><a href='../new arrivals/arrivals.html'>New Arrivals</a></li>
+            <li><a href='../contact/contact.html'>Contact Us</a></li>
+            <li><a href='../about/about.html'>About Us</a></li>
+            
+            <div class='header-info'>
+                <span class='cart'>
+                <a href='../cart/cart.php'><img src='../Admin/home/style/images/cart.png' width='28px' height='28px' alt='cart'><br>Cart</a>
+                </span>
+            </div>
+            
+        </ul>
+    </nav>
+</header>
+
             <div class='container'>
                 <div class='image-container'>
                     <img src='../$dir_path' alt='$flower_name'>
@@ -263,7 +283,11 @@ if(isset($_GET['flower_id'])){
     }
 
 
-    echo "</div><br>";
+    echo "</div><br><br><br>
+
+<footer>
+    <p>&copy; 2024 Flora Vista. All Rights Reserved.</p>
+</footer><br>";
 }
 
 

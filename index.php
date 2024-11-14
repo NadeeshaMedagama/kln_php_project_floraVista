@@ -200,7 +200,8 @@ $result = mysqli_query($connection, $query);
                 }
 
                 if ($row['quantity'] > 0) {
-                    echo "<p><form action='' method='post'><input type='hidden' name='flower_id' value='{$row['flower_id']}'><button type='submit' name='add_cart'>Add to Cart</button></form></p>";
+                    echo "<p><form action='' method='post'><input type='hidden' name='flower_id' value='{$row['flower_id']}'>
+                    <button type='submit' name='add_cart'>Add to Cart</button></form></p>";
 
                 } else {
                     echo "<p style='color: red; font-weight: bold;'>Out of Stock</p>";
