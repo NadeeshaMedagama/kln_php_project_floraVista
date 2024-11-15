@@ -176,7 +176,7 @@ $array = [];
 
     <div class="cart-summary">
         <h2>Cart Summary</h2>
-        <p><b>Total: </b>Rs: <?php echo number_format($total, 2); ?></p>
+        <p><b>Total: Rs: <?php echo number_format($total, 2); ?></b></p>
         <?php
 
         if ($num_of_items > 0):
@@ -194,7 +194,7 @@ $array = [];
                 <button type="submit">Buy Now</button><br>
             </form>
 
-            <br><br>
+            <br>
         <?php endif; ?>
 
     </div><br>
