@@ -21,7 +21,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid black;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 40px;
     border: 2px solid #4dff4d;
 }
@@ -136,7 +136,7 @@ tr:hover {
 
 footer {
     background-color: #7bbf6a;
-    padding: 20px;
+    padding: 3px;
     text-align: center;
     color: white;
     position: fixed;
