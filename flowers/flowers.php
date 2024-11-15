@@ -236,8 +236,8 @@ if(isset($_GET['flower_id'])){
                                 <form action='flowers.php'  method='post'>
                                 <input type='hidden' name='flower_id' value='$flower_id'>
                                 <input type='hidden' name='sale_price' value='$sale_price'>
-                                <lable>Quantity :  </lable>
-                                <input type='number' id='quantity' name='quantity' min='1' max='$quantity' value='1' step='1' required><br><br>
+                                <label><b>Quantity :  </b></label>
+                                <input type='number' id='quantity' name='quantity' min='1' max='$quantity' value='1' step='1' style='cursor: pointer' required><br><br>
                                 
                                 <textarea name='address'  class= 'address' placeholder='Enter your address'></textarea><br><br>
                                 
