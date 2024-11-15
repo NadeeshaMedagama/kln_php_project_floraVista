@@ -1,5 +1,5 @@
 <?php
-global $connection;
+global $connection, $sale_price;
 session_start();
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
@@ -89,6 +89,7 @@ if (isset($_GET['search_btn'])) {
 
 $query .= "LIMIT $itemsPerPage OFFSET $offset";
 $result = mysqli_query($connection, $query);
+
 ?>
 
 <!DOCTYPE html>
@@ -169,7 +170,9 @@ $result = mysqli_query($connection, $query);
                     <img src="<?= $row['dir_path'] ?>" alt="flower image" style="width:300px; height:300px">
                 </a>
                 <h2><?= $row['flower_name'] ?></h2>
-                <p class="price">RS. <?= $row['sale_price'] ?>.00</p>
+                <?php $row['sale_price'] = number_format($row['sale_price'], 2); ?>
+                <p class="price"><b>RS. <?= $row['sale_price'] ?></b></p>
+
                 <?php
 
                 $query_discount = "SELECT * FROM flower_discounts WHERE flower_id = '{$row['flower_id']}'";

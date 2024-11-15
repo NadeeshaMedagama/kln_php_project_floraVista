@@ -160,6 +160,9 @@ if(isset($_GET['flower_id'])){
         $today_discount_end = $row2['today_discount_end'] ?? 0;
         $loyalty_discount_end = $row2['loyalty_discount_end'] ?? 0;
         $price_off_end = $row2['price_off_end'] ?? 0;
+
+    $sale_price = number_format($sale_price, 2);
+
 //    }else {
 //        echo "<p>Flowers not found!</p>";
 //        exit;

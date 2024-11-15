@@ -85,7 +85,7 @@ $array = [];
             <th><h2 style="color: black">Quantity</h2></th>
             <th><h2 style="color: black">Price</h2></th>
             <th><h2 style="color: black">Total</h2></th>
-            <th><h2 style="color: black">Action</h2></th>
+            <th><h2 style="color: black">Remove Item</h2></th>
         </tr>
         </thead>
         <tbody>
@@ -150,16 +150,17 @@ $array = [];
                                 <form action='cart.php' method='post'>
                                     <input type='number' name='user_quantity' min='1' max='$max_quantity' value='$user_quantity' required>
                                     <input type='hidden' name='flower_id' value='$flower_id'>
+                                    <button type='submit' name='change_quantity'>Change</button>
                                 </form>
                             </td>
                             
-                            <td><b>Rs: $sale_price</b></td>
-                            <td><b>Rs: $items_total</b></td>
+                            <td><b>Rs: $sale_price </b></td>
+                            <td><b>Rs: $items_total </b></td>
                             
                             <td>    
                                     <form action='cart.php' method='post'>    
-                                    <button type='submit' name='change_quantity'>Change</button>
-                                    <button type='submit' name='delete'>Delete</button>   
+                                    <input type='hidden' name='flower_id' value='$flower_id'>
+                                    <button type='submit' name='delete' class='delete-button'>Delete Item</button>   
                                     </form>    
                                                            
                             </td>
