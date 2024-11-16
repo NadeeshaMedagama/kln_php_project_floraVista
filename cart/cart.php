@@ -76,7 +76,7 @@ $array = [];
 </header>
 
 <div class="container">
-    <h1>Your Cart</h1>
+    <h1>&nbsp;My Cart</h1>
 
     <table>
         <thead>
@@ -168,7 +168,7 @@ $array = [];
                         </tr>";
             }
         } else {
-            echo "<tr><td colspan='5'>Your cart is empty.</td></tr>";
+            echo "<tr><td colspan='5'><b>Your Cart is Empty.</b></td></tr>";
         }
         ?>
         </tbody>

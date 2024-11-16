@@ -2556,3 +2556,29 @@
 [2024-11-15 13:51:57]  [INFO] - Supplier :  login successfully. Redirect to the suplier_panel page.
 [2024-11-15 13:52:41]  [INFO] - Retrieve data from Users table Successfully
 [2024-11-15 13:52:41]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-15 14:07:01]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-15 14:07:01]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-16 08:30:38]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 08:30:38]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-16 09:36:07]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:36:14]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:36:21]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:36:31]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:37:14]  [WARNING] - jagath@gmail.com or 0777444333 is already taken
+[2024-11-16 09:37:14]  [INFO] - register.php : User data inserted successfully
+[2024-11-16 09:37:35]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:37:35]  [INFO] - User : Jagath Login Successfully. Redirect to the Index page.
+[2024-11-16 09:44:15]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:44:15]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-16 09:50:30]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:50:30]  [INFO] - User : Jagath Login Successfully. Redirect to the Index page.
+[2024-11-16 09:52:11]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:52:11]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-16 09:55:40]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-16 09:55:40]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-16 09:56:13]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-16 10:01:41]  [INFO] - Get flowers_category data successfully
+[2024-11-16 10:02:22]  [INFO] - Get flowers_category data successfully
+[2024-11-16 10:02:47]  [INFO] - Get flowers_category data successfully
+[2024-11-16 10:02:59]  [INFO] - get the supplier data in db successfully
+[2024-11-16 10:03:01]  [INFO] - get the supplier data in db successfully

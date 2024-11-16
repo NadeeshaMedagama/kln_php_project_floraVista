@@ -102,6 +102,18 @@ echo "<br><h3>My Orders</h3>";
 $query = "SELECT * FROM delivery_items WHERE user_id='$user_id'";
 $result = mysqli_query($connection,$query);
 
+echo "<table>
+        <thead>
+        <tr>
+        
+            <th><h2 class='item' style='color: #555'>Item</h2></th>
+            <th><h2 style='color: #555'>Order ID</h2></th>
+            <th><h2 style='color: #555'>Quantity</h2></th>
+            
+        </tr>
+        </thead>
+        <tbody>";
+
 if(mysqli_num_rows($result)>0){
     while($row = mysqli_fetch_assoc($result)){
         $flower_id = $row['flower_id'];
@@ -112,11 +124,41 @@ if(mysqli_num_rows($result)>0){
         $flower_result = mysqli_query($connection,$flower_q);
         $flower_name = mysqli_fetch_assoc($flower_result)['flower_name'];
 
-        echo  "<lable><b>Order ID :   </b>$reference_no</lable><br> 
-               <lable><b>Flower Name: </b>$flower_name</lable><br> 
-               <lable><b>Quantity :   </b>$quantity </lable><br><br>";
+        $img_query = "SELECT * FROM flower_images WHERE flower_id='$flower_id'";
+        $img_result = mysqli_query($connection, $img_query);
+        $dir_path = mysqli_fetch_assoc($img_result)['dir_path'];
+
+        echo  "<tr>
+
+               <td>
+               <div class='sizeimg'>
+               <img src='$dir_path' alt='flower image' width='80' height='80'><br>
+               </div>
+               <div class='sizetext'>
+               <p><b>$flower_name</b></p> <br>
+               </div>
+               </td>
+               
+               <td>
+               <p><b>$reference_no</b></p> 
+               </td>
+               
+               <td>
+               <div class='size'>
+               <p><b>$quantity </b></p> 
+               </div>
+               </td>
+               
+                </tr>";
+
     }
 }
+else {
+    echo "<tr><td colspan='3'><b>You have not placed Any Orders</b></td></tr>";
+}
+
+echo "        </tbody>
+               </table>";
 
 ?>
 

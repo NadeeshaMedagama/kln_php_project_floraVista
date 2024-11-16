@@ -228,9 +228,12 @@ nav {
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.dot:hover{
+    transform: scale(1.1);
+}
 
 .active {
     background-color: #333;

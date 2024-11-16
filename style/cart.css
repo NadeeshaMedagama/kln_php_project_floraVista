@@ -26,6 +26,15 @@
     border-radius: 8px;
 }
 
+tr:hover {
+    background-color: #e8f5e9;
+}
+
+tr{
+    cursor: pointer;
+}
+
+
 .item p, .item lable {
     font-size: 1.2em;
     color: #333;
