@@ -6,7 +6,9 @@
 
 ## **Features**
 
-- 🌼 **User-Friendly Interface**: Easy-to-navigate design for browsing flowers and products.
+- 🌼 **User-Friendly Interface**:
+
+  - Easy-to-navigate design for browsing flowers and products.
   
 - 🛒 **Cart and Purchase System**:
 
