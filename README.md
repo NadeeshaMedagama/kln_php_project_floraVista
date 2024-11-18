@@ -4,33 +4,51 @@
 ---
 
 ## **Features**
+
 - 🌼 **User-Friendly Interface**: Easy-to-navigate design for browsing flowers and products.
+  
 - 🛒 **Cart and Purchase System**:
+
   - Add items to the cart and manage them efficiently.
   - Apply discounts for special promotions and seasonal offers.
+    
 - 📦 **Order Management**:
+  
   - Admin panel displays pending orders first for quick processing.
   - Track order status and manage customer inquiries.
+    
 - 💬 **Customer Reviews**:
+  
   - Customers can leave comments and reviews for purchased items.
+    
 - 👥 **Loyalty Customers**:
+  
   - Special benefits and discounts for loyal customers.
+    
 - 📑 **Pagination**:
+  
   - Seamless navigation with page numbers for browsing flowers.
+    
 - 🌍 **Global Access**:
+  
   - Support for international customers with country-specific features.
 
 ---
 
 ## **Technologies Used**
+
 - **Frontend**:
   - HTML5, CSS3, JavaScript
+    
 - **Backend**:
   - PHP
+    
 - **Database**:
   - MySQL
+    
 - **Version Control**:
   - GitHub ([Repository Link](https://github.com/NadeeshaMedagama/kln_php_project_floraVista.git))
+    
 - **Web Server**:
   - Apache (via XAMPP or other servers)
 
@@ -38,11 +56,13 @@
 
 ## **How to Use**
 ### **Customers**
+
 1. **Browse**: Explore the range of flowers and floral products.
 2. **Add to Cart**: Select products and add them to the cart.
 3. **Checkout**: Apply discounts, place orders, and track delivery.
 
 ### **Admins**
+
 1. **Login**: Access the admin panel with secure credentials.
 2. **Manage Orders**: View and prioritize pending orders.
 3. **Add Discounts**: Create and manage promotional offers.
