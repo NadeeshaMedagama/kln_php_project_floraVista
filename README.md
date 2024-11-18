@@ -58,19 +58,25 @@
 ### **Customers**
 
 1. **Browse**: Explore the range of flowers and floral products.
+
 2. **Add to Cart**: Select products and add them to the cart.
+   
 3. **Checkout**: Apply discounts, place orders, and track delivery.
 
 ### **Admins**
 
 1. **Login**: Access the admin panel with secure credentials.
+   
 2. **Manage Orders**: View and prioritize pending orders.
+   
 3. **Add Discounts**: Create and manage promotional offers.
+   
 4. **Monitor Feedback**: Review customer comments and reviews.
 
 ---
 
 ## **Setup Instructions**
+
 ### **Local Environment**
 
 1. Clone the repository:
@@ -81,29 +87,35 @@
 2. Set up your web server (e.g., XAMPP, WAMP).
    
 3. Import the database:
+   
    - Open phpMyAdmin.
    - Create a database named `floraVista`.
    - Import the `floraVista.sql` file from the repository.
   
 4. Update the configuration:
+   
    - Update the database connection details in the `config.php` file.
      
 5. Launch the application:
+   
    - Access the website through `http://localhost/floraVista`.
 
 ---
 
 ## **Contributing**
+
 We welcome contributions to improve **FloraVista**! Follow these steps:
 
 1. Fork the repository.
    
 2. Create a branch for your feature:
+   
    ```bash
    git checkout -b feature-name
    ```
    
 3. Commit your changes and push:
+   
    ```bash
    git commit -m "Add new feature"
    git push origin feature-name
