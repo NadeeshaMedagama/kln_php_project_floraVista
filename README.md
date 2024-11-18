@@ -102,7 +102,7 @@
    
    - Open phpMyAdmin.
      
-   - Create a database named `floraVista`.
+   - Create a database named `kln_php`.
      
    - Import the `floraVista.sql` file from the repository.
   
