@@ -21,6 +21,12 @@
             <li><a href="subscription/subscription.html">Subscribe</a></li>
             <li><a href="about/about.html">About Us</a></li>
 
+            <div class='header-info'>
+                <span class='cart'>
+                <a href='cart/cart.php'><img class="cartimg" src='Admin/home/style/images/cart.png' width='28px' height='28px' alt='cart'><br>Cart</a>
+                </span>
+            </div>
+
         </ul>
     </nav>
 </header>
@@ -63,7 +69,7 @@ if(isset($_POST['submit'])){
     }
 }
 
-echo "<h2>User Information</h2>";
+echo "<h2>My Profile Information</h2>";
 
 echo "<form action='profile.php' method='post' >
             <input type='hidden' name='user_id'  value='$user_id'>
@@ -81,7 +87,7 @@ echo "<form action='profile.php' method='post' >
             </div><br>
     
           </form>";
-            echo "<br><a href = 'index.php'><button type='submit' class='back-home-btn'>Back to Home</button></a><br>";
+            //echo "<br><a href = 'index.php'><button type='submit' class='back-home-btn'>Back to Home</button></a><br>";
 
 
     if (isset($_POST['logout'])) {
@@ -92,12 +98,12 @@ echo "<form action='profile.php' method='post' >
     }
 
 if(isset($_SESSION['user']['loyalty_id']) && isset($_SESSION['user']['points_balance'])){
-    echo "<br><h3>Loyalty Information</h3>";
+    echo "<br><br><h2>Loyalty Information</h2>";
     echo "<b>Loyalty ID : </b>".$_SESSION['user']['loyalty_id']."<br>";
     echo "<b>Points Balance : </b>".$_SESSION['user']['points_balance']."<br>";
 }
 
-echo "<br><h3>My Orders</h3>";
+echo "<br><h2>My Orders</h2>";
 
 $query = "SELECT * FROM delivery_items WHERE user_id='$user_id'";
 $result = mysqli_query($connection,$query);
@@ -106,9 +112,9 @@ echo "<table>
         <thead>
         <tr>
         
-            <th><h2 class='item' style='color: #555'>Item</h2></th>
-            <th><h2 style='color: #555'>Order ID</h2></th>
-            <th><h2 style='color: #555'>Quantity</h2></th>
+            <th><h3 class='item' style='color: #555'>Item</h3></th>
+            <th><h3 style='color: #555'>Order ID</h3></th>
+            <th><h3 style='color: #555'>Quantity</h3></th>
             
         </tr>
         </thead>

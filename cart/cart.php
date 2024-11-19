@@ -68,8 +68,9 @@ $array = [];
             <li><a href="../offers/offers.html">Special Offers</a></li>
             <li><a href="../new arrivals/arrivals.html">New Arrivals</a></li>
             <li><a href="../contact/contact.html">Contact Us</a></li>
-            <li><a href="../subscription/subscription.html">Subscribe</a></li>
+            <li><a href="../profile.php">My Profile</a></li>
             <li><a href="../about/about.html">About Us</a></li>
+
 
         </ul>
     </nav>

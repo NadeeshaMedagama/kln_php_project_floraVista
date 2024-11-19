@@ -98,9 +98,9 @@ if (isset($_POST['submit_flowers_categories'])) {
 
     $delete_query = "DELETE FROM flower_categories WHERE category_id='$category_id'";
 
-    if (mysqli_query($connection, $delete_query)) {
+    if (mysqli_query($connection,$delete_query)) {
         foreach ($flowers_id_array as $flower_id) {
-            $insert_query = "INSERT INTO flower_categories(flower_id, category_id) VALUES ('$flower_id', '$category_id')";
+            $insert_query = "INSERT IGNORE INTO flower_categories(flower_id, category_id) VALUES ('$flower_id', '$category_id')";
 
             try {
                 mysqli_query($connection, $insert_query);
@@ -108,8 +108,9 @@ if (isset($_POST['submit_flowers_categories'])) {
                 logger("ERROR", $e->getMessage());
             }
         }
-        header("Location: ./flowers.php");
+
     }
+    header("Location: ./flowers.php");
 }
 ?>
 
@@ -126,133 +127,188 @@ if (isset($_POST['submit_flowers_categories'])) {
 
 <div class="container">
 
-<br><div class="head"> <a href="discount.php" class="added">Add Discounts&nbsp;</a><br><br>
-<a href="flower_search.php" class="added">Flower Information</a></div><br><br>
+    <br><div class="head"> <a href="discount.php" class="added">Add Discounts&nbsp;</a><br><br>
+        <a href="flower_search.php" class="added">Flower Information</a></div><br><br>
 
-<div id="flowers_category">
-    <h2>&nbsp;&nbsp;Flowers Category</h2>
-    <div id="show_category">
-        <?php
-        try {
-            $query = "SELECT * FROM categories";
-            $result = mysqli_query($connection, $query);
-            logger("INFO", "Get flowers_category data successfully");
+    <div id="flowers_category">
+        <h2>&nbsp;&nbsp;Flowers Category</h2>
+        <div id="show_category">
+            <?php
+            try {
+                $query = "SELECT * FROM categories";
+                $result = mysqli_query($connection, $query);
+                logger("INFO", "Get flowers_category data successfully");
 
-            if (mysqli_num_rows($result) > 0) {
-                echo "<table id='show_category_table' border='1'>
-                            <tr><th>Category</th><th>Remove Category</th></tr>";
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $category_id = $row["category_id"];
-                    $category_name = $row["category_name"];
+                if (mysqli_num_rows($result) > 0) {
+                    echo "<table id='show_category_table' border='1'>
+                            <tr><th>Category</th><th>Delete</th></tr>";
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $category_id = $row["category_id"];
+                        $category_name = $row["category_name"];
 
-                    echo "<tr>
+                        echo "<tr>
                                 <td>$category_name</td>
                                 <td>
                                     <form action='flowers.php' method='post'>
+                                    
                                         <input type='hidden' name='category_id' value='$category_id'>
+                                        
                                         <div class='delete'>
                                         <button type='submit' name='delete_category'><b>Delete</b></button>
                                         </div>
+                                        
                                     </form>
                                 </td>
                               </tr>";
+                    }
+                    echo "</table>";
+                } else {
+                    echo "<h3>No Categories in table</h3>";
                 }
-                echo "</table>";
-            } else {
-                echo "<h3>No Categories in table</h3>";
+            } catch (Exception $e) {
+                logger("ERROR", $e->getMessage());
             }
-        } catch (Exception $e) {
-            logger("ERROR", $e->getMessage());
-        }
-        ?>
+            ?>
+        </div>
+
+        <div id="add_category">
+            <form action="flowers.php" method="post" id="add_flower_category">
+                <label class="cat">Category Name :</label><br>
+                <input type="text" name="category_name" id="category_name" placeholder="Category Name"><br><br>
+                <button type="submit" name="add_category">ADD</button><br>
+            </form>
+
+            <div class="back"> <a href = "../admin_panel.php"><button type="submit" class="backBtn">Back </button></a></div>
+
+        </div>
     </div>
 
-    <div id="add_category">
-        <form action="flowers.php" method="post" id="add_flower_category"><br>
-            <label class="cat">Category Name :</label><br>
-            <input type="text" name="category_name" id="category_name" placeholder="Category Name"><br><br>
-            <button type="submit" name="add_category">ADD</button><br>
-        </form>
-
-        <div class="back"> <a href = "../admin_panel.php"><button type="submit" class="backBtn">Back </button></a></div>
-
+    <!-- upload flower section -->
+    <div id="upload_flowers">
+        <div id="flower_upload_form">
+            <h2>Upload Flower</h2>
+            <form action="flowers.php" method="post" id="upload_flower_form" enctype="multipart/form-data">
+                <label>Flower Name:</label><br>
+                <input type="text" name="flower_name" id="flower_name" placeholder="Flower Name" required><br><br>
+                <label>Description:</label><br>
+                <textarea name="description" id="description" placeholder="Description" required></textarea><br><br>
+                <label>Sale Price:</label><br>
+                <input type="number" name="sale_price" placeholder="Flower sale price" required/><br><br>
+                <label>Quantity : </label><br>
+                <input type='number' name='quantity' placeholder='Flower Quantity' step='1' min='0' required><br><br>
+                <label>Image:</label><br>
+                <input type="file" name="image" accept="image/*" required><br><br>
+                <button type="submit" name="flower_upload">Upload</button><br>
+            </form>
+        </div>
     </div>
-</div>
 
-<!-- upload flower section -->
-<div id="upload_flowers">
-    <div id="flower_upload_form">
-        <h2>Upload Flowers</h2><br>
-        <form action="flowers.php" method="post" id="upload_flower_form" enctype="multipart/form-data">
-            <label class="abc">Flower Name :</label><br>
-            <input type="text" name="flower_name" id="flower_name" placeholder="Flower Name" required><br><br>
-            <label class="abc">Description :</label><br>
-            <textarea name="description" id="description" placeholder="Description" required></textarea><br><br>
-            <label class="abc">Sale Price :</label><br>
-            <input type="number" name="sale_price" placeholder="Flower sale price" required/><br><br>
-            <label class="abc">Quantity : </label><br>
-            <input type='number' name='quantity' placeholder='Flower Quantity' step='1' min='0' required><br><br>
-            <label class="abc">Add Image :</label><br>
-            <input type="file" name="image" accept="image/*" required><br><br>
-            <button type="submit" name="flower_upload">Upload</button><br>
-        </form>
-    </div>
-</div>
+    <div id=flower_categories>
+        <h2> Flowers Add to Categories</h2><br>
 
-<div id="flower_categories">
-    <h2>&nbsp;&nbsp;Flowers Add to Categorize</h2><br>
-    <form action="flowers.php" method="post" id="flowers-categories">
-        <label class="abc"><b>Select Category : </b></label><br>
-        <select id="category_name" name="category_id">
+        <form action='flowers.php' method='post' id='flowers-categories'>
+
             <?php
             $query = "SELECT * FROM categories";
-            $result_set = mysqli_query($connection, $query);
+            $result_set = mysqli_query($connection,$query);
 
-            if (mysqli_num_rows($result_set) > 0) {
-                while ($row = mysqli_fetch_assoc($result_set)) {
+            echo "<lable><h3><b>Select Category</b></h3></lable>&nbsp
+                  <select id='category_name' name='category_id'>";
+
+            if(mysqli_num_rows($result) > 0){
+                while ($row = mysqli_fetch_assoc($result_set)){
                     $category_id = $row['category_id'];
                     $category_name = $row['category_name'];
-                    echo "<option value='$category_id' class='category'>$category_name</option>";
+                    echo "<option value='$category_id'>$category_name</option>";
+
                 }
             }
             ?>
-        </select> <br>
-        <button type="submit" name="search_category">Search</button><br>
-    </form>
+            </select> &nbsp
+            <button type='submit' name='search_category'>Search </button>
+        </form><br><br>
 
-    <?php
-    // get the flowers detail from flowers category
-    if (isset($_POST['search_category'])) {
-        $category_id = $_POST['category_id'];
-        $query = "SELECT * FROM categories WHERE category_id='$category_id' LIMIT 1";
-        $result = mysqli_query($connection, $query);
-        $category_name = mysqli_fetch_assoc($result)['category_name'];
 
-        echo "<form action='flowers.php' method='post'>
-                    <h3>&nbsp;&nbsp;Select a flower - Category name: $category_name<br></h3><br>
-                    <input type='hidden' name='category_id' value='$category_id'/>";
+        <?php
+        if (isset($_POST['search_category'])) {
 
-        $query = "SELECT * FROM flowers";
-        $result_set = mysqli_query($connection, $query);
+            $category_id = $_POST['category_id'];
 
-        if (mysqli_num_rows($result_set) > 0) {
-            echo "<div id='flower_list'>";
-            while ($row = mysqli_fetch_assoc($result_set)) {
-                $flower_name = $row['flower_name'];
-                $flower_id = $row['flower_id'];
 
-                echo "<input type='checkbox' value='$flower_id' name='flower_id_array[]'> 
-                          <label>$flower_name</label><br>";
+            $query = "SELECT * FROM categories WHERE category_id='$category_id' LIMIT 1";
+            $result = mysqli_query($connection, $query);
+            $category_name = mysqli_fetch_assoc($result)['category_name'];
+
+
+            $query = "SELECT flowers.flower_id, flowers.flower_name, flower_images.dir_path 
+              FROM flowers 
+              INNER JOIN flower_images ON flowers.flower_id = flower_images.flower_id";
+            $flowers_data_set = mysqli_query($connection, $query);
+
+
+            $flowers = [];
+            if (mysqli_num_rows($flowers_data_set) > 0) {
+                while ($row = mysqli_fetch_assoc($flowers_data_set)) {
+                    $flower_id = $row['flower_id'];
+
+
+                    $check_query = "SELECT * FROM flower_categories WHERE flower_id='$flower_id' AND category_id='$category_id' LIMIT 1";
+                    $check_result = mysqli_query($connection, $check_query);
+                    $is_checked = mysqli_num_rows($check_result) > 0;
+
+                    $flowers[] = [
+                        'flower_id' => $flower_id,
+                        'flower_name' => $row['flower_name'],
+                        'dir_path' => $row['dir_path'],
+                        'is_checked' => $is_checked
+                    ];
+                }
             }
-            echo "</div>";
-            echo "<div class='center-container'><br><button type='submit' class='add'>Add</button><br><br></div><br><br>";
-            echo "</form>";
-        } else {
-            echo "No flowers available";
         }
-    }
-    ?>
+        ?>
+
+        <?php if (isset($category_name) && isset($flowers)): ?>
+
+            <form action="flowers.php" method="post">
+
+                <h3>Select a flowers - Category Name: <?php echo htmlspecialchars($category_name); ?></h3><br>
+
+                <input type="hidden" name="category_id" value="<?php echo htmlspecialchars($category_id); ?>"/>
+
+                <?php foreach ($flowers as $flower): ?>
+
+                    <div class="image">
+
+                        <input type="checkbox"
+                               name="flower_id_array[]"
+                               value="<?php echo htmlspecialchars($flower['flower_id']); ?>"
+
+
+
+                            <?php
+                            echo "class='select'";
+                            echo $flower['is_checked'] ? 'checked' : '';
+                            ?>
+                        >
+
+                        <b><label class="select"><?php echo htmlspecialchars($flower['flower_name']); ?></label></b>
+
+                       <br> <img src="../../<?php echo htmlspecialchars($flower['dir_path']); ?>" alt="No image" width="150px" height="150px"/><br><br><br>
+
+                    </div>
+
+                <?php endforeach; ?>
+
+                <div class='center-container'>
+                <button type="submit" name="submit_flowers_categories" class='add'>Insert</button>
+                </div>
+            </form>
+        <?php endif; ?>
+
+    </div>
 </div>
-</div>
+
 </body>
 </html>
+
+<?php mysqli_close($connection) ?>

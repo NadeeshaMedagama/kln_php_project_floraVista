@@ -234,6 +234,10 @@ form button:hover {
     margin-left: 10px;
 }
 
+.image{
+    text-align: center;
+}
+
 .center-container {
     display: flex;
     justify-content: center;
@@ -307,4 +311,22 @@ h2{
     font-size: 18px;
     font-weight: bold;
     right: 20px;
+}
+
+img {
+    border-radius: 4px;
+    max-width: 150px;
+    height: auto;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: 2px solid #ffdb4d;
+}
+
+img:hover{
+    transform: scale(1.05);
+}
+
+.select{
+    cursor: pointer;
 }

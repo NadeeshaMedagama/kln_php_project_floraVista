@@ -1,72 +1,82 @@
-* {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ccccb3;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #ccccb3;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #333;
     border: 2px solid black;
 }
 
-.payment-container {
+form {
     background-color: #f5f5ef;
-    padding: 40px;
-    width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    padding: 20px 30px;
     border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4CAF50;
 }
 
-h2 {
+form h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #4CAF50;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
 }
 
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-    font-size: 14px;
-}
-
-.input-group input {
+form input[type="text"],
+form input[type="hidden"],
+form input[type="submit"] {
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="submit"]:hover {
+    border: 1px solid #4CAF50;
     outline: none;
-    transition: border-color 0.3s ease;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
-.input-group input:focus {
-    border-color: #28a745;
-}
-
-.btn {
-    width: 100%;
-    background-color: #28a745;
+form input[type="submit"] {
+    background-color: #4CAF50;
     color: white;
-    padding: 12px;
-    font-size: 18px;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: none;
     cursor: pointer;
+    font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.btn:hover {
-    background-color: #218838;
+form input[type="submit"]:hover {
+    background-color: #45a049;
     transform: scale(1.05);
+    text-decoration: underline;
+}
+
+form br {
+    display: none;
+}
+
+form span {
+    font-size: 14px;
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    form h3 {
+        font-size: 20px;
+    }
 }

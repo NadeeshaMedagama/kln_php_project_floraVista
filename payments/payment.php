@@ -89,6 +89,7 @@ if(isset($_SESSION['payment']) && $_SESSION['payment']['success'] == false){
         $address = "No address provided";
     }
 
+    //$_SESSION['payment']['total'] = number_format($_SESSION['payment']['total'], 2);
 
     echo "
 

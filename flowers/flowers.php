@@ -54,8 +54,9 @@ if(isset($_POST['buy_now'])){
     $sale_price = $_POST['sale_price'];
     $address = $_POST['address'];
 
-    if(!isset($address)|| $address ==''){
+    if (empty($address)) {
         echo "<script>window.alert('Enter the shipping address')</script>";
+        exit;
     }
 
     $flower_query = "SELECT * FROM flower_discounts WHERE  flower_id = '$flower_id'";
@@ -78,7 +79,6 @@ if(isset($_POST['buy_now'])){
     $loyalty_discount_end = isset($row2['loyalty_discount_end']) ? $row2['loyalty_discount_end'] : '';
     $price_off_end = isset($row2['price_off_end']) ? $row2['price_off_end'] : '';
 
-
     $items_price = (float) $quantity * $sale_price;
 
     $discount = 0;
@@ -96,6 +96,7 @@ if(isset($_POST['buy_now'])){
         $discount = $discount -  ($items_price * $price_off / 100);
     }
     $total = $items_price - $discount;
+
     $array[$flower_id] = $quantity;
 
     $_SESSION['payment'] = [
@@ -210,9 +211,9 @@ if(isset($_GET['flower_id'])){
                     <img src='../$dir_path' alt='$flower_name'>
                 </div>
                 
-                <div class='back'> 
+     <!--           <div class='back'> 
                     <a href = '../index.php'><button type='submit' class='backBtn'>Back </button></a>
-                </div>
+                </div>  -->
     
                 <div class='flower-details'>
                     <h2>$flower_name</h2>

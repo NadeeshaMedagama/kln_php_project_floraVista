@@ -4,60 +4,107 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-if(!isset($_SESSION['payment'])){
-    header('Location: ../index.php');
+// echo "<pre>";
+// print_r($_SESSION);
+// echo "</pre>";
+
+if (!file_exists(__FILE__)) {
+    echo "The file does not exist.";
+    exit;
 }
 
-if (isset($_POST['pay_success'])){
-    $_SESSION['payment']['success'] = true;
-    $_SESSION['payment']['reference_no'] = uniqid();
-    header("Location: payment.php");
+if (!isset($_SESSION['user']['email']) || !isset($_SESSION['user']['mobile'])) {
+    echo "Session data is missing!";
+    exit;
 }
+
+if (!isset($_SESSION['payment'])) {
+    header('Location: ../index.php');
+    exit;
+}
+
+if (isset($_GET['pay_success'])) {
+    $_SESSION['payment']['success'] = true;
+    $_SESSION['payment']['reference_no'] = urldecode($_GET['ref_no']);
+    header("Location: payment.php");
+    exit;
+}
+
+$total = $_SESSION['payment']['total'] ; // fallback for safety
+$email = $_SESSION['user']['email'] ;
+$mobile = $_SESSION['user']['mobile'];
+$ref_no = uniqid();
+
+$merchant_id = 1228547;
+$currency = "LKR";
+$merchant_secret = "ODAwMjE4Mzc5Mjk3NTgzMTI1MDI2Mjc5NDQzNjUzNTkyMTUwMDUx";
+
+$hash = strtoupper(
+    md5(
+        $merchant_id .
+        $ref_no .
+        number_format($total, 2, '.', '') .
+        $currency .
+        strtoupper(md5($merchant_secret))
+    )
+);
+
+$return_url = 'http://localhost:63342/kln_php_project_floraVista/payments/paymentGateWay.php?pay_success=true&ref_no=' . urlencode($ref_no);
+
+$data = [
+    'merchant_id' => $merchant_id,
+    'amount' => $total,
+    'return_url' => $return_url,
+    'order_id' => $ref_no,
+    'currency' => 'LKR',
+    'hash' => $hash,
+    'email' => $email,
+    'mobile' => $mobile
+];
+
+
+$json_data = json_encode($data);
+
+//$total = number_format($total, 2);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Gateway</title>
     <link rel="stylesheet" href="../style/payments/paymentGateWay.css">
+
 </head>
 <body>
 
-<div class="payment-container">
-    <h2>Payment Information</h2>
-    <form action="paymentGateWay.php" method="post">
+<form method="post" action="https://sandbox.payhere.lk/pay/checkout">
 
-        <div class="input-group">
-            <label for="name">Cardholder Name</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" required>
-        </div>
+    <h3>Amount : Rs. <?php echo $total; ?></h3>
+    <input type="hidden" name="merchant_id" value="<?php echo $merchant_id ?>">    <!-- replace your merchant ID -->
+    <input type="hidden" name="return_url" value="<?php echo $return_url ?>"> <!-- replace your return URL -->
+    <input type="hidden" name="cancel_url" value="http://sample.com/cancel">
+    <input type="hidden" name="notify_url" value="http://sample.com/notify">
+    <input type="hidden" name="order_id" value="<?php echo $ref_no ?>"> <!-- replace your order ID -->
+    <input type="hidden" name="items" value="FloraVista Flowers">
+    <input type="hidden" name="currency" value="LKR">
+    <input type="hidden" name="amount" value="<?php echo $total ?>">
 
-        <div class="input-group">
-            <label for="card-number">Card Number</label>
-            <input type="text" id="card-number" name="card_number" placeholder="1111 2222 3333 4444" required>
-        </div>
+    </br></br><h2><b>Customer Details :</b></h2></br>
 
-        <div class="input-group">
-            <label for="expiry-date">Expiry Date</label>
-            <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY" required>
-        </div>
+    <input type="text" name="first_name" placeholder="First Name" required>
+    <input type="text" name="last_name" placeholder="Second Name" required>
+    <input type="text" name="email" placeholder="Email" required>
+    <input type="text" name="phone" placeholder="Mobile Number" required>
+    <input type="text" name="address" placeholder="Address" required>
+    <input type="text" name="city" placeholder="City" required>
+    <input type="hidden" name="country" value="Sri Lanka">
+    <input type="hidden" name="hash" value="<?php echo $hash ?>">
+    <input type="submit" value="Pay by PayHere">
 
-        <div class="input-group">
-            <label for="cvv">CVV</label>
-            <input type="text" id="cvv" name="cvv" placeholder="123" required>
-        </div>
-
-        <div class="input-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-        </div>
-
-        <button type="submit" name='pay_success' class="btn">Submit Payment</button>
-    </form>
-</div>
-
+</form>
 </body>
 </html>

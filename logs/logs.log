@@ -2605,3 +2605,119 @@
 [2024-11-18 04:33:53]  [INFO] - Get flowers_category data successfully
 [2024-11-18 04:34:18]  [INFO] - retrieve data from users table successfully
 [2024-11-18 04:34:18]  [INFO] - Supplier :  login successfully. Redirect to the suplier_panel page.
+[2024-11-18 04:35:53]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-18 04:35:59]  [INFO] - Get flowers_category data successfully
+[2024-11-18 04:36:05]  [INFO] - Get flowers_category data successfully
+[2024-11-18 04:36:23]  [INFO] - Get flowers_category data successfully
+[2024-11-19 10:41:51]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-19 10:41:51]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-19 11:08:26]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-19 11:08:46]  [INFO] - Get flowers_category data successfully
+[2024-11-19 11:09:16]  [INFO] - Get flowers_category data successfully
+[2024-11-19 11:09:24]  [INFO] - Get flowers_category data successfully
+[2024-11-19 11:09:27]  [INFO] - Get flowers_category data successfully
+[2024-11-19 11:10:35]  [INFO] - get the supplier data in db successfully
+[2024-11-19 11:10:45]  [INFO] - get the supplier data in db successfully
+[2024-11-19 11:10:48]  [INFO] - get the supplier data in db successfully
+[2024-11-19 11:10:52]  [INFO] - get the supplier data in db successfully
+[2024-11-19 11:11:38]  [INFO] - retrieve data from users table successfully
+[2024-11-19 11:11:38]  [INFO] - Supplier :  login successfully. Redirect to the suplier_panel page.
+[2024-11-19 12:28:52]  [INFO] - Get flowers_category data successfully
+[2024-11-19 12:28:59]  [INFO] - Get flowers_category data successfully
+[2024-11-19 12:29:16]  [INFO] - Get flowers_category data successfully
+[2024-11-19 12:29:42]  [INFO] - Get flowers_category data successfully
+[2024-11-19 12:30:03]  [INFO] - Get flowers_category data successfully
+[2024-11-19 12:57:21]  [INFO] - Get flowers_category data successfully
+[2024-11-19 12:57:37]  [INFO] - Get flowers_category data successfully
+[2024-11-19 12:58:00]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:05:58]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:06:07]  [INFO] - category: $add_category added successfully
+[2024-11-19 13:06:07]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:06:07]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:06:31]  [ERROR] - Table 'kln_php.flowers_category' doesn't exist
+[2024-11-19 13:06:31]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:06:52]  [ERROR] - Table 'kln_php.flowers_category' doesn't exist
+[2024-11-19 13:06:52]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:08:05]  [INFO] - 10 id deleted successfully
+[2024-11-19 13:08:05]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:08:07]  [INFO] - 10 id deleted successfully
+[2024-11-19 13:08:07]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:08:09]  [INFO] - 10 id deleted successfully
+[2024-11-19 13:08:09]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:10:12]  [INFO] - 10 id deleted successfully
+[2024-11-19 13:10:12]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:10:14]  [INFO] - 9 id deleted successfully
+[2024-11-19 13:10:14]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:11:05]  [INFO] - category: $add_category added successfully
+[2024-11-19 13:11:05]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:11:05]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:11:25]  [INFO] - 11 id deleted successfully
+[2024-11-19 13:11:25]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:11:39]  [INFO] - category: $add_category added successfully
+[2024-11-19 13:11:39]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:11:39]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:11:47]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:12:07]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:25:37]  [INFO] - Get flowers_category data successfully
+[2024-11-19 13:25:48]  [INFO] - get the supplier data in db successfully
+[2024-11-19 13:25:50]  [INFO] - get the supplier data in db successfully
+[2024-11-19 14:52:31]  [INFO] - Get flowers_category data successfully
+[2024-11-19 16:54:39]  [INFO] - Get flowers_category data successfully
+[2024-11-19 16:54:47]  [INFO] - Get flowers_category data successfully
+[2024-11-19 16:55:06]  [INFO] - Get flowers_category data successfully
+[2024-11-19 16:55:31]  [INFO] - Get flowers_category data successfully
+[2024-11-19 16:55:47]  [INFO] - Get flowers_category data successfully
+[2024-11-19 16:58:02]  [INFO] - Get flowers_category data successfully
+[2024-11-19 16:58:32]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:12:55]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-19 17:17:15]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-19 17:22:11]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:22:20]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:22:35]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:50:41]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:50:55]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:51:17]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:51:17]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:55:09]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:55:11]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:56:39]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:57:10]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:57:33]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:57:49]  [INFO] - Get flowers_category data successfully
+[2024-11-19 17:59:15]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:01:31]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:01:54]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:02:08]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:02:11]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:02:49]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:03:43]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:04:14]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:04:27]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:04:40]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:05:11]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:05:26]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:05:56]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:07:03]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:07:13]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:07:33]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:08:16]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:08:42]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:08:58]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:09:15]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:09:26]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:09:44]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:10:13]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:10:20]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:10:53]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:10:58]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:11:12]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:12:12]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:12:44]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:13:07]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:13:13]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:13:36]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:13:36]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:14:23]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:14:50]  [INFO] - Get flowers_category data successfully
+[2024-11-19 18:14:56]  [INFO] - get the supplier data in db successfully
+[2024-11-19 18:14:58]  [INFO] - get the supplier data in db successfully

@@ -84,19 +84,22 @@ button:hover {
     justify-content: center;
     display: flex;
     position: absolute;
-    top: 523px;
+    top: 544px;
+}
+
+h2{
+    color: #00cc00;
 }
 
 h2 {
     font-size: 1.8rem;
-    color: #7a7a52;
     margin-bottom: 15px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #7a7a52;
     margin-bottom: 15px;
     border-bottom: 2px solid #ddd;
@@ -160,7 +163,7 @@ footer {
 
 header {
     background-color: #7bbf6a;
-    padding: 12px;
+    padding: 23px;
     text-align: center;
 }
 
@@ -187,6 +190,38 @@ header nav ul li a:hover {
     color: #e4e4e4;
     text-decoration: underline;
     transform: scale(1.05);
+}
+
+.header-info {
+    display: flex;
+    position: absolute;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    right: 60px;
+    top: 6px;
+}
+
+.cart {
+    background-color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cart:hover {
+    background-color: #ccf2ff;
+    transform: scale(1.05);
+}
+
+.cartimg {
+    border: none;
+    background: none;
+    gap: 2px;
+}
+
+.cartimg:hover{
+    transform: none;
 }
 
 footer {
