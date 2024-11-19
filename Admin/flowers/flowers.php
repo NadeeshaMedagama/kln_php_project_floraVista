@@ -283,8 +283,6 @@ if (isset($_POST['submit_flowers_categories'])) {
                                name="flower_id_array[]"
                                value="<?php echo htmlspecialchars($flower['flower_id']); ?>"
 
-
-
                             <?php
                             echo "class='select'";
                             echo $flower['is_checked'] ? 'checked' : '';
