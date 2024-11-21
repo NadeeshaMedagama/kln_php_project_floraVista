@@ -71,10 +71,9 @@ $array = [];
             <li><a href="../profile.php">My Profile</a></li>
             <li><a href="../about/about.html">About Us</a></li>
 
-
         </ul>
     </nav>
-</header>
+</header><br><br>
 
 <div class="container">
     <h1>&nbsp;My Cart</h1>

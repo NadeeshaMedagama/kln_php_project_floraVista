@@ -15,7 +15,7 @@ if (!isset($_SESSION['admin']['islogin']) || $_SESSION['admin']['islogin'] != tr
 if (isset($_POST['delete_category'])) {
     try {
         $category_id = (int) $_POST['category_id'];
-        $query = "DELETE FROM flowers_category WHERE category_id=$category_id";
+        $query = "DELETE FROM  categories WHERE category_id=$category_id";
         $result = mysqli_query($connection, $query);
         logger("INFO", "$category_id id deleted successfully");
     } catch (Exception $e) {
@@ -291,14 +291,14 @@ if (isset($_POST['submit_flowers_categories'])) {
 
                         <b><label class="select"><?php echo htmlspecialchars($flower['flower_name']); ?></label></b>
 
-                       <br> <img src="../../<?php echo htmlspecialchars($flower['dir_path']); ?>" alt="No image" width="150px" height="150px"/><br><br><br>
+                        <br> <img src="../../<?php echo htmlspecialchars($flower['dir_path']); ?>" alt="No image" width="150px" height="150px"/><br><br><br>
 
                     </div>
 
                 <?php endforeach; ?>
 
                 <div class='center-container'>
-                <button type="submit" name="submit_flowers_categories" class='add'>Insert</button>
+                    <button type="submit" name="submit_flowers_categories" class='add'>Insert</button>
                 </div>
             </form>
         <?php endif; ?>
