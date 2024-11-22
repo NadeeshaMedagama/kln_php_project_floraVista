@@ -60,6 +60,9 @@ if ($isLoggedIn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Shop</title>
     <link rel="stylesheet" href="home.css?v=<?= time(); ?>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet"/>
 
 </head>
 <body>
@@ -385,6 +388,92 @@ if ($isLoggedIn) {
 
 </section>
 
+<div class="carousel-container">
+
+    <div class="swiper">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/01.jpg" alt="Image 1" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/02.jpg" alt="Image 2" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/03.jpg" alt="Image 3" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/04.jpg" alt="Image 1" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/05.jpg" alt="Image 2" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/06.jpg" alt="Image 3" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/07.jpg" alt="Image 2" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/08.jpg" alt="Image 3" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/09.jpg" alt="Image 1" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/10.jpg" alt="Image 2" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/11.jpg" alt="Image 3" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/12.jpg" alt="Image 2" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/13.jpg" alt="Image 3" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/14.jpg" alt="Image 1" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/15.jpg" alt="Image 2" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/16.jpg" alt="Image 3" />
+            </div>
+
+            <div class="swiper-slide">
+                <img src="style/images/logos/17.jpg" alt="Image 2" />
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+
+    </div>
+
+</div>
+
 <div class="highlight-section">
 
     <div class="highlight-card">
@@ -527,6 +616,7 @@ if ($isLoggedIn) {
 
         </div>
     </div>
+
 </section>
 
 <footer>
@@ -547,6 +637,7 @@ if ($isLoggedIn) {
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 
 </body>
