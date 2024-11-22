@@ -486,7 +486,7 @@ $result = mysqli_query($connection, $query);
             </div>
 
             <div class="swiper-slide">
-                <img src="style/images/logos/08.jpg" alt="Image 3" />
+                <img src="Admin/home/style/images/logos/08.jpg" alt="Image 3" />
             </div>
 
             <div class="swiper-slide">
