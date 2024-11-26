@@ -49,7 +49,8 @@ $hash = strtoupper(
     )
 );
 
-$return_url = 'http://localhost/kln_php_project_floraVista/payments/payment.php?pay_success=true&ref_no=' . urlencode($ref_no);
+$return_url = 'http://localhost:63342/kln_php_project_floraVista/payments/paymentGateWay.php?pay_success=true&ref_no=' . urlencode($ref_no);
+//$return_url = 'http://localhost:63342/kln_php_project_floraVista/cart/cart.php?pay_success=true&ref_no=' . urlencode($ref_no);
 
 $data = [
     'merchant_id' => $merchant_id,

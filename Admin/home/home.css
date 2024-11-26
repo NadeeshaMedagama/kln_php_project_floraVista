@@ -201,6 +201,8 @@ nav {
 .dropdown-btn:hover {
     background-color: #2db300;
     transform: scale(1.05);
+    color: white;
+    text-decoration: underline;
 }
 
 .image-container {

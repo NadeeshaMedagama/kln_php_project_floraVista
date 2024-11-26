@@ -2867,3 +2867,19 @@
 [2024-11-21 19:06:48]  [INFO] - get the supplier data in db successfully
 [2024-11-22 07:26:20]  [INFO] - Retrieve data from Users table Successfully
 [2024-11-22 07:26:20]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-22 08:05:07]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-22 08:05:07]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-25 03:44:27]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-25 03:44:27]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-26 11:26:34]  [INFO] - Retrieve data from Users table Successfully
+[2024-11-26 11:26:34]  [INFO] - User : Nadeesha Login Successfully. Redirect to the Index page.
+[2024-11-26 12:10:43]  [INFO] - Admin: Nadeesha login successfully. Redirect to the admin_panel
+[2024-11-26 12:11:16]  [INFO] - Get flowers_category data successfully
+[2024-11-26 12:13:24]  [INFO] - Get flowers_category data successfully
+[2024-11-26 12:14:34]  [INFO] - Get flowers_category data successfully
+[2024-11-26 12:15:15]  [INFO] - get the supplier data in db successfully
+[2024-11-26 12:15:39]  [INFO] - get the supplier data in db successfully
+[2024-11-26 12:16:19]  [INFO] - retrieve data from users table successfully
+[2024-11-26 12:16:19]  [INFO] - Supplier :  login successfully. Redirect to the suplier_panel page.
+[2024-11-26 12:17:05]  [INFO] - get the supplier data in db successfully
+[2024-11-26 12:17:06]  [INFO] - get the supplier data in db successfully

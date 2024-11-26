@@ -22,7 +22,7 @@ if (isset($_POST['pay_success'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Gateway</title>
-    <link rel="stylesheet" href="../style/payments/paymentGateWay.css">
+    <link rel="stylesheet" href="../style/payments/paymentGateWayOld.css">
 </head>
 <body>
 
